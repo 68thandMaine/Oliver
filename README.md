@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Oliver
 
-## Available Scripts
+Have you ever wanted an easier way to plan your budget and start saving towards goals? Oliver is being built to make it easier to understand where your money goes, and what you can do with it after bills have been paid.
 
-In the project directory, you can run:
+Oliver is a budgeting application that uses React on the fontend, a C# web api as a data access layer, and a MySql database. A user will be able to create bills, input paychecks, and create goals. Oliver will takes the input and cretes visually appealing and meaningful graphs to make it easier to understand where money goes and what the status of your financial health is.
+___
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+|Section|Title|
+|---|---|
+| I. | [Desired Features](#desired-features) |
+<!-- | II. | [Available Scripts](#available-scripts) | -->
+| III | [Planning](#planning) |
+| IV. | [MVP Requirements](#mvp) |
+| V. | [Stretch Goals](#stretcu-goals) |
+| VI. | [Technology Used](#technology-used) |
+___
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Desired Features
 
-### `npm test`
+- [Create Account Types](./documentation/accounts/AccountOverView.md)
+- [Create Bills](./documentation/bills/BillsOverView.md)
+- [Create Goals](./documentation/goals/Goals.md)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+___
 
-### `npm run build`
+### Planning
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+___
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### MVP Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+___
 
-### `npm run eject`
+### Stretch Goals
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Stretch goals for Oliver:
+  
+1. Integrate API calls to banks.
+2. Create a way to analyze purchasing areas.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+___
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Technology Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+| Tool | Website | Tool | Website |
+|---|---|---|---|
+| React | [Click](https://reactjs.org/) | | |
