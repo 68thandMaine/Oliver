@@ -19,4 +19,4 @@ ___
 
 ### Bank Accounts
 
-In version 1.0 bank accounts will be manually inputted
+In version 1.0 bank accounts will be manually inputted, but in future versions I should be able to use an API to connect bank accounts to Oliver ()
