@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 import BankAccountForm from './bankAccount/NewBankAccount';
 
-function FormControl(props) {
+function Index(props) {
 
-  const [ formToShow, setFormToShow ] = useState("");
+  let [ formToShow, setFormToShow ] = useState("");
   
   useEffect(() => {
-    setFormToShow(props.formName)
-  });
+    setFormToShow(props.formName);
+  }, [props] );
 
 return (
   <div>
@@ -21,8 +21,8 @@ return (
   )
 }
 
-FormControl.propTypes = {
+Index.propTypes = {
   formName: PropTypes.string.isRequired,
 };
 
-export default FormControl;
+export default Index;

@@ -1,0 +1,10 @@
+.col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}

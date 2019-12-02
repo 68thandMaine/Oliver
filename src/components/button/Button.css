@@ -1,0 +1,13 @@
+.btn {
+  outline: none;
+  text-emphasis: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.greenPill {
+  background: #468C32;
+  border-radius: 2vw;
+  
+}

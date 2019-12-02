@@ -1,15 +1,35 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
+
+import './Dashboard.css';
+import NewBankAccountForm from '../../components/forms';
 
 function Dashboard(props) {
 
+
   return (
+
     <div>
-      <h1>Dashboard</h1>
-      <p>This is the dasboard view. It should have the following components:</p>
-      <ul>
-        <li></li>
-      </ul>
+      {/* <div className='requirements'>
+        <h1>Dashboard Requirements</h1>
+        <p>This is the dasboard view. It should have the following components:</p>
+        <ul>
+          <li>Income This Month</li>
+          <li>Total amount of money available</li>
+          <li>Available Credit</li>
+          <li>Available Debit</li>
+          <li>Total Savings</li>
+          <li>Menu</li>
+          <li>Form Options</li>
+        </ul>
+      </div> */}
+
+      <NewBankAccountForm 
+      formName='newBankAccount'/>
     </div>
-  )
+
+  );
 }
+
+export default Dashboard;

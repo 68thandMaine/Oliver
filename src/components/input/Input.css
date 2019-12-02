@@ -1,0 +1,19 @@
+.inputWrapper {
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none !important;
+  border: none;
+}
+
+.newForm {
+  background: none;
+  border-bottom: solid 1px white;
+  border-bottom-left-radius: 2vw;
+  padding: 1vw 2vw;
+  margin: 2vw;
+  width: 90%;
+}
