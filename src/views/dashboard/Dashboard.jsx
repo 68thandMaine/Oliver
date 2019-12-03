@@ -1,9 +1,9 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import './Dashboard.css';
-import NewBankAccountForm from '../../components/forms';
+import Form from '../../components/forms';
 
 function Dashboard(props) {
 
@@ -25,8 +25,8 @@ function Dashboard(props) {
         </ul>
       </div> */}
 
-      <NewBankAccountForm 
-      formName='newBankAccount'/>
+      <Form 
+      formName='newTransaction'/>
     </div>
 
   );

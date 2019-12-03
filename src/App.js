@@ -1,23 +1,25 @@
-import React from 'react';
+// Important Stuff
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 
-import { Provider } from 'react-redux';
-import store from './store';
-
-import { BrowserRouter as Router } from 'react-router-dom';
+// API Stuff
+import { getBankAccounts } from './actions/BankAccountActions';
+// Router Stuff
 import Routes from './routes/Routes';
-
+// Styling Stuff
 import './App.css';
 
-function App() {
+function App(props) {
+
+  useEffect(() => {
+    props.dispatch(getBankAccounts());
+  },[props]);
+
   return (
     <div className="App">
-      <Provider store={store}>
-        <Router>
-          <Routes />
-        </Router>
-      </Provider>
+      <Routes /> 
     </div>
   );
 }
 
-export default App;
+export default connect()(App);

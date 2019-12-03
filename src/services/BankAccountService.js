@@ -11,4 +11,15 @@
        }
      });
    }
+
+   static getAllBankAccounts() {
+     return new Promise (async (resolve, reject) => {
+       try {
+         const bankAccounts = await Api().get('/oliver/account');
+         resolve(bankAccounts);
+       } catch (err) {
+         reject(err);
+       }
+     });
+   }
  }
