@@ -3,8 +3,9 @@
 }
 
 .input {
-  background: #fff;
-  border: 1px solid #ebebeb;
+  /* background: #fff; */
+  /* border-bottom: 1px solid #ebebeb; */
+  cursor: text;
   padding: 10px 9px 9px;
   display: block;
   width: 100%;
@@ -12,13 +13,13 @@
   color: inherit;
   text-align: left;
   box-sizing: border-box;
-  border-radius: 3px;
+  /* border-radius: 3px; */
 }
 
 
 .newForm {
-  background: none;
-  border-bottom: solid 1px white;
+  background: #252525;
+  /* border-bottom: solid 1px white; */
   padding: 1vw 2vw;
   margin: 2vw;
   width: 90%;

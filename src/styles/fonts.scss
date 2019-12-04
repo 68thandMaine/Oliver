@@ -1,0 +1,76 @@
+@import './themes/dm-theme.scss';
+
+p,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+li,
+label {
+  outline: none;
+  margin: 0;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 1rem;
+  color: lightgrey;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: $dm_attn;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size:4.5rem;
+}
+
+h3 {
+  font-size: 3.75rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 1.75rem;
+}
+
+p,
+label,
+li,
+input,
+button {
+  font-size: 1.25em;
+  font-family: 'Varela Round', sans-serif;
+  color: $dm_p;
+}
+
+@media screen and (min-width: 50em) {
+  html {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 1.5em;
+  }
+}

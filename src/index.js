@@ -12,9 +12,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // Component
 import App from './App';
 // Styling Stuff
-import './index.css';
+import './index.scss';
 import './styles/posisitioning.scss';
-import './styles/text.scss';
+import './styles/fonts.scss';
+import './styles/surfaces.scss';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
