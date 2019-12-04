@@ -17,10 +17,14 @@
 }
 
 
-.newForm {
+.txt {
   background: #252525;
   /* border-bottom: solid 1px white; */
   padding: 1vw 2vw;
   margin: 2vw;
   width: 90%;
+}
+
+.num {
+  width: 10%;
 }

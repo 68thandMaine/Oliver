@@ -4,7 +4,6 @@ import constants from '../constants';
 const { action } = constants;
 
 export function getBankAccounts() {
-  console.log('getbankaccounts');
   return async function (dispatch) {
     try {
       const res = await BankAccountService.getAllBankAccounts();
@@ -17,7 +16,6 @@ export function getBankAccounts() {
 
 
 export function receiveBankAccounts(bankAccountList) {
-  console.log('rec', bankAccountList)
   return {
     type: action.RECEIVE_BANKACCOUNTS,
     bankAccounts: bankAccountList

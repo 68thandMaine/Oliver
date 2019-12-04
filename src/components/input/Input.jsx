@@ -21,9 +21,9 @@ const Input = (props) => {
     <div className='inputWrapper'>
       {{
         true: <textarea
-          className={'input ' + props.styling}></textarea>,
+          className={'input ' + props.inputStyle}></textarea>,
         undefined: <input
-          className={'input ' + props.styling}
+          className={'input ' + props.inputStyle}
           type={props.inputType}
           name={props.inputName} 
           value={props.inputValue}
@@ -38,7 +38,7 @@ const Input = (props) => {
 Input.propTypes = {
   inputName : PropTypes.string.isRequired,
   inputType : PropTypes.string.isRequired,
-  styling: PropTypes.string.isRequired,
+  inputStyle: PropTypes.string.isRequired,
   handleChange: PropTypes.func,
   inputPlaceholder: PropTypes.string,
   inputValue : PropTypes.string,

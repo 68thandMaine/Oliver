@@ -26,7 +26,7 @@ function Dashboard(props) {
       </div> */}
 
       <Form 
-      formName='newTransaction'/>
+      formName='newCreditCard'/>
     </div>
 
   );
