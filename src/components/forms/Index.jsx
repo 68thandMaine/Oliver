@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import BankAccountForm from './bankAccount/NewBankAccount';
 import CreditCardForm from './creditCard/CreditCardForm';
+import LoanForm from './loan/LoanForm';
 import TransactionForm from './transaction/TransactionForm';
 
 function Index(props) {
@@ -17,9 +18,10 @@ function Index(props) {
 return (
   <div>
    {{
-     newCreditCard : <CreditCardForm />,
-     newTransaction: <TransactionForm />,
      newBankAccount: <BankAccountForm />,
+     newCreditCard : <CreditCardForm />,
+     newLoan : <LoanForm />,
+     newTransaction: <TransactionForm />,
    }[formToShow]}
   </div>
   )
