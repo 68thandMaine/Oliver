@@ -1,5 +1,7 @@
 # Creating Oliver's Grid System
 
+> Created following [this tutorial](https://www.toptal.com/sass/css3-flexbox-sass-grid-tutorial).
+
 To create the grid system I will use [Flexbox](https://jonibologna.com/blog/flexbox-cheatsheet) and follow the [BEM naming conventions](http://getbem.com/naming/) for class names.
 
 BEM conventions add information about an element and it's context:

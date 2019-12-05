@@ -34,33 +34,30 @@ const LoanForm = (props) => {
                 inputPlaceholder='Education'/>
 
             <div className='container__row'>
-                <div className='container__col-sm-3 '>
-                    <label>Loan Amount</label>
-                    <Input
-                        inputName='loanAmount'
-                        inputType='number'
-                        inputStyle='num'
-                        inputPlaceholder='11,000'/>
-                </div>
-                <div className='container__col-sm-3 '>
 
-                    <label>APY</label>
-                    <Input
-                        inputName='apy'
-                        inputType='number'
-                        inputStyle='num'
-                        inputPlaceholder='12.2'/>
-                </div>
-                <div className='container__col-sm-3 '>
-                    <label>Balance</label>
-                    <Input
-                        inputName='balance'
-                        inputType='number'
-                        inputStyle='num'
-                        inputPlaceholder='9,000'/>
-                </div>
+                <label>Loan Amount</label>
+                <Input
+                    inputName='loanAmount'
+                    inputType='number'
+                    inputStyle='num'
+                    inputPlaceholder='11,000'/>
+
+                <label>APY</label>
+                <Input
+                    inputName='apy'
+                    inputType='number'
+                    inputStyle='num'
+                    inputPlaceholder='12.2'/>
+
+                <label>Balance</label>
+                <Input
+                    inputName='balance'
+                    inputType='number'
+                    inputStyle='num'
+                    inputPlaceholder='9,000'/>
 
             </div>
+
             <Button
                 text='submit'
                 buttonStyle='greenPill'
@@ -69,7 +66,6 @@ const LoanForm = (props) => {
         </form>
     );
 }
-
 LoanForm.propTypes = {};
 
 export default LoanForm;

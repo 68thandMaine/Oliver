@@ -29,7 +29,6 @@ $map-grid-props: (
     }
     @for $i from 1 through $grid-cols {
       &__col#{$modifier}-#{$i} {
-        border: solid 1px red !important;
         flex-basis: (100 / ($grid-cols / $i) ) * 1%;
       }
       &__col#{$modifier}-offset-#{$i} {
