@@ -11,7 +11,7 @@ const LoanForm = (props) => {
         setLoanFormProps] = useState({});
 
     return (
-        <form className='loanFormWrapper'>
+        <form className='container'>
             <label>Name of the loan</label>
             <Input
                 inputName='loanName'
@@ -33,8 +33,8 @@ const LoanForm = (props) => {
                 inputStyle='txt'
                 inputPlaceholder='Education'/>
 
-            <div className='row'>
-                <div className='col'>
+            <div className='container__row'>
+                <div className='container__col-sm-3 '>
                     <label>Loan Amount</label>
                     <Input
                         inputName='loanAmount'
@@ -42,7 +42,8 @@ const LoanForm = (props) => {
                         inputStyle='num'
                         inputPlaceholder='11,000'/>
                 </div>
-                <div className='col'>
+                <div className='container__col-sm-3 '>
+
                     <label>APY</label>
                     <Input
                         inputName='apy'
@@ -50,16 +51,15 @@ const LoanForm = (props) => {
                         inputStyle='num'
                         inputPlaceholder='12.2'/>
                 </div>
-            </div>
-            <div className = 'col center'>
-              
-                <label>Balance</label>
-                <Input
-                    inputName='balance'
-                    inputType='number'
-                    inputStyle='num'
-                    inputPlaceholder='9,000'/>
-              
+                <div className='container__col-sm-3 '>
+                    <label>Balance</label>
+                    <Input
+                        inputName='balance'
+                        inputType='number'
+                        inputStyle='num'
+                        inputPlaceholder='9,000'/>
+                </div>
+
             </div>
             <Button
                 text='submit'

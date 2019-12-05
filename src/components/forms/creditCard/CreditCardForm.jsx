@@ -35,8 +35,8 @@ const CreditCardForm = (props) => {
                         <Input inputName='apy' inputType='number' styling='num'/>
                     </div>
                 </div>
-                        <label>Balance</label>
-                        <Input inputName='balance' inputType='number' styling='num'/>
+                <label>Balance</label>
+                <Input inputName='balance' inputType='number' styling='num'/>
                 <Button
                     text='submit'
                     buttonStyle='greenPill'
