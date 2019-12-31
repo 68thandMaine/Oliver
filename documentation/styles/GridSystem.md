@@ -67,7 +67,7 @@ ___
 
 ### Creating Rows
 
-Rows organzie content horizontally. Elements within a row will wrap to prevent overflowwing and will have a 100% width. All will be acomplished using **flexbox**.
+Rows organzie content horizontally. Elements within a row will wrap to prevent overflowwing and will have a 100% width.
 
 Since rows are within a `.container`, they need to be an scss element wrapped inside the `.container` class.
 
@@ -113,7 +113,7 @@ Designing the column system requires some considerations. For example how do we 
 | 9 | 11% |
 | 10 | 10% |
 | 11 | 0% |
-| 12 | 8.33% | 
+| 12 | 8.33% |
 
 Flexbox can accomplish this with the `flex-basis` property. This property can help set the width by accepting the same values as the `width` and `height` property PLUS `content`.
 
@@ -129,7 +129,9 @@ $grid__cols: 12;
 }
 ```
 
-In SCSS knows to evaulate the number of columns based off the number provided in the className.
+The flex basis is set by dividing the width of the row (100) by the total number of possible grid columns (12) divided by the desired number of columns(3). 
+
+`100 / ( 12 / 3 )  = 25` where 25 is the width each column will receive.
 
 ___
 

@@ -1,9 +1,13 @@
 import React from 'react';
 
+import initialState from '../../constants';
+
 // import PropTypes from 'prop-types';
 
 import './Dashboard.css';
 import Form from '../../components/forms';
+
+const state = initialState.initialState;
 
 function Dashboard(props) {
 
@@ -27,6 +31,7 @@ function Dashboard(props) {
 
       <Form 
       formName='newLoan'/>
+      <button onClick={()=>console.log(state)}>Click</button>
     </div>
 
   );
