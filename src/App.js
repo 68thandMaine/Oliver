@@ -8,7 +8,12 @@ import { getBankAccounts } from './actions/BankAccountActions';
 import Routes from './routes/Routes';
 // Styling Stuff
 import './App.css';
-import StyleSheet from './styles/stylesheet';
+import StyleSheet from './assets/style-sheet/stylesheet';
+// Icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCogs, faChartPie } from '@fortawesome/free-solid-svg-icons'
+library.add(faCogs, faChartPie);
+
 
 function App(props) {
 
@@ -18,8 +23,7 @@ function App(props) {
 
   return (
     <div className="App">
-      {/* <Routes />  */}
-      
+
        <StyleSheet />
     </div>
   );
