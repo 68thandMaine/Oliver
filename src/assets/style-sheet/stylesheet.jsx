@@ -43,9 +43,16 @@ function StyleSheet(props) {
                 <div className='container__col-lg-4'>
                     <h1>Icons</h1>
                     <ul className='stylesheet'>
-                        <li>Overview Icon: <span><FontAwesomeIcon icon=''/></span></li>
-                        <li>Settings Icon: <span><FontAwesomeIcon icon='cogs'/></span></li>
+                        <li>Logo Icon: <span><FontAwesomeIcon icon={["fab", "first-order"]}/></span></li>
+                        <li>Overview Icon: <span><FontAwesomeIcon icon='warehouse'/></span></li>
+                        <li>Accounts Icon: <span><FontAwesomeIcon icon="landmark"/></span></li>
                         <li>Graphs Icon: <span><FontAwesomeIcon icon='chart-pie'/></span></li>
+                        <li>Goals Icon: <span><FontAwesomeIcon icon="list-alt"/></span></li>
+                        <li>Settings Icon: <span><FontAwesomeIcon icon='cogs'/></span></li>
+                        <li>Add Icon: <span><FontAwesomeIcon icon="plus-circle"/></span></li>
+                        <li>Search Icon: <span><FontAwesomeIcon icon="search"/></span></li>
+                        <li>Loan Icon: <span><FontAwesomeIcon icon='file-invoice-dollar'/></span></li>
+                        <li>Money Icon: <span><FontAwesomeIcon icon="dollar-sign"/></span></li>
                     </ul>
                 </div>
                 <div className='container__col-lg-4'></div>
