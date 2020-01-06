@@ -5,6 +5,7 @@ import initialState from '../../constants';
 // import PropTypes from 'prop-types';
 
 import './Dashboard.css';
+import Card from '../../components/styles/card/Card';
 import Form from '../../components/forms';
 
 const state = initialState.initialState;
@@ -30,6 +31,7 @@ function Dashboard(props) {
             <li>Form Options</li>
           </ul>
         </div>
+        <Card />
       </div>
       <div className='container__col-sm-6'>
         <div className='container__row'>

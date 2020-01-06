@@ -1,7 +1,7 @@
 // Important Stuff
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import NavBar from './components/nav-bar/NavBar';
+import NavBar from './components/styles/nav-bar/NavBar';
 
 // API Stuff
 import { getBankAccounts } from './actions/BankAccountActions';
@@ -38,8 +38,8 @@ function App(props) {
         </div>
         <div className='container__col-lg-10'>
           {/* <StyleSheet /> */}
-          {/* <Routes /> */}
-          {view}
+          <Routes />
+          
         </div>
       </div>
     </div>
