@@ -16,10 +16,10 @@ function Dashboard(props) {
 
     <div className='container--fluid'>
       <div className='container__row'>
-      <div className='container__col-lg-6'>
+      <div className='container__col-sm-6'>
         <div>
-          <h1>Dashboard Requirements</h1>
-          <p>This is the dasboard view. It should have the following components:</p>
+          <h3>Dashboard Requirements</h3>
+          <p>This is the dashboard view. It should have the following components:</p>
           <ul>
             <li>Income This Month</li>
             <li>Total amount of money available</li>
@@ -31,13 +31,13 @@ function Dashboard(props) {
           </ul>
         </div>
       </div>
-      <div className='container__col-lg-6'>
+      <div className='container__col-sm-6'>
         <div className='container__row'>
-          <h1>Section 2</h1>
+          <h3>Section 2</h3>
           <p>This section will hold my graphs.</p> 
         </div>
         <div className='container__row'>
-          <h1>Section 3</h1>
+          <h3>Section 3</h3>
           <p>This section will be for controlling the graphs</p>
         </div>
         </div>
