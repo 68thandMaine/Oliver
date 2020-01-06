@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import initialState from '../../constants';
 
@@ -31,7 +32,8 @@ function Dashboard(props) {
             <li>Form Options</li>
           </ul>
         </div>
-        <Card />
+        <Card 
+          bankAccounts={props.bankAccounts}/>
       </div>
       <div className='container__col-sm-6'>
         <div className='container__row'>
@@ -49,4 +51,8 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+const mapStateToProps = state => ({
+  bankAccounts: state.bankAccounts,
+});
+
+export default connect(mapStateToProps)(Dashboard);
