@@ -1,7 +1,7 @@
 // Important Stuff
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import NavBar from './components/styles/nav-bar/NavBar';
+import NavBar from './components/nav-bar/NavBar';
 
 // API Stuff
 import { getBankAccounts } from './actions/BankAccountActions';

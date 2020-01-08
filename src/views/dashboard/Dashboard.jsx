@@ -6,10 +6,10 @@ import initialState from '../../constants';
 // import PropTypes from 'prop-types';
 
 import './Dashboard.css';
-import Card from '../../components/styles/card/Card';
-import Form from '../../components/forms';
+import BankAccount from './ bank-account/BankAccount';
 
-const state = initialState.initialState;
+
+// const state = initialState.initialState;
 
 function Dashboard(props) {
 
@@ -19,9 +19,8 @@ function Dashboard(props) {
     <div className='container--fluid'>
       <div className='container__row'>
       <div className='container__col-sm-6'>
-        <div>
+        {/* <div>
           <h3>Dashboard Requirements</h3>
-          <p>This is the dashboard view. It should have the following components:</p>
           <ul>
             <li>Income This Month</li>
             <li>Total amount of money available</li>
@@ -30,9 +29,10 @@ function Dashboard(props) {
             <li>Total Savings</li>
             <li>Menu</li>
             <li>Form Options</li>
-          </ul>
-        </div>
-        <Card 
+            </ul>
+        </div> */}
+        
+        <BankAccount 
           bankAccounts={props.bankAccounts}/>
       </div>
       <div className='container__col-sm-6'>

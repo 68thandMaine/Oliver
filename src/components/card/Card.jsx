@@ -10,17 +10,17 @@ function Card( props ) {
     return (
         <div className='cardWrapper'>
             <CardHeader 
-                title={'props.cardTitle'}/>
-            <Balance 
-                balance={'props.accountBalance'} />
-            <CardBody />
+                title={props.cardTitle}/>
+            <CardBody>
+                {props.children}
+            </CardBody>
         </div>
     )
 };
 
 Card.propTypes = {
-    // cardTitle: PropTypes.string.isRequired,
-    // accountBalance: PropTypes.string.isRequired,
+    cardTitle: PropTypes.string.isRequired,
+    accountBalance: PropTypes.string.isRequired,
 };
 
 export default Card;
