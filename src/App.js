@@ -37,9 +37,9 @@ function App(props) {
             handleSetActiveView={onSetActiveView}/>
         </div>
         <div className='container__col-lg-10'>
-          {/* <StyleSheet /> */}
+          <StyleSheet />
           {/* <Routes /> */}
-          {view}
+          {/* {view} */}
         </div>
       </div>
     </div>
