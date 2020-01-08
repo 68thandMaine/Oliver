@@ -79,3 +79,11 @@ button {
     font-size: 1.5em;
   }
 }
+
+.text {
+  color: $dm_p;
+
+  &--bold {
+    font-weight: 800;
+  }
+}

@@ -18,7 +18,7 @@ import './styles/grid-system.scss';
 import './styles/surfaces.scss';
 
 
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Router>

@@ -1,0 +1,19 @@
+.bankAccountMenu {
+    border: 2px sold yellow;
+    
+    &__account {
+        justify-content: space-evenly;
+    }
+
+    &__accountInfo {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__balanceInfo {
+        border: solid 1px white;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+}

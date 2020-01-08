@@ -5,7 +5,7 @@ import './stylesheet.scss';
 function StyleSheet(props) {
 
     return (
-        <div className='container'>
+        <div className='container--fluid styleSheetWrapper'>
             <div className='container__row'>
                 <div className='container__col-lg-4'>
                     <h1>Typography</h1>
@@ -42,8 +42,8 @@ function StyleSheet(props) {
                 </div>
                 <div className='container__col-lg-4'>
                     <h1>Icons</h1>
-                    <div className='container__row'>
-                        <div className='container__col-lg-12'>
+                    <div className='container__row--no-wrap'>
+                        <div className='container__col-lg-4'>
                             <h3>Nav Bar Icons</h3>
                             <ul>
                                 <li>Logo Icon: <span><FontAwesomeIcon icon={["fab", "first-order"]}/></span></li>
@@ -54,30 +54,35 @@ function StyleSheet(props) {
                                 <li>Settings Icon: <span><FontAwesomeIcon icon='cogs'/></span></li>
                             </ul>
                         </div>
-                    </div>
-                        <div className='container__row'>
-                            <div className='container__col-lg-6'>
-                                <h3>Interaction Icons</h3>
-                                <ul>
-                                    <li>Add Icon: <span><FontAwesomeIcon icon="plus-circle"/></span></li>
-                                    <li>Close Icon: <span><FontAwesomeIcon icon="times-circle"/></span></li>
-                                    <li>Search Icon: <span><FontAwesomeIcon icon="search"/></span></li>
-                                    <li>Right Icon: <span><FontAwesomeIcon icon='angle-right'/></span></li>
-                                    <li>Left Icon: <span><FontAwesomeIcon icon='angle-left'/></span></li>
-                                </ul>
-                            </div>
-                            <div className='container__col-lg-6'>
-                                <h3>Finance Icons</h3>
-                                <ul>
-                                    <li>Loan Icon: <span><FontAwesomeIcon icon='file-invoice-dollar'/></span></li>
-                                    <li>Money Icon: <span><FontAwesomeIcon icon="dollar-sign"/></span></li>
-                                    <li>Grocery Icon: <span><FontAwesomeIcon icon='shopping-cart'/></span></li>
-                                    <li>Credit Card Icon: <span><FontAwesomeIcon icon='credit-card'/></span></li>
-                                </ul>
-                            </div>
+                        <div className='container__col-lg-4'>
+                            <h3>Interaction Icons</h3>
+                            <ul>
+                                <li>Add Icon: <span><FontAwesomeIcon icon="plus-circle"/></span></li>
+                                <li>Close Icon: <span><FontAwesomeIcon icon="times-circle"/></span></li>
+                                <li>Search Icon: <span><FontAwesomeIcon icon="search"/></span></li>
+                                <li>Right Icon: <span><FontAwesomeIcon icon='angle-right'/></span></li>
+                                <li>Left Icon: <span><FontAwesomeIcon icon='angle-left'/></span></li>
+                            </ul>
+                        </div>
+                        <div className='container__col-lg-4'>
+                            <h3>Finance Icons</h3>
+                            <ul>
+                                <li>Loan Icon: <span><FontAwesomeIcon icon='file-invoice-dollar'/></span></li>
+                                <li>Money Icon: <span><FontAwesomeIcon icon="dollar-sign"/></span></li>
+                                <li>Grocery Icon: <span><FontAwesomeIcon icon='shopping-cart'/></span></li>
+                                <li>Credit Card Icon: <span><FontAwesomeIcon icon='credit-card'/></span></li>
+                            </ul>
                         </div>
                     </div>
-                <div className='container__col-lg-4'></div>
+                    <div className='container__row'>
+                    <div className='container__col-lg-4'>
+                        <h3>Fonts</h3>
+                        <p className='js-sans'>h1-h6 Font Family: Josefin Sans</p>
+                        <p>p Font Family: Varela Round</p>
+                        <p>p bold: <span className='text--bold'>Bold text</span> (800)</p>
+                    </div>
+                    </div>
+                    </div>
             </div>
         </div>
     )
