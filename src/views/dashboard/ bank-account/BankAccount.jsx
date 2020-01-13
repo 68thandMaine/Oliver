@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Card from '../../../components/card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './BankAccount.scss';
+import { formatMoney } from '../../../formatters/AccountFormatters';
 
 function BankAccount(props) {
 
@@ -33,7 +34,7 @@ function BankAccount(props) {
         <div className='bankAccountMenu'>
             <Card
                 cardTitle='Total In All Bank Accounts' >
-                <h1>{bankAccounts.sumTotal}</h1>
+                <h1>{formatMoney(bankAccounts.sumTotal)}</h1>
             </Card>
             {props.bankAccounts.map((bankAccount, index)=> {
                 return (
@@ -42,13 +43,14 @@ function BankAccount(props) {
                     cardTitle={bankAccount.AccountName}>
                     <div className='container__row--no-wrap bankAccountMenu__account'>
                         <div className='container__col-lg-4 bankAccountMenu__accountInfo'>
-                            <h5>{bankAccount.AccountType}</h5>
-                            <h6>{formatAccountNumber(bankAccount.AccountNumber)}</h6>
+                            <p>{bankAccount.AccountType}</p>
+                            <p>{formatAccountNumber(bankAccount.AccountNumber)}</p>
                         </div>
                         <div className='container__col-lg-5'></div>
                         <div className='container__col-lg-3 bankAccountMenu__balanceInfo'>
-                        <h5>{bankAccount.Balance}</h5>
-                        <FontAwesomeIcon 
+                        <p className='text--bold'>{formatMoney(bankAccount.Balance)}</p>
+                        <FontAwesomeIcon
+                                color='white' 
                                 icon='angle-right'
                                 size='lg' />
                         </div>

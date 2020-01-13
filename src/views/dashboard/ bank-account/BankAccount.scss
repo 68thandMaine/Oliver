@@ -1,8 +1,8 @@
 .bankAccountMenu {
-    border: 2px sold yellow;
     
     &__account {
         justify-content: space-evenly;
+        margin-bottom:1vw;
     }
 
     &__accountInfo {
@@ -11,9 +11,8 @@
     }
 
     &__balanceInfo {
-        border: solid 1px white;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }

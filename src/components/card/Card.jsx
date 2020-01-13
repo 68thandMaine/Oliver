@@ -19,7 +19,7 @@ function Card( props ) {
 
 Card.propTypes = {
     cardTitle: PropTypes.string.isRequired,
-    accountBalance: PropTypes.string.isRequired,
+    // accountBalance: PropTypes.string.isRequired,
 };
 
 export default Card;
