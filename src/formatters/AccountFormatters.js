@@ -1,10 +1,11 @@
-function formatMoney(amount) {
-    // let stringAmount = amount.toString();
-    // console.log(typeof stringAmount)
-    // (amount.includes('.')) ? console.log('true') : console.log('false');
-    return `$${amount}`;
-};
+
+
+const formatDollars = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
 
 export {
-    formatMoney,
+    formatDollars,
 }
