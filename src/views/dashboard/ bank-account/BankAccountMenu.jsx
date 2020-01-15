@@ -7,7 +7,7 @@ import { formatDollars } from '../../../formatters/AccountFormatters';
 
 function BankAccountMenu(props) {
 
-    const [ bankAccounts, setBankAccountStatus ] = useState({});
+    const [ bankAccounts, setBankAccountTotal ] = useState({});
     
     useEffect(() => {
         accountTotal();
@@ -18,7 +18,7 @@ function BankAccountMenu(props) {
         for(let i = 0; i < props.bankAccounts.length; i += 1) {
             bankAccountsTotal = bankAccountsTotal + props.bankAccounts[i].Balance
         }
-        setBankAccountStatus({ sumTotal: bankAccountsTotal });
+        setBankAccountTotal({ sumTotal: bankAccountsTotal });
     }
 
     function formatAccountNumber(accountNumber) {
@@ -47,7 +47,7 @@ function BankAccountMenu(props) {
                             <p>{bankAccount.AccountType}</p>
                             <p>{formatAccountNumber(bankAccount.AccountNumber)}</p>
                         </div>
-                        {/* <div className='container__col-lg-5'></div> */}
+                        <div className='container__col-lg-5'></div>
                         <div className='container__col-lg-3 bankAccountMenu__balanceInfo'>
                             <p className='text--bold'>{formatDollars.format(bankAccount.Balance)}</p>
                         </div>

@@ -7,17 +7,64 @@ import './CreditCardMenu.scss';
 
 function CreditCardMenu(props) {
 
+    const [ creditCards, modifyCreditCard ] = useState({});
+
+    useEffect(() => {
+        calculateTotalCredit()
+    });
+
+    function calculateTotalCredit() {
+        let totalCreditAvailable = 0;
+        for(let credit of props.creditCards) {
+            totalCreditAvailable += credit.AvailableCash;
+        } 
+        modifyCreditCard({ availableCredit: totalCreditAvailable });
+    }
+
+    function formatAccountNumber(accountNumber) {
+        let account = accountNumber.toString();
+        let formattedNumber = [];
+        for(let i = 0; i < account.length - 4; i += 1 ){
+            formattedNumber.push('*');
+        }
+        return formattedNumber.join('') + account.substring(account.length - 4);
+    }
+
     return (
         <div className='credCardMenu'>
             <Card
                 cardTitle='Total Credit Available'>
-                    <h1>$5000.00</h1>
+                <h1>{formatDollars.format(creditCards.availableCredit)}</h1>
             </Card>
+            {props.creditCards.map((creditCard, index) => {
+                return (
+                    <Card
+                        key={index}
+                        cardTitle={creditCard.CC_Name}
+                        >
+                            <div className='container__row--no-wrap'>
+                                <div className='container__col-lg-6'>
+                                    <p>{formatAccountNumber(creditCard.CC_Number)}</p>
+                                </div>
+                                <div className='container__col-lg-3'>
+                                <div className='container__col-lg-5'></div>
+                <p className='text--bold'>{formatDollars.format(creditCard.CC_Balance)}</p>
+                                </div>
+                                <div className='container__col-lg-3'>
+                                    <FontAwesomeIcon
+                                        color='white'
+                                        icon='angle-right'
+                                        size='lg' />
+                                </div>
+                            </div>
+                        </Card>
+                )
+            })}
         </div>
     );
 }
 
-const CredCardPropTypes = {
+const CreditCardPropTypes = {
     Id: PropTypes.number.isRequired,
     CC_Name: PropTypes.string.isRequired,
     CC_Provider: PropTypes.string.isRequired,
@@ -29,8 +76,8 @@ const CredCardPropTypes = {
 };
 
 CreditCardMenu.propTypes = {
-    credCards: PropTypes.arrayOf(PropTypes.shape(
-        CredCardPropTypes
+    creditCards: PropTypes.arrayOf(PropTypes.shape(
+        CreditCardPropTypes
     )).isRequired
 };
 

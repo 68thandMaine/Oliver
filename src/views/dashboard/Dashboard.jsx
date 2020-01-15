@@ -35,7 +35,7 @@ function Dashboard(props) {
         <BankAccountMenu 
           bankAccounts={props.bankAccounts}/>
         <CreditCardMenu
-          />
+          creditCards={props.creditCards}/>
       </div>
       <div className='container__col-sm-6'>
         <div className='container__row'>
@@ -55,7 +55,7 @@ function Dashboard(props) {
 
 const mapStateToProps = state => ({
   bankAccounts: state.bankAccounts,
-  creditCards: state.credCards,l
+  creditCards: state.creditCards,
 });
 
 export default connect(mapStateToProps)(Dashboard);
