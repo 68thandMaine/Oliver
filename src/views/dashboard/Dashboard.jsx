@@ -6,7 +6,8 @@ import initialState from '../../constants';
 // import PropTypes from 'prop-types';
 
 import './Dashboard.css';
-import BankAccount from './ bank-account/BankAccount';
+import BankAccountMenu from './ bank-account/BankAccountMenu';
+import CreditCardMenu from './credit-card/CreditCardMenu';
 
 
 // const state = initialState.initialState;
@@ -18,7 +19,7 @@ function Dashboard(props) {
 
     <div className='container--fluid'>
       <div className='container__row'>
-      <div className='container__col-sm-6'>
+      <div className='container__col-sm-6 accounts'>
         {/* <div>
           <h3>Dashboard Requirements</h3>
           <ul>
@@ -31,8 +32,10 @@ function Dashboard(props) {
             <li>Form Options</li>
             </ul>
         </div> */}
-        <BankAccount 
+        <BankAccountMenu 
           bankAccounts={props.bankAccounts}/>
+        <CreditCardMenu
+          />
       </div>
       <div className='container__col-sm-6'>
         <div className='container__row'>
@@ -52,6 +55,7 @@ function Dashboard(props) {
 
 const mapStateToProps = state => ({
   bankAccounts: state.bankAccounts,
+  creditCards: state.credCards,l
 });
 
 export default connect(mapStateToProps)(Dashboard);

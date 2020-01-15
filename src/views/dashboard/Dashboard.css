@@ -11,3 +11,7 @@
   opacity: 0;
   background: lightcyan;
 }
+
+.accounts {
+  display: flex;
+}

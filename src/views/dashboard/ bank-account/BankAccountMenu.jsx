@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Card from '../../../components/card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './BankAccount.scss';
-import { formatMoney } from '../../../formatters/AccountFormatters';
+import './BankAccountMenu.scss';
+import { formatDollars } from '../../../formatters/AccountFormatters';
 
-function BankAccount(props) {
+function BankAccountMenu(props) {
 
     const [ bankAccounts, setBankAccountStatus ] = useState({});
     
@@ -34,25 +34,28 @@ function BankAccount(props) {
         <div className='bankAccountMenu'>
             <Card
                 cardTitle='Total In All Bank Accounts' >
-                <h1>{formatMoney(bankAccounts.sumTotal)}</h1>
+                <h1>{formatDollars.format(bankAccounts.sumTotal)}</h1>
             </Card>
             {props.bankAccounts.map((bankAccount, index)=> {
                 return (
                 <Card
                     key={index}
-                    cardTitle={bankAccount.AccountName}>
+                    cardTitle={bankAccount.AccountName}
+                    >
                     <div className='container__row--no-wrap bankAccountMenu__account'>
-                        <div className='container__col-lg-4 bankAccountMenu__accountInfo'>
+                        <div className='container__col-lg-6 bankAccountMenu__accountInfo'>
                             <p>{bankAccount.AccountType}</p>
                             <p>{formatAccountNumber(bankAccount.AccountNumber)}</p>
                         </div>
-                        <div className='container__col-lg-5'></div>
+                        {/* <div className='container__col-lg-5'></div> */}
                         <div className='container__col-lg-3 bankAccountMenu__balanceInfo'>
-                        <p className='text--bold'>{formatMoney(bankAccount.Balance)}</p>
-                        <FontAwesomeIcon
-                                color='white' 
-                                icon='angle-right'
-                                size='lg' />
+                            <p className='text--bold'>{formatDollars.format(bankAccount.Balance)}</p>
+                        </div>
+                        <div className='container_col-lg-3 '>
+                            <FontAwesomeIcon
+                                    color='white' 
+                                    icon='angle-right'
+                                    size='lg' />
                         </div>
                     </div>
                 </Card>
@@ -74,10 +77,10 @@ const BankAccountPropTypes = {
     AvailableCash: PropTypes.number.isRequired
 }
 
-BankAccount.propTypes = {
+BankAccountMenu.propTypes = {
     bankAccounts: PropTypes.arrayOf(PropTypes.shape(
         BankAccountPropTypes
     )).isRequired
 };
 
-export default BankAccount;
+export default BankAccountMenu;

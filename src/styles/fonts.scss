@@ -82,9 +82,9 @@ button {
 
 .text {
   color: $dm_p;
-  
 
   &--bold {
-    font-weight: 800;
+    color: $dm_p;
+    font-weight: 400;
   }
 }
