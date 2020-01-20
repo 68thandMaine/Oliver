@@ -5,10 +5,8 @@ import initialState from '../../constants';
 
 // import PropTypes from 'prop-types';
 
-import './Dashboard.css';
-import BankAccountMenu from './ bank-account/BankAccountMenu';
-import CreditCardMenu from './credit-card/CreditCardMenu';
-
+import './Dashboard.scss';
+import AccountMenu from '../../components/account/AccountMenu';
 
 // const state = initialState.initialState;
 
@@ -17,7 +15,7 @@ function Dashboard(props) {
 
   return (
 
-    <div className='container--fluid'>
+    <div className='container--fluid dashboard'>
       <div className='container__row'>
       <div className='container__col-sm-6 accounts'>
         {/* <div>
@@ -32,10 +30,15 @@ function Dashboard(props) {
             <li>Form Options</li>
             </ul>
         </div> */}
-        <BankAccountMenu 
-          bankAccounts={props.bankAccounts}/>
-        <CreditCardMenu
-          creditCards={props.creditCards}/>
+        <AccountMenu
+          accountType='bankAccount'
+          accounts = {props.bankAccounts}
+          />
+
+        <AccountMenu
+          accountType='creditCard'
+          accounts = {props.creditCards}
+          />  
       </div>
       <div className='container__col-sm-6'>
         <div className='container__row'>

@@ -1,0 +1,10 @@
+.accountMenu {
+    width: 40%;
+
+
+    &__accountInfo {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+}

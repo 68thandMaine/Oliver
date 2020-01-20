@@ -29,6 +29,10 @@ function App(props) {
      setView(view)
   }
 
+  const content = {
+    marginTop: '2vh',
+  };
+
   return (
     <div className="container--fluid">
       <div className="container__row--no-wrap">
@@ -36,7 +40,7 @@ function App(props) {
           <NavBar 
             handleSetActiveView={onSetActiveView}/>
         </div>
-        <div className='container__col-lg-10'>
+        <div className='container__col-lg-10' style={content}>
           {/* <StyleSheet /> */}
           <Routes />
           {/* {view} */}

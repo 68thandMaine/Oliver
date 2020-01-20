@@ -13,7 +13,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 // Styling Stuff
 import './index.scss';
-import './styles/fonts.scss';
+import './styles/fonts/fonts.scss';
 import './styles/grid-system.scss';
 import './styles/surfaces.scss';
 
