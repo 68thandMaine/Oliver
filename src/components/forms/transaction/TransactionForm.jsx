@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-import Button from '../../button';
-import Input from '../../input';
+import Button from '../../styles/button/Button';
+import Input from '../../styles/input/Input';
 
 import './TransactionForm.css';
 

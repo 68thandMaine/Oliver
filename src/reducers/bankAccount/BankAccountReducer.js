@@ -1,11 +1,14 @@
 import types from '../../constants';
+import initialState from '../../constants/InitialState'
 
-const BankAccountReducer = ( state = {}, action ) => {
+
+const BankAccountReducer = ( state = initialState.BankAccount, action ) => {
   let newState;
   switch( action.type ) {
-    case types.RECEIVE_BANKACCOUNT: {
+    case types.RECEIVE_BANKACCOUNTS: {
       newState = Object.assign ({}, state);
-      newState = action.bankAccounts;
+      console.log(newState)
+      // newState = action.bankAccounts;
       return newState;
     }
     default:

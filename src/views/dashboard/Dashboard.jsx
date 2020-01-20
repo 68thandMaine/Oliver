@@ -1,25 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import initialState from '../../constants';
 
 // import PropTypes from 'prop-types';
 
-import './Dashboard.css';
-import Form from '../../components/forms';
+import './Dashboard.scss';
+import AccountMenu from '../../components/account/AccountMenu';
 
-const state = initialState.initialState;
+// const state = initialState.initialState;
 
 function Dashboard(props) {
 
 
   return (
 
-    <div className='container--fluid'>
+    <div className='container--fluid dashboard'>
       <div className='container__row'>
-      <div className='container__col-lg-6'>
-        <div>
-          <h1>Dashboard Requirements</h1>
-          <p>This is the dasboard view. It should have the following components:</p>
+      <div className='container__col-sm-6 accounts'>
+        {/* <div>
+          <h3>Dashboard Requirements</h3>
           <ul>
             <li>Income This Month</li>
             <li>Total amount of money available</li>
@@ -28,16 +28,25 @@ function Dashboard(props) {
             <li>Total Savings</li>
             <li>Menu</li>
             <li>Form Options</li>
-          </ul>
-        </div>
+            </ul>
+        </div> */}
+        <AccountMenu
+          accountType='bankAccount'
+          accounts = {props.bankAccounts}
+          />
+
+        <AccountMenu
+          accountType='creditCard'
+          accounts = {props.creditCards}
+          />  
       </div>
-      <div className='container__col-lg-6'>
+      <div className='container__col-sm-6'>
         <div className='container__row'>
-          <h1>Section 2</h1>
+          <h3>Section 2</h3>
           <p>This section will hold my graphs.</p> 
         </div>
         <div className='container__row'>
-          <h1>Section 3</h1>
+          <h3>Section 3</h3>
           <p>This section will be for controlling the graphs</p>
         </div>
         </div>
@@ -47,4 +56,9 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+const mapStateToProps = state => ({
+  bankAccounts: state.bankAccounts,
+  creditCards: state.creditCards,
+});
+
+export default connect(mapStateToProps)(Dashboard);
