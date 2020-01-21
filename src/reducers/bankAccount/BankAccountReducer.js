@@ -7,8 +7,6 @@ const BankAccountReducer = ( state = initialState.BankAccount, action ) => {
   switch( action.type ) {
     case types.RECEIVE_BANKACCOUNTS: {
       newState = Object.assign ({}, state);
-      console.log(newState)
-      // newState = action.bankAccounts;
       return newState;
     }
     default:
