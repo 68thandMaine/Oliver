@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 function TableHeader(props) {
 const {
     numberOfRows,
-    header,
+    headerContent,
 } = props;
+
+
+useEffect(() => {
+getHeaderInfo()
+    
+}, []);
+
+function getHeaderInfo() {
+    console.log('-----');
+    // console.log('header type: ', typeof headerContent);
+    console.log('header: ', props.headerContent);
+    // console.log('header length: ', headerContent.length);
+    // console.log('header[0] ', headerContent[0]);
+    console.log('-----')
+    console.log('');
+}
+
 
     return (
         <thead>
             <tr>
-                
-                    <button onClick={(e) => console.log(header[0].length)}>Header Values</button>               
-                
+                <button onClick={(e) => console.log(getHeaderInfo())} >Click </button>
             </tr>
             <tr>
                 <th>Date</th>
@@ -26,7 +41,8 @@ const {
 };
 
 TableHeader.propTypes = {
-    numberOfRows: PropTypes.number.isRequired,
+    // numberOfRows: PropTypes.number.isRequired,
+    headerContent: PropTypes.array.isRequired
 };
 
 export default TableHeader;

@@ -1,0 +1,156 @@
+// Spacing Utility Classes
+// Description:
+//  A set a utility classes to use for controlled spacing. The set includes both margins and padding. margin auto is
+//  also included for varoius needs (including flexbox). The set includes the directional properties for margin and
+//  padding (i.e. margin-right, padding-bottom, etc.). The set also includes responsive value integration to control
+//  those values at different breakpoints defined in $grid-breakpoints.
+//
+// Usage:
+//  On an element, add the appropriate class (i.e. "u-mb1", "u-p2", etc.). Responsive styles use 'min-width' to easily
+//  replace the lower breakpoint value (i.e. "u-p1 u-p1-sm u-p1-md u-p1-lg").
+
+// Property value map for each breakpoint increment.
+// This can be any number of values; 1, 2, 5, 7, one million (though that one is not recommended)
+
+$u-spacing: (
+  0: (
+    b: 0,
+    sm: 0,
+    md: 0,
+    lg: 0
+  ),
+  1: (
+    b: 2px,
+    sm: 2px,
+    md: 2px,
+    lg: 2px
+  ),
+  2: (
+    b: 4px,
+    sm: 4px,
+    md: 4px,
+    lg: 4px
+  ),
+  3: (
+    b: 8px,
+    sm: 8px,
+    md: 8px,
+    lg: 8px
+  ),
+  4: (
+    b: 16px,
+    sm: 16px,
+    md: 16px,
+    lg: 16px
+  ),
+  5: (
+    b: 32px,
+    sm: 32px,
+    md: 32px,
+    lg: 32px
+  ),
+  6: (
+    b: 64px,
+    sm: 64px,
+    md: 64px,
+    lg: 64px
+  ),
+  7: (
+    b: 128px,
+    sm: 128px,
+    md: 128px,
+    lg: 128px
+  ),
+  8: (
+    b: 256px,
+    sm: 256px,
+    md: 256px,
+    lg: 256px
+  ),
+  a: (
+    b: auto,
+    sm: auto,
+    md: auto,
+    lg: auto
+  )
+) !default;
+
+// Helper mixin used by u-spacing-init to generate the rulesets
+@mixin u-spacing-create-rulesets($value-map, $key: null) {  
+  $types: padding, margin;
+  $directions: (
+    top: t,
+    right: r,
+    bottom: b,
+    left: l
+  );
+
+  // Breakpoint name suffix to append when in a media query
+  $key-part: if($key, -#{$key}, null);
+  @each $prop, $value in $value-map {
+    @each $type in $types {
+      // Get the first letter from the type to insert into the selector
+      $type-letter: str-slice($type, 0, 1);
+
+      .u-#{$type-letter}#{$prop}#{$key-part} {
+        #{$type}: $value !important;
+      }
+
+      // Generate rulsets for the top, right, bottom, and left properties
+      @each $dir, $dir-letter in $directions {
+        .u-#{$type-letter}#{$dir-letter}#{$prop}#{$key-part} {
+          #{$type}-#{$dir}: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin u-spacing-init($value-map, $breakpoint-map) {
+  $all: (b: ());
+  @each $bp, $width in $breakpoint-map {
+    $all: map-merge($all, ($bp: ())); 
+  }
+
+  @each $prop, $rules in $value-map {
+    // value map is the u-spacing object up top.
+    // prop are 0, 1, 2, 3, 4, 5, 7, 7, 8, a
+    // rules are (b: 0, sm: 0, md: 0, lg: 0)
+    @each $breakpoint, $val in $rules {
+      // breakpoint is b, sm, md, lg
+      // val is the pixel value in the rule    
+      // sets each breakpoint map like {breakpoint}: ( {prop}: {val}, ... )
+      $all: map-deep-set($all, $breakpoint, $prop, $val);
+    }
+  }
+  
+  // Begin the generating of rulesets
+  @each $key, $value-map in $all {    
+    @if $key == b {
+      @include u-spacing-create-rulesets($value-map);
+    } @else if map-has-key($breakpoint-map, $key) {      
+      $bp-width: map-get($breakpoint-map, $key);
+      @media (min-width: $bp-width) {
+        @include u-spacing-create-rulesets($value-map, $key);
+      }
+    }
+  }
+}
+
+
+// Kick off the spacing utility ruleset generation
+@include u-spacing-init($u-spacing, $grid-breakpoints);
+
+// Width utility classes. Max-width comes in handy to limit text line-length.
+.u-mw1  {  max-width: 10rem; } // 160px
+.u-mw2  {  max-width: 20rem; } // 320px
+.u-mw3  {  max-width: 28rem; } // 448px
+.u-mw4  {  max-width: 32rem; } // 512px
+.u-mw5  {  max-width: 36rem; } // 576px
+.u-mw6  {  max-width: 40rem; } // 640px
+.u-mw7  {  max-width: 44rem; } // 704px
+.u-mw8  {  max-width: 50rem; } // 800px
+.u-mw9  {  max-width: 60rem; } // 960px
+.u-mw-100  { max-width: 100%; }
+.u-w-100 { width: 100%; }
+

@@ -6,6 +6,8 @@ const TransactionReducer = ( state = initialState.Transaction, action ) => {
     switch(action.type) {
         case types.RECEIVE_TRANSACTIONS: {
             newState = Object.assign({}, state);
+            console.log(newState);
+            debugger;
             return newState;
         }
         default:

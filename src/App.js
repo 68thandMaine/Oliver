@@ -1,12 +1,12 @@
 // Important Stuff
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { connect } from 'react-redux';
 import NavBar from './components/nav-bar/NavBar';
 
 // API Stuff
 import { getBankAccounts } from './actions/BankAccountActions';
 // Router Stuff
-import Routes from './routes/Routes';
+// import Routes from './routes/Routes';
 // Styles for app
 import StyleSheet from './assets/style-sheet/stylesheet';
 // Icons
@@ -19,14 +19,14 @@ library.add(fab, faCogs, faChartPie, faFileInvoiceDollar, faLandmark, faListAlt,
 
 function App(props) {
 
-  let [ view, setView ] = useState('dashboard');
+  // let [ view, setView ] = useState('dashboard');
 
   useEffect(() => {
     props.dispatch(getBankAccounts());
   },[props]);
 
   function onSetActiveView(view) {
-     setView(view)
+    //  setView(view)
   }
 
   const content = {
@@ -41,8 +41,8 @@ function App(props) {
             handleSetActiveView={onSetActiveView}/>
         </div>
         <div className='container__col-lg-10' style={content}>
-          {/* <StyleSheet /> */}
-          <Routes />
+          <StyleSheet />
+          {/* <Routes /> */}
           {/* {view} */}
         </div>
       </div>

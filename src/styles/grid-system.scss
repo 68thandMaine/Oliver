@@ -4,13 +4,22 @@ $grid__bp-lg: 992;
 $grid__bp-xl: 1200;
 $grid__cols: 12;
 
-$map-grid-props: (
+$map-breakpoints: (
         '': 0,
         '-sm': $grid__bp-sm,
         '-md': $grid__bp-md,
         '-lg': $grid__bp-lg,
         '-xl': $grid__bp-xl
-);
+) !default;
+
+
+$grid-breakpoints: (
+  sm: 394px,
+  md: 505px,
+  lg: 616px
+) !default;
+
+
 
 @mixin create-mq($breakpoint, $min-or-max) {
   @if($breakpoint == 0) {
@@ -38,7 +47,7 @@ $map-grid-props: (
   }
 }
 
-@each $modifier , $breakpoint in $map-grid-props {
+@each $modifier , $breakpoint in $map-breakpoints {
   @if($modifier == '') {
     $modifier: '-xs';
   }
@@ -73,7 +82,7 @@ $map-grid-props: (
       flex-wrap: nowrap
     }
   }
-  @each $modifier , $breakpoint in $map-grid-props {
+  @each $modifier , $breakpoint in $map-breakpoints {
     @include create-col-classes($modifier, $grid__cols, $breakpoint);
   }
 }

@@ -1,25 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TableHeader from './table-elements/TableHeader';
 import TableBody from './table-elements/TableBody';
 
 function TransactionTable(props) {
-  let headerValues = [];
-  let bodyValues = [];
-  useEffect(() => {
-    headerValues.push(Object.keys(props.transactionData[0]));
-    bodyValues.push(props.transactionData);
+  const [ tableProperties, setTableProperties ] = useState({
+    transactions : props.transactionData.transactions,
   });
-  
+  useEffect(() => {
+    const headerValues = [ ...new Set(Object.keys(props.transactionData.transactions[0]))]
+    setTableProperties( Object.assign(tableProperties, {headerContent: headerValues}));
+    console.log(tableProperties)
+  });
   
   
   return (
       <table>
-        {/* <button onClick={(e) => console.log(headerValues)}>Click this shit</button> */}
+        {/* <button onClick={() => Object.entries(headerValues)}>Click this shit</button> */}
           <TableHeader 
-            header = {headerValues} />
+            headerContent = {tableProperties} />
           <TableBody
-            body = {bodyValues} />
+            body = {tableProperties.transactions} />
       </table>
   )  
 };
@@ -35,7 +36,7 @@ const TransactionProps = {
 }
 
 TransactionTable.propTypes = {
-  transactionData: PropTypes.arrayOf(PropTypes.shape(TransactionProps))
+  // transactionData: PropTypes.arrayOf(PropTypes.shape(TransactionProps)).isRequired
 };
 
 export default TransactionTable;

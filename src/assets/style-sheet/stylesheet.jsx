@@ -81,6 +81,13 @@ function StyleSheet(props) {
                         <p>p Font Family: Varela Round</p>
                         <p>p bold: <span className='text--bold'>Bold text</span> (800)</p>
                     </div>
+                    <div className='container__col-lg-4'>
+                        <h3>Spacing</h3>
+                        <p>Spacing utility classes based off of the RF Prefab util classes can be used to adjust margins, padding, and positioning.</p> 
+                        <p>Top</p>
+                        <p className='u-p4'>margin-top: 4</p>
+                        <p>End</p>
+                    </div>
                     </div>
                     </div>
             </div>
