@@ -2,7 +2,7 @@
 
 Have you ever wanted an easier way to plan your budget and start saving towards goals? Oliver is being built to make it easier to understand where your money goes, and what you can do with it after bills have been paid.
 
-Oliver is a budgeting application that uses React on the fontend, a C# web api as a data access layer, and a MySql database. A user will be able to create bills, input paychecks, and create goals. Oliver will takes the input and cretes visually appealing and meaningful graphs to make it easier to understand where money goes and what the status of your financial health is.
+Oliver is a budgeting application that uses React on the fontend, a C# web api as a data access layer, and a MySql database. A user will be able to create bills, input paychecks, and create goals. Oliver will takes the input and creates visually appealing and meaningful graphs to make it easier to understand where money goes and what the status of your financial health is.
 ___
 
 ## Table of Contents

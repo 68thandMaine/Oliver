@@ -77,7 +77,7 @@ $u-spacing: (
 
 // Helper mixin used by u-spacing-init to generate the rulesets
 @mixin u-spacing-create-rulesets($value-map, $key: null) {  
-  $types: padding, margin;
+  $types: padding, margin, absolute, relative;
   $directions: (
     top: t,
     right: r,
@@ -100,6 +100,11 @@ $u-spacing: (
       @each $dir, $dir-letter in $directions {
         .u-#{$type-letter}#{$dir-letter}#{$prop}#{$key-part} {
           #{$type}-#{$dir}: $value !important;
+        }
+
+        .u-#{type-letter}#{$dir-letter}#{$prop} {
+          position: $type;
+          #{$dir}: #{$value} !important;
         }
       }
     }
