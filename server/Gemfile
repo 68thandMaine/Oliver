@@ -6,3 +6,4 @@ gem 'pry'
 
 # For routing with Sinatra
 gem('sinatra')
+gem('sinatra-contrib')
