@@ -7,6 +7,7 @@ import initialState from '../../constants';
 
 import './Dashboard.scss';
 import AccountMenu from '../../components/account/AccountMenu';
+import Graphs from '../../components/graphs';
 
 // const state = initialState.initialState;
 
@@ -42,8 +43,8 @@ function Dashboard(props) {
       </div>
       <div className='container__col-sm-6'>
         <div className='container__row'>
-          <h3>Section 2</h3>
           <p>This section will hold my graphs.</p> 
+          <Graphs />
         </div>
         <div className='container__row'>
           <h3>Section 3</h3>

@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+# For debugging and testing
+gem 'rspec'
+gem 'pry'
+
+# For routing with Sinatra
+gem('sinatra')
