@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Accounts</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Bank Accounts</h1>
+
+      <% if @bank_accounts.any? %>
+      <ul>
+        <% @bank_accounts.each do |bank_account| %>
+        <li><%= bank_account.account_name %></li>
+        <li><%= bank_account.bank_name %></li>
+        <li><%= bank_account.account_type %></li>
+        <li><%= bank_account.routing_number %></li>
+        <li><%= bank_account.account_number %></li>
+        <li><%= bank_account.balance %></li>
+        <li><%= bank_account.available_cash %></li>
+        <li><%= bank_account.apy %></li>
+        <% end %>
+      </ul>
+
+      <% else %> 
+      <p>There are currently no bank accounts available</p>
+
+      <% end %>
+
+      <a href="/bank_accounts/new">Add a bank account</a>
+    </div>
+  </body>
+</html>
