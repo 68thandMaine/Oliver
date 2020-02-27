@@ -7,6 +7,7 @@ import initialState from '../../constants';
 
 import './Dashboard.scss';
 import AccountMenu from '../../components/account/AccountMenu';
+import Graphs from '../../components/graphs/index';
 
 // const state = initialState.initialState;
 
@@ -17,7 +18,20 @@ function Dashboard(props) {
 
     <div className='container--fluid dashboard'>
       <div className='container__row'>
-      <div className='container__col-sm-6 accounts'>
+      
+        <div className='container__col-lg-6'>
+        
+          <div className='container__row'>
+            <Graphs 
+              graphDaa = {props.transactions}
+               />
+          </div>
+
+        <div className='container__row'>
+          <h3>Section 3</h3>
+          <p>This section will be for controlling the graphs</p>
+        </div>
+        <div className='container__col-sm-6 accounts'>
         {/* <div>
           <h3>Dashboard Requirements</h3>
           <ul>
@@ -35,22 +49,13 @@ function Dashboard(props) {
           accounts = {props.bankAccounts}
           />
 
-        <AccountMenu
+          <AccountMenu
           accountType='creditCard'
           accounts = {props.creditCards}
           />  
       </div>
-      <div className='container__col-sm-6'>
-        <div className='container__row'>
-          <h3>Section 2</h3>
-          <p>This section will hold my graphs.</p> 
-        </div>
-        <div className='container__row'>
-          <h3>Section 3</h3>
-          <p>This section will be for controlling the graphs</p>
-        </div>
-        </div>
       </div>
+    </div>
   </div>
 
   );
@@ -59,6 +64,7 @@ function Dashboard(props) {
 const mapStateToProps = state => ({
   bankAccounts: state.bankAccounts,
   creditCards: state.creditCards,
+  transactions: state.transactions
 });
 
 export default connect(mapStateToProps)(Dashboard);
