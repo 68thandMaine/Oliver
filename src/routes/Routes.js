@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 
-import Dashboard from '../views/dashboard/Dashboard';
+import Dashboard from '../views/dashboard/Dashboard/Dashboard';
 
 function Routes() {
   return (

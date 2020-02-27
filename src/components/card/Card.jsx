@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CardBody from './body/CardBody';
 import CardHeader from './header/CardHeader';
-import './Card.scss';
 
 function Card( props ) {
 

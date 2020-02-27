@@ -4,8 +4,8 @@ import rd3 from 'react-d3-library';
 function Graphs(props) {
 
   return (
-    <div classname="container-fluid">
-      <h1>Graph Title</h1>
+    <div className="container-fluid">
+      <h1 className={"container-row text-center"}>Graph Title</h1>
     </div>
       );
 };

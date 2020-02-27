@@ -100,3 +100,10 @@ button {
     font-weight: 400;
   }
 }
+
+@include b("text") {
+
+  @include m("center") {
+    text-align: center;
+  }
+}

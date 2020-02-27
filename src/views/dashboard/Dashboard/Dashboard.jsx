@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import initialState from '../../constants';
+import initialState from '../../../constants';
 
 // import PropTypes from 'prop-types';
 
 import './Dashboard.scss';
-import AccountMenu from '../../components/account/AccountMenu';
-import Graphs from '../../components/graphs/index';
+import AccountMenu from '../../../components/account/AccountMenu';
+import Graphs from '../../../components/graphs/index';
 
 // const state = initialState.initialState;
 

@@ -13,10 +13,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 // Styling Stuff
 import './index.scss';
-import './styles/fonts/fonts.scss';
-import './styles/grid-system.scss';
-import './styles/surfaces.scss';
-
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
