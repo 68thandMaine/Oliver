@@ -30,6 +30,7 @@ h5,
 h6 {
   font-family: 'Josefin Sans', sans-serif;
   color: $dm_attn;
+  font-weight: 100;
 }
 
 h1 {
@@ -85,6 +86,10 @@ button {
 .text {
   color: $dm_p;
 
+  &--center {
+    font-size: 0.75em;
+    text-align: center;
+  }
   &__small {
     font-size: 0.75em;
     
@@ -98,12 +103,5 @@ button {
   &--bold {
     color: $dm_p;
     font-weight: 400;
-  }
-}
-
-@include b("text") {
-
-  @include m("center") {
-    text-align: center;
   }
 }

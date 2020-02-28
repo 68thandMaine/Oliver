@@ -35,17 +35,13 @@ function App(props) {
 
   return (
     <div className="container--fluid">
-      <div className="container__row--no-wrap">
-        <div className='container__col-lg-2'>
-          <NavBar 
-            handleSetActiveView={onSetActiveView}/>
-        </div>
-        <div className='container__col-lg-10' style={content}>
+      <NavBar 
+        handleSetActiveView={onSetActiveView}/>
+        <div className='container__col-lg-12' style={content}>
           {/* <StyleSheet /> */}
           <Routes />
           {/* {view} */}
         </div>
-      </div>
     </div>
   );
 }

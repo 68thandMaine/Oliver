@@ -1,12 +1,9 @@
-//Utilities
+@import "./themes/dm-theme.scss";
 @import "./utilities/sass-bem-utils";
-
+@import "./utilities/sass-bem-utils";
 // Fonts
 @import "./fonts/fonts.scss";
-
-// Themes
-@import "./themes/dm-theme.scss";
-
+@import "./functions/index.scss";
 // Third Party Libraries
 @import "sass-bem";
 
@@ -22,3 +19,14 @@ $bem: (
 	modifier: '--',
 	state: '-'
 );
+
+
+$grid-breakpoints: (
+  sm: 394px,
+  md: 505px,
+  lg: 616px
+) !default;
+
+// Utilities
+@import "./utilities/positioning";
+

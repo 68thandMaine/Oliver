@@ -1,10 +1,9 @@
 import React from 'react';
-import './CardBody.scss';
 
 function CardBody(props) {
 
     return (
-        <div className='container cardBody'>
+        <div className='container u-pb3'>
            {props.children}
         </div>
     );

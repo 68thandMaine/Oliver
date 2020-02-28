@@ -4,6 +4,9 @@ $grid__bp-lg: 992;
 $grid__bp-xl: 1200;
 $grid__cols: 12;
 
+// Used in the positioning utility. Probably should use it to refactor too.
+
+
 $map-grid-props: (
         '': 0,
         '-sm': $grid__bp-sm,

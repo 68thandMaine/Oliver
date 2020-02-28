@@ -1,0 +1,8 @@
+@include b('navbar') {
+  border: 1px solid red;
+  
+  @include m('center') {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
