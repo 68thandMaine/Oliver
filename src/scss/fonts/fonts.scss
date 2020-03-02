@@ -61,8 +61,9 @@ p,
 label,
 li,
 input,
+input::-webkit-input-placeholder,
 button {
-  font-size: 1em;
+  font-size: -.5em;
   font-family: 'Varela Round', sans-serif;
   color: $dm_p;
 }
@@ -74,12 +75,12 @@ button {
 
 @media screen and (min-width: 50em) {
   html {
-    font-size: 2vw;
+    font-size: 0.75vw;
   }
 }
 @media screen and (min-width: 75em) {
   html {
-    font-size: 1.5em;
+    font-size: 0.85vw;
   }
 }
 

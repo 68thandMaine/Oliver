@@ -1,13 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-
+import NavSearch from './NavSearch';
+import NavLinks from './NavLinks';
 
 function NavBar(props) {
 
   function changeActiveClass(icon, label) {
     
-    if(icon.className.baseVal.includes('icon--active')) {
+    if (icon.className.baseVal.includes('icon--active')) {
       return null;
     } else {
       const activeIcon = document.getElementsByClassName('icon--active');
@@ -30,8 +31,9 @@ function NavBar(props) {
   }
   
   return (
-    <nav className='navbar--center'>
-      
+    <nav className={"navbar navbar--center"}>
+      <NavSearch />
+      <NavLinks />
     </nav>
   )
 }

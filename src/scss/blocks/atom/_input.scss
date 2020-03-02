@@ -1,9 +1,5 @@
-.inputWrapper {
-  display: inline-block;
-}
-
 .input {
-  background: #252525;
+  background: transparent;
   border: none;
   cursor: text;
   padding: 10px 9px 9px;
@@ -14,17 +10,18 @@
   text-align: left;
   box-sizing: border-box;
   caret-color: white;
-}
+  min-width: 100%;
 
+  &--txt {
+    padding: 1vw 2vw;
+    margin: 2vw;
+    width: 90%;
+  }
 
-.txt {
-  padding: 1vw 2vw;
-  margin: 2vw;
-  width: 90%;
-}
+  &--num {
+    width: 5em;
+    padding: 2vw;
+    text-align: center;
+  }
 
-.num {
-  width: 5em;
-  padding: 2vw;
-  text-align: center;
 }

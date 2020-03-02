@@ -8,7 +8,7 @@ import initialState from '../../../constants';
 import './Dashboard.scss';
 import AccountMenu from '../../../components/account/AccountMenu';
 import Graphs from '../../../components/graphs/index';
-
+import NavBar from '../../../components/nav-bar/NavBar';
 // const state = initialState.initialState;
 
 function Dashboard(props) {
@@ -18,7 +18,6 @@ function Dashboard(props) {
     <div className='container--fluid dashboard'>
       <div className='container__col-lg-6'>
         <Graphs graphDaa = {props.transactions} />
-        
         <div className='container__col-sm-6 accounts'>  
           <AccountMenu accountType='bankAccount' accounts={props.bankAccounts}
             />
