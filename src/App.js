@@ -7,8 +7,7 @@ import NavBar from './components/nav-bar/NavBar';
 import { getBankAccounts } from './actions/BankAccountActions';
 // Router Stuff
 import Routes from './routes/Routes';
-// Styles for app
-import StyleSheet from './assets/style-sheet/stylesheet';
+
 // Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';

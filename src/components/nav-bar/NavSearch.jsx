@@ -6,8 +6,10 @@ function NavSearch() {
 
       return (
   <div className="navbar__input-search">
-    <FontAwesomeIcon className='icon--white u-pb4 u-pt2 u-rt3' icon='search'/>
-    <input className="input input__search" autoFocus placeholder="What can I do for you?"/>
+    <span className='py-8'>
+      <FontAwesomeIcon className='icon--white' icon='search'/>
+    </span>
+    <input className="input input__search u-pl2 text-2xl" autoFocus placeholder="What can I do for you?"/>
   </div>
   )
 }

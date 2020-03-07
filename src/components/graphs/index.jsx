@@ -5,7 +5,7 @@ function Graphs(props) {
 
   return (
     <div className="container-fluid text--center u-pt1 u-mb8">
-      <h1 className={"container-row"}>Graph Title</h1>
+      <h1 className="container-row text-6xl">Graph Title</h1>
     </div>
       );
 };
