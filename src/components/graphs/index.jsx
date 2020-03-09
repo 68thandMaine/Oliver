@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import BarChart from './BarChart';
 import Circles from './Circles';
+import PieChart from './PieChart';
 
 function Graphs(props) {
   const exampleData = [ 8, 5, 13, 9, 12 ];
@@ -45,7 +46,8 @@ function Graphs(props) {
 
   return (
     // <BarChart />
-    <Circles />
+    // <Circles />
+    <PieChart />
   )
 };
 

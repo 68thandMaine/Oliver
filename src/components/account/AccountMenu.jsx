@@ -69,7 +69,7 @@ function AccountMenu({
             {accounts.map((account, index) => {
                 return (
                     <Card
-                        key='index'
+                        key= {index}
                         cardTitle={(account.AccountName) ? account.AccountName : account.CC_Name}>
                             <div className='container__row--no-wrap accountMenu__account'>
                                 <div className='container__col-md-12'>
