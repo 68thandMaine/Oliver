@@ -1,5 +1,5 @@
 import React from 'react';
-import rd3 from 'react-d3-library';
+// import rd3 from 'react-d3-library';
 
 function Graphs(props) {
 
