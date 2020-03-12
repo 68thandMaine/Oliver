@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3';
-import BarChart from './BarChart';
-import Circles from './Circles';
 
-function Graphs(props) {
-  const exampleData = [ 8, 5, 13, 9, 12 ];
-  const [data, setData ] = useState(exampleData);
-
+function BarChart(props) {
+  // break down props here into variables to increase readability
+  const [ data, setData ] = useState();
+  
   useEffect(() => {
     drawBarChart(data);
-  })
+  });
 
   function drawBarChart(data) {
     const canvasHeight = 400;
@@ -20,7 +18,6 @@ function Graphs(props) {
       .append("svg")
       .attr("width", canvasWidth)
       .attr("height", canvasHeight)
-      .style("margin", 0)
       .style("border", "1px solid white")
 
       svgCanvas.selectAll("rect")
@@ -39,14 +36,13 @@ function Graphs(props) {
       .attr("y", (dataPoint, i) => canvasHeight - dataPoint * scale - 10)
       .text(dataPoint => dataPoint)
       .style("color", "white")
-
   }
 
-
   return (
-    // <BarChart />
-    <Circles />
-  )
-};
+    <div id="canvas" className="container">
+  
+    </div>
+  );
+}
 
-export default Graphs;
+export default BarChart
