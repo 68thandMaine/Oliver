@@ -24,14 +24,11 @@ function NavBar(props) {
   }
 
   function changeView(view) {
-    const iconId = view +'Icon';
-    const icon = document.getElementById(iconId);
-    changeActiveClass(icon, view);
-    props.handleSetActiveView(view)
+    
   }
   
   return (
-    <nav className={"navbar navbar--center"}>
+    <nav className="navbar navbar--center testing-border">
       <NavSearch />
       <NavLinks />
     </nav>

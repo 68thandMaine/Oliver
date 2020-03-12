@@ -75,12 +75,13 @@ button {
 
 @media screen and (min-width: 50em) {
   html {
-    font-size: 1vw;
+    // split screen with the below commented out looks nice.
+    // font-size: 1vw;
   }
 }
 @media screen and (min-width: 75em) {
   html {
-    font-size: 0.85vw;
+    // font-size: 0.85vw;
   }
 }
 
