@@ -1,15 +1,18 @@
 @import "./variables";
 
+@import "./functions/index.scss";
+
 @import "./themes/dm-theme.scss";
 
 @import "./utilities/sass-bem-utils";
+
 @import "./utilities/testing";
 
-@import "./utilities/sass-bem-utils";
+@import './utilities/positioning';
+
+@import "./utilities/spacing";
 
 @import "./fonts/fonts.scss";
-
-@import "./functions/index.scss";
 
 @import "sass-bem";
 
@@ -13283,14 +13286,6 @@ $bem: (
 	modifier: '--',
 	state: '-'
 );
-
-$grid-breakpoints: (
-  sm: 394px,
-  md: 505px,
-  lg: 616px
-) !default;
-
-@import "./utilities/positioning";
 
 @media (min-width: 640px){
   .sm\:sr-only{

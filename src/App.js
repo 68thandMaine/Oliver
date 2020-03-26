@@ -24,10 +24,6 @@ function App(props) {
     props.dispatch(getBankAccounts());
   },[props]);
 
-  function onSetActiveView(view) {
-     setView(view)
-  }
-
   const content = {
     marginTop: '2vh',
   };
@@ -35,7 +31,7 @@ function App(props) {
   return (
     <div className="container--fluid">
       <NavBar 
-        handleSetActiveView={onSetActiveView}/>
+        linkList = {props.navOptions}/>
         <div className='container__col-lg-12' style={content}>
           {/* <StyleSheet /> */}
           <Routes />
@@ -45,4 +41,8 @@ function App(props) {
   );
 }
 
-export default connect()(App);
+const mapStateToProps = state => ({
+  navOptions: state.NavOptions
+});
+
+export default connect(mapStateToProps)(App);

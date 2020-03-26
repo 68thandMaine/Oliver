@@ -5,5 +5,85 @@ $nav__link--active: #33F5FF;
 $nav__link--text: #61B0E6;
 
 // Global Colors
-
 $white: #eee;
+
+
+// Global maps for spacing and positioning utils:
+// Property value map for each breakpoint increment.
+// This can be any number of values; 1, 2, 5, 7, one million (though that one is not recommended)
+$u-spacing: (
+  0: (
+    b: 0,
+    sm: 0,
+    md: 0,
+    lg: 0
+  ),
+  1: (
+    b: 2px,
+    sm: 2px,
+    md: 2px,
+    lg: 2px
+  ),
+  2: (
+    b: 4px,
+    sm: 4px,
+    md: 4px,
+    lg: 4px
+  ),
+  3: (
+    b: 8px,
+    sm: 8px,
+    md: 8px,
+    lg: 8px
+  ),
+  4: (
+    b: 16px,
+    sm: 16px,
+    md: 16px,
+    lg: 16px
+  ),
+  5: (
+    b: 32px,
+    sm: 32px,
+    md: 32px,
+    lg: 32px
+  ),
+  6: (
+    b: 64px,
+    sm: 64px,
+    md: 64px,
+    lg: 64px
+  ),
+  7: (
+    b: 128px,
+    sm: 128px,
+    md: 128px,
+    lg: 128px
+  ),
+  8: (
+    b: 256px,
+    sm: 256px,
+    md: 256px,
+    lg: 256px
+  ),
+  a: (
+    b: auto,
+    sm: auto,
+    md: auto,
+    lg: auto
+  )
+) !default;
+
+$grid-breakpoints: (
+  sm: 394px,
+  md: 505px,
+  lg: 616px,
+) !default;
+
+// Directional suffix on properties
+$directions: (
+    top: t,
+    right: r,
+    bottom: b,
+    left: l
+  );

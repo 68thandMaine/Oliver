@@ -20,6 +20,14 @@
 
   &__link {
     color: $white;
+
+    &--active {
+      @apply bg-blue-500;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__input-search {
