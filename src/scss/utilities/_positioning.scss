@@ -1,0 +1,59 @@
+@mixin u-position-create-rulesets($value-map, $key: null) {
+  $types: relative, absolute;
+  $key-part: if($key, -#{$key}, null);
+
+  @each $prop, $value in $value-map {
+    @each $type in $types {
+      $type-letter: str-slice($type, 0, 1);
+     
+      @each $dir, $dir-letter in $directions {
+      
+        .u-#{$type-letter}#{$dir-letter}#{$prop} {
+          position: $type;
+          #{$dir}: $value;
+        }
+      
+      }
+    }
+  }
+}
+
+// Mixin to init spacing
+@mixin u-positioning-init($spacing-values, $breakpoint-map) {
+  // Set up a basic map
+  $all: (b: ());
+
+  // set up breakpoint maps from $breakpoint-map
+  @each $bp, $width in $breakpoint-map {
+    $all: map-merge($all, ($bp: ()));
+  }
+  @each $prop, $rules in $spacing-values {
+    @each $breakpoint, $val in $rules {
+      $all: map-deep-set($all, $breakpoint, $prop, $val);
+    }
+  }
+
+  // Begin the generating of rulesets
+  @each $key, $value-map in $all {
+    // When we are on the base 'b' map, do no generate media queries
+    @if $key == b {
+      @include u-position-create-rulesets($value-map);
+    }
+  }
+}
+
+// Kick off the spacing utility ruleset generation
+@include u-positioning-init($u-spacing, $grid-breakpoints);
+
+// Width utility classes. Max-width comes in handy to limit text line-length.
+.u-mw1  {  max-width: 10rem; } // 160px
+.u-mw2  {  max-width: 20rem; } // 320px
+.u-mw3  {  max-width: 28rem; } // 448px
+.u-mw4  {  max-width: 32rem; } // 512px
+.u-mw5  {  max-width: 36rem; } // 576px
+.u-mw6  {  max-width: 40rem; } // 640px
+.u-mw7  {  max-width: 44rem; } // 704px
+.u-mw8  {  max-width: 50rem; } // 800px
+.u-mw9  {  max-width: 60rem; } // 960px
+.u-mw-100  { max-width: 100%; }
+.u-w-100 { width: 100%; }

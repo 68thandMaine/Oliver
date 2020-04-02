@@ -1,0 +1,108 @@
+@import '../themes/dm-theme.scss';
+@import './mixins/font-mixins.scss';
+
+
+p,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+li,
+label {
+  outline: none;
+  margin: 0;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 1rem;
+  color: lightgrey;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: $dm_attn;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p,
+label,
+li,
+input,
+input::-webkit-input-placeholder,
+button {
+  font-size: -.5em;
+  font-family: 'Varela Round', sans-serif;
+  color: $dm_p;
+}
+
+button {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 50em) {
+  html {
+    // split screen with the below commented out looks nice.
+    // font-size: 1vw;
+  }
+}
+@media screen and (min-width: 75em) {
+  html {
+    // font-size: 0.85vw;
+  }
+}
+
+.text {
+  color: $dm_p;
+
+  &--center {
+    font-size: 0.75em;
+    text-align: center;
+  }
+  &__small {
+    font-size: 0.75em;
+    
+    &--italic {
+      font-size: 0.75em;
+      @include italics;
+    }
+  }
+
+  &--bold {
+    color: $dm_p;
+    font-weight: 400;
+  }
+}

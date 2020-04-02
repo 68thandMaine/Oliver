@@ -1,0 +1,74 @@
+@mixin u-spacing-create-rulesets($spacing-values, $key: null) {
+  // Types of spacing properties
+  $spacing-types: padding, margin;
+
+  // If there is sm, md, lg, then the middle value is appended to the className?
+  $bp-suffix: if($key, -#{$key}, null);
+
+  @each $prop, $spacing-value in $spacing-values {
+
+    @each $type in $spacing-types {
+      $type-letter: str-slice($type, 0, 1);
+
+      // With no direction specified 
+      // u-p1-sm or just u-p1
+      .u-#{$type-letter}#{$prop}#{$bp-suffix} {
+        #{$type}: $spacing-value !important;
+      }
+
+      @each $direction, $direction-letter in $directions {
+       // With a direction specified this works like this:
+       // u-pt1 {padding-top:2px}
+        .u-#{$type-letter}#{$direction-letter}#{$prop}#{$bp-suffix} {
+          #{$type}-#{$direction}: $spacing-value !important;
+        }
+      }
+    }
+  }
+}
+
+// Generates a map of rules and media queries to be used before 
+// creating the rules themselves.
+@mixin u-spacing-init($spacing-values, $breakpoints) {
+  // Step 1. Create a map
+  $map: (b:());
+
+  // Step 2. Add Breakpoints as keys to the map
+  @each $breakpoint, $width in $breakpoints {
+    $map: map-merge($map, ($breakpoint: ()));
+  }
+
+  // Step 3. Create new rules to avoid spamming media queries.
+  @each $key, $spacing-value-set in $spacing-values {
+    @each $screen-size_bp, $spacing-value in $spacing-value-set {
+      $map: map-deep-set($map, $screen-size_bp, $key, $spacing-value);
+
+      // This creates a map like this:
+      //$map: (
+      //   b:(0: 0, 1: 2px, 2: 4px...)
+      //   sm:(0: 0, 1: 2px, 2: 4px...)
+      //   md:(0: 0, 1: 2px, 2: 4px...)
+      //   lg:(0: 0, 1: 2px, 2: 4px...)
+      // );
+    }
+  } 
+
+  // Step 4. Generate CSS rules
+  @each $screen-size_bp, $spacing-value-set in $map {
+    @if $screen-size_bp == b {
+      // This block executes if there is no screen size given.
+      @include u-spacing-create-rulesets($spacing-value-set);
+    } @else if map-has-key($breakpoints, $screen-size_bp) {
+      // This block executes if the class has sm, md, or lg specified.
+      // Generates media queries bd off sm, md. or lg.
+      $breakpoint-width: map-get($breakpoints, $screen-size_bp);
+      @media (min-width: $breakpoint-width) {
+        @include u-spacing-create-rulesets($spacing-value-set, $screen-size_bp);
+      }
+    }
+  }
+
+}
+
+// Start the spacing ruleset generation
+@include u-spacing-init($u-spacing, $grid-breakpoints);
