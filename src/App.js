@@ -7,8 +7,7 @@ import NavBar from './components/nav-bar/NavBar';
 import { getBankAccounts } from './actions/BankAccountActions';
 // Router Stuff
 import Routes from './routes/Routes';
-// Styles for app
-import StyleSheet from './assets/style-sheet/stylesheet';
+
 // Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -25,29 +24,25 @@ function App(props) {
     props.dispatch(getBankAccounts());
   },[props]);
 
-  function onSetActiveView(view) {
-     setView(view)
-  }
-
   const content = {
     marginTop: '2vh',
   };
 
   return (
     <div className="container--fluid">
-      <div className="container__row--no-wrap">
-        <div className='container__col-lg-2'>
-          <NavBar 
-            handleSetActiveView={onSetActiveView}/>
-        </div>
-        <div className='container__col-lg-10' style={content}>
+      <NavBar 
+        linkList = {props.navOptions}/>
+        <div className='container__col-lg-12' style={content}>
           {/* <StyleSheet /> */}
           <Routes />
           {/* {view} */}
         </div>
-      </div>
     </div>
   );
 }
 
-export default connect()(App);
+const mapStateToProps = state => ({
+  navOptions: state.NavOptions
+});
+
+export default connect(mapStateToProps)(App);

@@ -1,4 +1,4 @@
-@import './styles/themes/dm-theme.scss';
+@import "./scss/bundle.scss";
 
 body {
   margin: 0;
@@ -9,7 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: $dm_bg;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

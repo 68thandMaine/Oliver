@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'; 
-
 import PropTypes from 'prop-types';
-
-import './Input.css';
 
 const Input = (props) => {
 
