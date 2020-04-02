@@ -27,7 +27,7 @@ function NavBar(props) {
 
 
   return (
-    <nav className="navbar navbar--center testing-border">
+    <nav className="navbar navbar--center">
       <NavSearch />
       <NavLinks linkList={linkList} assignActiveClass={activeClass} activeView={navConfig.activeView}/>
     </nav>
