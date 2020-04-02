@@ -62,7 +62,7 @@ function AccountMenu({
     }
 
     return (
-        <div className='accountMenu'>
+        <div className='card'>
             <Card cardTitle={determineHeader()}>
                 <p>{formatDollars.format(accountInformation.available)}</p>
             </Card>

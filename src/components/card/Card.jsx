@@ -6,7 +6,7 @@ import CardHeader from './header/CardHeader';
 function Card( props ) {
 
     return (
-        <div className='cardWrapper'>
+        <div>
             <CardHeader 
                 title={props.cardTitle}/>
             <CardBody>
