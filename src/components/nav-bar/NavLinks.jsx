@@ -7,7 +7,7 @@ function NavLinks(props) {
   const links = props.linkList.map((link) => <li key={link.id} id={link.name} onClick={() => assignActiveClass(link.name)} className='navbar_link u-pl5 u-pt3 text-lg'>{link.name}</li>)
 
   return (
-    <ul className="navbar--horizontal navbar__link  u-ml8 testing-border">
+    <ul className="navbar--horizontal navbar__link  u-ml8">
       {links}
     </ul>
   );
