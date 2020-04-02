@@ -8,12 +8,12 @@ function Graphs(props) {
   
 
   return (
-    <div className = 'container'>
+    <div className = 'container u-pl7'>
       {/* <BarChart /> */}
       {/* <Circles /> */}
       <PieChart />
     </div>
   )
-};
+}
 
 export default Graphs;
