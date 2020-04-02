@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3';
+import "./pie_chart.scss";
 
 function PieChart() {
-  const width = 400;
+  const width = 500;
   const height = width;
   const margin = 40;
   const radius = Math.min(width, height) / 2 - margin
@@ -40,7 +41,7 @@ function PieChart() {
   });
 
   return (
-    <div id='donutChart'></div>
+      <div id='donutChart'></div>
   )
 }
 
