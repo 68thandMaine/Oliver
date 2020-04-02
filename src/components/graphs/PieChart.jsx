@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3';
 
 function PieChart() {
-  const width = 450;
+  const width = 400;
   const height = width;
   const margin = 40;
   const radius = Math.min(width, height) / 2 - margin
