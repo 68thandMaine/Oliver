@@ -3,8 +3,7 @@
   margin-top: 1.5em;
    
   &--center {
-    display: flex;
-    justify-content: space-evenly;
+    @include center
 
   }
 

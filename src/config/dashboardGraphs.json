@@ -1,0 +1,23 @@
+[
+  {
+    "identifier": "paycheck_identifier",
+    "graphType": "donut",
+    "name": "Paycheck Breakdown"
+  },
+  {
+    "identifier": "savings_vs_bills",
+    "graphType": "line",
+    "name": "Savings vs Bills"
+  },
+  {
+    "identifier": "total_debt",
+    "graphType": "line",
+    "name": "Total Debt"
+  },
+  {
+    "identifier": "bills",
+    "graphType": "bar",
+    "name": "Bills"
+  }
+]
+
