@@ -17,8 +17,8 @@ function Dashboard(props) {
   return (
     <div className='container--fluid dashboard'>
       <div className='container__col-lg-6'>
-        <Graphs graphDaa = {props.transactions} />
-        <div className='container__col-sm-6 accounts'>  
+        <Graphs graphData = {props.transactions} />
+        <div className='container__col-sm-6 accounts u-mt6'>  
           <AccountMenu accountType='bankAccount' accounts={props.bankAccounts}
             />
           <AccountMenu accountType='creditCard' accounts={props.creditCards} />  
