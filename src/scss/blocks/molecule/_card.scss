@@ -1,10 +1,4 @@
 .card {
-  
   border-radius:20px;
-
-  /* For Neumorphism Effect */
-  background-color:$dm_bg;
-  box-shadow: 6px 6px 8px $dm_dark_shadow,
-   -6px -6px 8px $dm_light_shadow;
-    /* For Neumorphism Effect */
+  @include neumorphic
 }
