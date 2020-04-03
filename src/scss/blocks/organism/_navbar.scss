@@ -1,7 +1,15 @@
 .navbar {
+<<<<<<< HEAD
   margin-top: 1em;
   border-radius: 25px;
   @include neumorphic;
+=======
+  border-bottom: solid 2px $nav-outline;
+  margin-top: 1.5em;
+   
+  &--center {
+    @include center
+>>>>>>> 25ff597... WIP
 
   &--center {
     @include center
