@@ -1,0 +1,30 @@
+.btn {
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 18px;
+  transition: background 0.1s, color 0.1s;
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+  box-shadow:  3px 3px 5px $dm_dark_shadow, 
+               -3px -3px 5px $dm_light_shadow;
+  padding: 1% 0 1% 0;
+}
+.btn:focus{
+  outline: 0
+}
+.btn:hover {
+  background: #141414;
+  color: #bbb;
+}
+.active {
+  box-shadow: inset  10px 10px 6px #101114, 
+                inset -3px -3px 6px #24252a; 
+  color: #6a6a6a;
+  background-color: $dm_bg;
+}
+
+.graph-control {
+  padding: 12px 24px;
+}
+    

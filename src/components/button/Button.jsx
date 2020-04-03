@@ -5,7 +5,7 @@ const Button = (props) => {
 
   return (
     <button 
-      className={'btn ' + props.buttonStyle}
+      className={`btn ${props.buttonStyle}`}
       data-cy={props.testingId}
       onClick={props.clickEvent}>
         {props.text}
