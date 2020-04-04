@@ -1,0 +1,18 @@
+@mixin neumorphic {
+  background-color: $dm_bg;
+  box-shadow: 6px 6px 8px $dm_dark_shadow,
+   -6px -6px 8px $dm_light_shadow; 
+}
+
+@mixin neumorphic-button {
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+  box-shadow:  3px 3px 5px $dm_dark_shadow, 
+               -3px -3px 5px $dm_light_shadow;
+}
+
+@mixin neumorphic-button--active {
+  box-shadow: inset  10px 10px 6px #101114, 
+                inset -3px -3px 6px #24252a; 
+  color: #6a6a6a;
+  background-color: $dm_bg;
+}

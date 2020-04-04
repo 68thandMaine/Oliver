@@ -1,10 +1,10 @@
 .navbar {
-  border-bottom: solid 2px $nav-outline;
-  margin-top: 1.5em;
-   
+  margin-top: 1em;
+  border-radius: 25px;
+  @include neumorphic;
+
   &--center {
     @include center
-
   }
 
   &--horizontal {
@@ -12,13 +12,15 @@
     flex-flow: row nowrap;
   }
 
-  &__input-search {
+  &__input-search { 
     display: flex;
-    flex-flow: row nowrap
+    flex-flow: row nowrap;
+    
   }
 
   &__link {
     color: $white;
+    padding-top: 9.95px;;
 
     &--active {
       @apply bg-blue-500;
