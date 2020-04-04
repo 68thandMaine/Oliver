@@ -24,7 +24,8 @@
     "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:functional": "npx cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
