@@ -28,7 +28,6 @@ function NavBar(props) {
   return (
     <nav className="navbar navbar--center u-pl5 u-pr5 u-ml5 u-mr5">
       <NavSearch />
-      <h1>||</h1>
       <NavLinks linkList={linkList} assignActiveClass={activeClass} activeView={navConfig.activeView}/>
     </nav>
   )
