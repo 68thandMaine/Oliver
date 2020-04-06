@@ -1,4 +1,4 @@
 {
     "baseUrl" : "http://localhost:3000",
-    "integrationFolder" : "__test__/integration/"
+    "integrationFolder" : "spec/integration/"
 }   

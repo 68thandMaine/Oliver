@@ -14,7 +14,7 @@ function AccountMenu({
     useEffect(() => {
         determineBalance();
         // determineHeader()
-    }, []);
+    });
 
     function determineHeader() {
         switch(accountType) {

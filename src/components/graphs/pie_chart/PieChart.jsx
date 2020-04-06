@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 import "./pie_chart.scss";
 
-function PieChart() {
+function PieChart(props) {
   const width = 500;
   const height = width;
   const margin = 40;
@@ -39,10 +40,16 @@ function PieChart() {
       .style("stroke-width", "2px")
       .style("opacity", 0.7)
   });
-
   return (
-      <div id='donutChart'></div>
+      <div>
+        <h1>{props.title}</h1>
+        <div id='donutChart'></div>
+      </div>
   )
+}
+
+PieChart.propTypes = {
+  title: PropTypes.string.isRequired,
 }
 
 export default PieChart;

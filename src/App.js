@@ -21,7 +21,7 @@ function App(props) {
   let [ view, setView ] = useState('dashboard');
 
   useEffect(() => {
-    props.dispatch(getBankAccounts());
+    // props.dispatch(getBankAccounts());
   },[props]);
 
   const content = {
