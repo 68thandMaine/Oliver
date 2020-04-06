@@ -1,37 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import dashboardGraphOptions
  from '../../config/dashboardGraphs.json'
 
-import BarChart from './BarChart';
-// import Circles from './Circles';
+// import BarChart from './BarChart';
+import Circles from './Circles';
 import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
 
 function Graphs(props) {
+  const defaults = {
+    identifier: dashboardGraphOptions[0].identifier,
+    graphType: dashboardGraphOptions[0].graphType,
+    name: dashboardGraphOptions[0].name,
+  }
+  const [ graphData, setGraphData ] = useState(defaults);
 
-  useEffect(() => {
-    showGraph()
-  }, [])
-
-  function showGraph(comparison) {
-    switch (comparison) {
+  function showGraph() {
+    switch (graphData.identifier) {
       case "paycheckBreakdown":
-        return <PieChart /> 
+        return <PieChart 
+                  title={graphData.name} /> 
       case "savingsVsBills":
-        return <PieChart />;
+        return <PieChart 
+                  title={graphData.name} />
       case "totalDebt":  
-        return <h1>line graph</h1>;
+        return <h1>line graph</h1>
       case "bills":
-        return <BarChart />
+        return <Circles 
+                  title={graphData.name} />
       default:
-        return <PieChart />
+        return null;
       }
   }
   return (
     <div className='container'>
       {showGraph()}
-      <DashboardGraphControls dashboardGraphOptions={dashboardGraphOptions} changeGraph={showGraph}/>
+      <DashboardGraphControls
+        dashboardGraphOptions={dashboardGraphOptions} 
+        switchGraph={setGraphData} 
+        activeControl={graphData.identifier} />
     </div>
   )
 }

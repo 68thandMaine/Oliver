@@ -39,5 +39,4 @@ describe("Dashboard graph controls", () => {
         });
     });
   });
-
 });

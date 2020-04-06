@@ -4,17 +4,14 @@ import Button from '../../button/Button';
 import { active } from 'd3';
 
 function DashboardGraphControls(props) {
-
+  
   useEffect(() => {
-    const controls = document.getElementsByClassName('graph-control');
-    controls[0].classList.add('active');
+    toggleActiveControl();
   })
 
-
-  function setActiveButton(buttonId) {
-    let activeButton = document.getElementsByClassName('active');
-    activeButton[0].classList.remove('active');
-    document.getElementById(buttonId).classList.add('active');
+  function toggleActiveControl(){
+    if(document.querySelector('.active')) { document.querySelector('.active').classList.remove('active') }
+    document.getElementById(props.activeControl).classList.add('active');
   }
 
   function showControls(options) {
@@ -25,13 +22,12 @@ function DashboardGraphControls(props) {
           id={option.identifier}
           buttonStyle="graph-control" 
           testingId={`${option.identifier}Button`} 
-          clickEvent={()=>setActiveButton(option.identifier)} 
+          clickEvent={() => props.switchGraph(option)} 
           text={option.name}/>
         )
       })
     } 
-  
-
+    
   return (
     <div className='container graph-controls'>
       {showControls(props.dashboardGraphOptions)}
@@ -41,7 +37,7 @@ function DashboardGraphControls(props) {
 
 DashboardGraphControls.propTypes = {
   dashboardGraphOptions: PropTypes.array.isRequired,
-  changeGraph: PropTypes.func.isRequired
+  switchGraph: PropTypes.func.isRequired
 }
 
 export default DashboardGraphControls;
