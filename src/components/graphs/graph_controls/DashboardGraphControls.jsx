@@ -6,13 +6,9 @@ import { active } from 'd3';
 function DashboardGraphControls(props) {
   
   useEffect(() => {
-    toggleActiveControl();
-  })
-
-  function toggleActiveControl(){
     if(document.querySelector('.active')) { document.querySelector('.active').classList.remove('active') }
     document.getElementById(props.activeControl).classList.add('active');
-  }
+  })
 
   function showControls(options) {
     return options.map((option) => {
@@ -37,7 +33,8 @@ function DashboardGraphControls(props) {
 
 DashboardGraphControls.propTypes = {
   dashboardGraphOptions: PropTypes.array.isRequired,
-  switchGraph: PropTypes.func.isRequired
+  switchGraph: PropTypes.func.isRequired,
+  activeControl: PropTypes.string.isRequired,
 }
 
 export default DashboardGraphControls;

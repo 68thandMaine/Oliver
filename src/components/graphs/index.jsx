@@ -39,7 +39,8 @@ function Graphs(props) {
       <DashboardGraphControls
         dashboardGraphOptions={dashboardGraphOptions} 
         switchGraph={setGraphData} 
-        activeControl={graphData.identifier} />
+        activeControl={graphData.identifier}
+         />
     </div>
   )
 }

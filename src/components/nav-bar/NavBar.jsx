@@ -5,19 +5,17 @@ import NavLinks from './NavLinks';
 const linkList = initialState.initialState.NavOptions;
 
 function NavBar(props) {
-
   const defaultConfig = {
-    activeView: 'Home',
+    activeLink: 'Home',
     searchString: '',
   };
-
+  
   const [navConfig, setNavConfig] = useState(defaultConfig);
 
-  function activeClass(id) {
+  function setActiveClass(name) {
     setNavConfig({
-      'activeView' : id
-    })
-    console.log(navConfig)
+      'activeLink' : name
+    });
   }
 
   function searchString(query) {
@@ -28,7 +26,11 @@ function NavBar(props) {
   return (
     <nav className="navbar navbar--center u-pl5 u-pr5 u-ml5 u-mr5">
       <NavSearch />
-      <NavLinks linkList={linkList} assignActiveClass={activeClass} activeView={navConfig.activeView}/>
+      <NavLinks 
+        linkList={linkList} 
+        activeLink={navConfig.activeLink}
+        assignActiveClass={setActiveClass}
+        />
     </nav>
   )
 }
