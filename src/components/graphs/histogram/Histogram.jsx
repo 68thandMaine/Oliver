@@ -1,6 +1,6 @@
-improt React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
+import Axes from './Axes';
 import { scaleBand, scaleLinear } from 'd3-scale';
 
 export default class Histogram extends React.Component() {
@@ -31,7 +31,10 @@ export default class Histogram extends React.Component() {
 
         return (
             <svg width={svgDimensions.width} height={svgDimensions.height}>
-            
+                <Axes
+                    scales= {{ xScale, yScale }}
+                    margins={margins}
+                    svgDimensions={svgDimensions} />
             </svg>
         );
     }
