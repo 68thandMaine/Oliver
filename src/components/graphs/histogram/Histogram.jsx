@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Axes from './Axes';
 import Bars from './Bars';
+import ResponsiveWrapper from './ChartComponent';
 import { scaleBand, scaleLinear } from 'd3-scale';
 
-export default class Histogram extends React.Component() {
+class Histogram extends React.Component() {
     constructor(props){
         super(props);
         this.xScale = scaleBand();
@@ -42,7 +43,7 @@ export default class Histogram extends React.Component() {
                     data={data}
                     maxValue={maxValue}
                     svgDimensions={svgDimensions}
-                />
+                    />
             </svg>
         );
     }
@@ -51,3 +52,5 @@ export default class Histogram extends React.Component() {
 Histogram.propTypyes = {
     
 }
+
+export default ResponsiveWrapper(Histogram);
