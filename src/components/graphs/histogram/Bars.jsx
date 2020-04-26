@@ -4,12 +4,15 @@ import PropTypes from 'prop-types';
 import { scaleLinear } from 'd3-scale';
 import { interpolateLab } from 'd3-interpolate';
 
+import { shortDate } from '../../../lib/formatters/DateFormatters';
+
 export default class Bars extends React.Component {
     constructor(props) {
         super(props)
+    
         this.colorScale = scaleLinear()
         .domain([0, this.props.maxValue])
-        .range(['#f3e5f5', '#7b1fa2'])
+        .range(['#ff0000', '#eee'])
         .interpolate(interpolateLab);
     }
     
@@ -20,12 +23,12 @@ export default class Bars extends React.Component {
         const bars = (
             data.map(datum =>
                 <rect
-                    key={datum.Id}
-                    x={xScale(datum.Date)}
-                    y={yScale(datum.Amount)}
-                    height={height - margins.bottom - yScale(datum.Amount)}
-                    widht={xScale.bandwidth()}
-                    fill={this.colorScale(datum.Amount)}
+                    key={datum.id}
+                    x={xScale(shortDate(datum.date))}
+                    y={yScale(datum.amount)}
+                    height={height - margins.bottom - yScale(datum.amount)}
+                    width={xScale.bandwidth()}
+                    fill={this.colorScale(datum.amount)}
                     />,
             )
         )

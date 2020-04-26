@@ -4,6 +4,7 @@ import Axes from './Axes';
 import Bars from './Bars';
 import ResponsiveWrapper from './ChartComponent';
 import { scaleBand, scaleLinear } from 'd3-scale';
+import { shortDate } from '../../../lib/formatters/DateFormatters';
 
 // This import should be reomved once Redux is connected
 import Transactions from '../../../mock-data/mock-transaction';
@@ -22,13 +23,14 @@ class Histogram extends React.Component {
     }
 
     render() {
-        const margins = { left: 39, right: 39, bottom: 2, top: 2}
+        const margins = { top: 50, right: 20, bottom: 100, left: 60 }
         const svgDimensions = { width: 800, height: 500 }
         
-        const maxValue = Math.max(...data.map(d=>d.Amount));
+        const maxValue = Math.max(...data.map(d=>d.amount));
 
         const xScale = this.xScale
-            .domain(data.map(d => d.Date))
+            .padding(0.5)
+            .domain(data.map(d => shortDate(d.date)))
             .range([margins.left, svgDimensions.width - margins.right]);
 
         const yScale = this.yScale
