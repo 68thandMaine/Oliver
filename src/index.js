@@ -12,7 +12,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // Component
 import App from './App';
 // Styling Stuff
-import './index.scss';
+import './tailwind.scss';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
