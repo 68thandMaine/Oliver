@@ -17,29 +17,25 @@ class Histogram extends React.Component {
         this.yScale = scaleLinear();
     }
 
-    componentDidMount() {
-        console.log(Transactions);
+    componentDidUpdate() {
+        console.log(this.props);
     }
 
     render() {
-        const margins = { left: 39, right: 39}
+        const margins = { left: 39, right: 39, bottom: 2, top: 2}
         const svgDimensions = { width: 800, height: 500 }
         
-        // Will switch data to props after scaffolding component in the consts
-        // below.
-        const maxValue = Math.max(...data.map(d=>d.value));
+        const maxValue = Math.max(...data.map(d=>d.Amount));
 
-        // scaleBand type
         const xScale = this.xScale
-        .domain(data.map(d => d.title))
-        .range([margins.left, svgDimensions.width - margins.right]);
+            .domain(data.map(d => d.Date))
+            .range([margins.left, svgDimensions.width - margins.right]);
 
-        // scaleLinear type
         const yScale = this.yScale
         // needs at least a min and max value for the domain
-        .domain([0, maxValue])
-        .range([svgDimensions.height - margins.bottom - margins.top]);
-
+            .domain([0, maxValue])
+            .range([svgDimensions.height - margins.bottom,  margins.top]);
+        
         return (
             <svg width={svgDimensions.width} height={svgDimensions.height}>
                 <Axes
