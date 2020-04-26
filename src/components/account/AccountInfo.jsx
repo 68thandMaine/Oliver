@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { formatDollars, formatAccountNumber } from '../../formatters/AccountFormatters';
+import { formatDollars, formatAccountNumber } from '../../lib/formatters/AccountFormatters';
 
 function AccountInfo(props) {
     return (
