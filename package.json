@@ -20,7 +20,7 @@
     "sass-bem": "^2.3.3"
   },
   "scripts": {
-    "build:style": "tailwind build ./src/index.scss -o ./src/tailwind.scss",
+    "build:style": "postcss ./src/index.scss -o ./src/tailwind.scss",
     "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
