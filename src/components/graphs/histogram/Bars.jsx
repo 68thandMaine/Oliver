@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { scaleLinear } from 'd3-scale';
 import { interpolateLab } from 'd3-interpolate';
 
-export default class Bars extends React.Component() {
+export default class Bars extends React.Component {
     constructor(props) {
         super(props)
 

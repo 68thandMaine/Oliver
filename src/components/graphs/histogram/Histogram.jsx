@@ -7,8 +7,10 @@ import { scaleBand, scaleLinear } from 'd3-scale';
 
 // This import should be reomved once Redux is connected
 import Transactions from '../../../mock-data/mock-transaction';
+const data = Transactions;
 
-class Histogram extends React.Component() {
+
+class Histogram extends React.Component {
     constructor(props){
         super(props);
         this.xScale = scaleBand();
@@ -20,8 +22,8 @@ class Histogram extends React.Component() {
     }
 
     render() {
-        // const margins = { this.props}
-        // const svgDimensions = { width: 800, height: 500 }
+        const margins = { left: 39, right: 39}
+        const svgDimensions = { width: 800, height: 500 }
         
         // Will switch data to props after scaffolding component in the consts
         // below.
@@ -30,7 +32,7 @@ class Histogram extends React.Component() {
         // scaleBand type
         const xScale = this.xScale
         .domain(data.map(d => d.title))
-        .range([margins.left, svgDimenstions.width - margins.right]);
+        .range([margins.left, svgDimensions.width - margins.right]);
 
         // scaleLinear type
         const yScale = this.yScale

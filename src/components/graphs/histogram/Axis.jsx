@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as d3Axis from 'd3-axis';
 import { select as d3Select } from 'd3'
 
-class Axis extends React.Component() {
+class Axis extends React.Component {
     constructor(props) {
         super(props);
 
@@ -39,7 +39,7 @@ class Axis extends React.Component() {
     }
 }
 
-export default Axis();
+export default Axis;
 
 Axis.propTypes = {
 
