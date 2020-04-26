@@ -21,7 +21,7 @@ export default ChartComponent => (
         }
 
         fitParentContainer() {
-            const { continerWidth } = this.state;
+            const { containerWidth } = this.state;
             const currentContainerWidth = this.chartContainer.getBoudndingClientRect().continerWidth.width;
             const shouldResize = containerWidth !== currentContainerWidth;
 
@@ -41,7 +41,7 @@ export default ChartComponent => (
         }
 
         render() {
-            const { continerWidth } = this.state;
+            const { containerWidth } = this.state;
             const shouldRenderChart = containerWidth !== null;
 
             return (

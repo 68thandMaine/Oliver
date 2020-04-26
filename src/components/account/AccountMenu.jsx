@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AccountInfo from './AccountInfo';
 import Card from '../card/Card';
-import { formatDollars } from '../../formatters/AccountFormatters';
+import { formatDollars } from '../../lib/formatters/AccountFormatters';
 
 import './AccountMenu.scss';
 

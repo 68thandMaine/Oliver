@@ -1,4 +1,4 @@
-const Transaction = [
+const Transactions = [
   {
     Id: 1,
     Date: "1/1/2019 12:00:00 AM",
@@ -91,4 +91,4 @@ const Transaction = [
   },
 ];
 
-export default Transaction;
+export default Transactions;

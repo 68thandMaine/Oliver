@@ -5,11 +5,18 @@ import Bars from './Bars';
 import ResponsiveWrapper from './ChartComponent';
 import { scaleBand, scaleLinear } from 'd3-scale';
 
+// This import should be reomved once Redux is connected
+import Transactions from '../../../mock-data/mock-transaction';
+
 class Histogram extends React.Component() {
     constructor(props){
         super(props);
         this.xScale = scaleBand();
         this.yScale = scaleLinear();
+    }
+
+    componentDidMount() {
+        console.log(Transactions);
     }
 
     render() {

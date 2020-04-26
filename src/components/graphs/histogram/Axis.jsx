@@ -11,11 +11,11 @@ class Axis extends React.Component() {
     }
 
     componentDidMount() {
-        renderAxis();
+        this.renderAxis();
     }
 
     componentDidUpdate() {
-        renderAxis();
+        this.renderAxis();
     }
 
     renderAxis() {

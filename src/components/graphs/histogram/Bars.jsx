@@ -16,7 +16,7 @@ export default class Bars extends React.Component() {
 
     render() {
         const { scale, margins, data, svgDimensions } = this.props;
-        const { xScale, yScale } = scales;
+        const { xScale, yScale } = scale;
         const { height } = svgDimensions;
         const bars = (
             data.map(datum =>
@@ -24,7 +24,7 @@ export default class Bars extends React.Component() {
                     key={datum.title}
                     x={xScale(datum.tile)}
                     y={yScale(datum.value)}
-                    height={height - margins.bottom - scales.yScale(datum.value)}
+                    height={height - margins.bottom - scale.yScale(datum.value)}
                     widht={xScale.bandwidth()}
                     fill={this.colorScale(datum.value)}
                     />,
