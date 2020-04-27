@@ -26,7 +26,7 @@ function NavBar(props) {
 
 
   return (
-    <nav className="navbar bg-blue-500">
+    <nav className="flex flex-row items-center justify-between xs:px-5 sm:px-10 lg:px-40 ">
       <NavSearch />
       <NavLinks linkList={linkList} assignActiveClass={activeClass} activeView={navConfig.activeView}/>
     </nav>
