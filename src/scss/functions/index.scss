@@ -30,7 +30,5 @@ nested map values from the yaml or json data files */
     $value: map-get($value, $key);
   }
   $result: unquote(inspect($value));
-    //  Inspect is used here to silence a warning about depricating
-    //  none-string unquoting in future versions of sass
   @return $result;
 }

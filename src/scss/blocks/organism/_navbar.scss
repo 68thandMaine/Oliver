@@ -1,7 +1,5 @@
 .navbar {
-  &--center {
-    @include center
-  }
+  
 
   &--horizontal {
     display: flex;
@@ -18,12 +16,7 @@
   }
 
   &__link {
-    color: $white;
     padding-top: 9.95px;;
-
-    &--active {
-      @apply bg-blue-500;
-    }
 
     &:hover {
       cursor: pointer;
