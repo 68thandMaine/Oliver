@@ -1,8 +1,4 @@
 .navbar {
-  margin-top: 1em;
-  border-radius: 25px;
-  @include neumorphic;
-
   &--center {
     @include center
   }
@@ -14,8 +10,11 @@
 
   &__input-search { 
     display: flex;
-    flex-flow: row nowrap;
-    
+    flex-flow: row nowrap;   
+  }
+
+  &__links {
+    list-style: none;
   }
 
   &__link {
