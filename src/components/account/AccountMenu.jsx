@@ -12,9 +12,9 @@ function AccountMenu({
 }) {
     let [ accountInformation, modifyAccountInformation ] = useState({});
     useEffect(() => {
-        determineBalance();
+        determineBalance()
         // determineHeader()
-    },[]);
+    }, []);
 
     function determineHeader() {
         switch(accountType) {

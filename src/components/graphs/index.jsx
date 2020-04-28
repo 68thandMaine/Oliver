@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-// import * as d3 from 'd3';
+import React, { useState } from 'react';
 import dashboardGraphOptions
  from '../../config/dashboardGraphs.json'
 
