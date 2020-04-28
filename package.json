@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:functional": "npx cypress open"
+    "test:integration": "npx cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"

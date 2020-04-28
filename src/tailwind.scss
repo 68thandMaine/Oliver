@@ -11299,7 +11299,12 @@ polyline{
   }
   &__link {
     padding-top: 9.95px;
-    background-color: #4299e1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &--active {
+      padding-top: 9.95px;
+      background-color: #4299e1;
+    }
     &:hover {
       cursor: pointer;
     }
