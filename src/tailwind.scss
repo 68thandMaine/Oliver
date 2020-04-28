@@ -10912,11 +10912,23 @@ video {
   transition-duration: 1000ms;
 }
 
-$nav-outline: white;
+/* https://miro.medium.com/max/1280/1*THFUfPfstX075wRBDSfi0Q.jpeg */
 
-$nav__link--active: #33F5FF;
+$cool-grey-dm-bg: #1e2025;
 
-$nav__link--text: #61B0E6;
+$cool-grey-gold: #EDC299;
+
+$cool-grey-gold-muted: #4F4649;
+
+$cool-grey-aqua: #33C6B9;
+
+$cool-grey-aqua-muted: #1F4A48;
+
+$cool-grey-dark: #202933;
+
+$cool-grey-med: #343c45;
+
+$cool-grey-light: #434c54;
 
 $white: #eee;
 
@@ -11053,6 +11065,10 @@ $dm_attn:#f7f7f7;
 $dm_p: #ffffff !important;
 
 $dm_muted: #333339;
+
+/* Experimental themes */
+
+$dm_button_outline: $cool-grey-gold-muted;
 
 @mixin italics {
   font-style: italic;
@@ -11302,8 +11318,11 @@ polyline{
     padding-left: 1rem;
     padding-right: 1rem;
     &--active {
-      padding-top: 9.95px;
-      background-color: #4299e1;
+      border: solid 2px $dm_button_outline;
+      border-radius: 500px;
+      position: relative;
+      top: 6px;
+      padding-top: 4px;
     }
     &:hover {
       cursor: pointer;
