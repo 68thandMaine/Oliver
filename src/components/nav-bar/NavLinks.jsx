@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 function NavLinks(props) {
   const { assignActiveClass } = props
+
   const links = props.linkList.map((link) => 
     <li 
       className='navbar__link text-lg'
@@ -14,6 +15,8 @@ function NavLinks(props) {
       {link.name} 
     </li>
     )
+
+    
   return (
     <ul className="navbar--horizontal navbar__links" data-cy='navbar__links'>
       {links}

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Axes from './Axes';
 import Bars from './Bars';
 import ResponsiveWrapper from './ChartComponent';

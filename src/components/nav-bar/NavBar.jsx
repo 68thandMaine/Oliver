@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import initialState from '../../constants/index';
 import NavSearch from './NavSearch';
 import NavLinks from './NavLinks';
@@ -11,27 +11,21 @@ function NavBar(props) {
     activeLinkName: 'Home',
     searchString: '',
   };
-
-  const [navConfig, setNavConfig] = useState(defaultConfig);
   
   useEffect(() => {
-    setActiveLink(navConfig.activeLinkName);
+    // When the page loads we set the active link by 
+    // matching the route to the linkId
+    setActiveLink(defaultConfig.activeLinkName);
   });
 
   function setActiveLink(linkName) {
-    // When the page loads we set the active link by matching the route to the linkId
     removeActiveLink();
     document.getElementById(linkName).classList.add('navbar__link--active')
-    // remove any instance of navbar__link-active present from the array
   }
 
   function removeActiveLink() {
     const activeLink = document.querySelector(`.${activeClass}`);
-    activeLink ? activeLink.classList.remove(activeClass) : console.log('false');
-  }
-
-  function searchString(query) {
-
+    if(activeLink) activeLink.classList.remove(activeClass);
   }
 
 

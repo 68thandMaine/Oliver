@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../../button/Button';
-import { active } from 'd3';
 
 function DashboardGraphControls(props) {
   

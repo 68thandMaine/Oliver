@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import { scaleLinear } from 'd3-scale';
 import { interpolateLab } from 'd3-interpolate';
-
 import { shortDate } from '../../../lib/formatters/DateFormatters';
 
 export default class Bars extends React.Component {
