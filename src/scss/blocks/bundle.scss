@@ -1,11 +1,10 @@
-// Atoms
-@import "./atom/button";
-@import "./atom/icon";
-@import "./atom/input";
-@import "./atom/surfaces";
+@import "./atom/_button.scss";
+@import "./atom/_icon.scss";
+@import "./atom/_input.scss";
+@import "./atom/_surfaces.scss";
 
-@import "./molecule/card";
-@import "./molecule/graph-control";
+@import "./molecule/_card.scss";
+@import "./molecule/_graph-control.scss";
 
-@import "./organism/graphs";
-@import "./organism/navbar";
+@import "./organism/_graphs.scss";
+@import "./organism/_navbar.scss";
