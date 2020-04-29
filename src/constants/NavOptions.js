@@ -2,22 +2,26 @@ const NavOptions = [
   {
     id: 1,
     name: "Home",
-    route: "/"
+    routeName: 'home',
+    path: "/"
   },
   {
     id: 2,
     name: "Account Info",
-    route: "./accounts"
+    routeName: 'accounts',
+    path: "./accounts"
   },
   {
     id: 3,
     name: "Goals",
-    route: "./goals"
+    routeName: "goals",
+    path: "./goals"
   },
   {
     id: 4,
     name: "Settings",
-    route: "./settings"
+    routeName: "settings",
+    path: "./settings"
   },
 ];
 

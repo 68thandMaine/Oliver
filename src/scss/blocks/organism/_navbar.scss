@@ -16,8 +16,12 @@
   }
 
   &__link {
-    padding-top: 9.95px;;
-    @apply bg-blue-500;
+    padding-top: 9.95px;
+    @apply px-4;
+
+    &--active {
+      @apply bg-blue-500
+    }
 
     &:hover {
       cursor: pointer;
