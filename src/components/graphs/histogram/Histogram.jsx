@@ -18,8 +18,8 @@ class Histogram extends React.Component {
         this.yScale = scaleLinear();
     }
 
-    componentDidUpdate() {
-        console.log(this.props);
+    componentDidMount() {
+    
     }
 
     render() {
@@ -34,7 +34,6 @@ class Histogram extends React.Component {
             .range([margins.left, svgDimensions.width - margins.right]);
 
         const yScale = this.yScale
-        // needs at least a min and max value for the domain
             .domain([0, maxValue])
             .range([svgDimensions.height - margins.bottom,  margins.top]);
         

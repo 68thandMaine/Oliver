@@ -6,11 +6,11 @@ import { select as d3Select } from 'd3'
 class Axis extends React.Component {
     constructor(props) {
         super(props);
-
         this.renderAxis = this.renderAxis.bind(this);
     }
 
     componentDidMount() {
+        console.log(this.props)
         this.renderAxis();
     }
 
