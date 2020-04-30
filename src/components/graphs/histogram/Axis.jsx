@@ -24,7 +24,7 @@ class Axis extends React.Component {
         .scale(this.props.scale)
         .tickSize(-this.props.tickSize)
         .tickPadding([12])
-        .ticks([4]);
+        // .ticks([4]);
 
         d3Select(this.axisElement).call(axis);
     }
