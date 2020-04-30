@@ -8,6 +8,7 @@ import Circles from './Circles';
 import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
+import LineGraph from './line_graph/LineGraph';
 
 
 function Graphs(props) {
@@ -24,8 +25,7 @@ function Graphs(props) {
         return <PieChart 
                   title={graphData.name} /> 
       case "savingsVsBills":
-        return <PieChart 
-                  title={graphData.name} />
+        return <LineGraph />
       case "totalDebt":  
         return <Histogram />
       case "bills":
