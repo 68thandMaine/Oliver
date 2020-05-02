@@ -10,7 +10,6 @@ class Axis extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
         this.renderAxis();
     }
 

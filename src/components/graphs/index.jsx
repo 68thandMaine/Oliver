@@ -13,7 +13,7 @@ import LineGraph from './line_graph/LineGraph';
 
 function Graphs(props) {
   const defaults = {
-    identifier: dashboardGraphOptions[0].identifier,
+    identifier: dashboardGraphOptions[1].identifier,
     graphType: dashboardGraphOptions[0].graphType,
     name: dashboardGraphOptions[0].name,
   }

@@ -69,7 +69,7 @@ const Transactions = [
     category: "utilities",
     amount: 845,
     paymentType: "bank account",
-    paymentTypeId:1,
+    paymentTypeId: 1,
   },
   {
     id: 9,
@@ -86,6 +86,15 @@ const Transactions = [
     description:"Beer with friends at Scoots",
     category: "personal",
     amount: 12,
+    paymentType: 'bank account',
+    paymentTypeId: 1
+  },
+  {
+    id: 11,
+    date: "3/12/2019 12:00:00 AM",
+    description:"Sitting on the toilet",
+    category: "personal",
+    amount: 13,
     paymentType: 'bank account',
     paymentTypeId: 1
   },
