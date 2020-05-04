@@ -9,10 +9,10 @@ class Line extends React.Component {
         this.ref = React.createRef();
         this.renderLine = this.renderLine.bind(this);
     }
-
+    
     componentDidMount() {
+        const { data } = this.props;
         const node = this.ref.current;
-        const { scales, data } = this.props;
         const initialData = data.map(d => ({
             date: d.date,
             balance: d.balance
@@ -27,11 +27,11 @@ class Line extends React.Component {
         .attr('fill', 'none')
         .attr('d', this.renderLine);
     }
-
-   renderLine = line()
-        .x(d => this.props.scales.xScale(shortDate(d.date)))
-        .y(d => this.props.scales.yScale(d.balance));
-
+    
+    renderLine = line()
+    .x(d => this.props.scales.xScale(shortDate(d.date)))
+    .y(d => this.props.scales.yScale(d.balance));
+    
     render() {
         return <g className='line-group' ref={this.ref} />;
     }
