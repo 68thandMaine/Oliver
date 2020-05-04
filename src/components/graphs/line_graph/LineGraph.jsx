@@ -1,6 +1,7 @@
 import React from 'react';
 import Axes from '../histogram/Axes';
 import Line from './Line';
+import Legend from './Legend';
 import * as d3 from 'd3';
 import {shortDate} from '../../../lib/formatters/DateFormatters';
 
@@ -33,6 +34,7 @@ function LineGraph() {
               svgDimensions={svgDimensions}
               data={data}
               maxValue={maxValue} />
+            <Legend />
           </g>
         </svg>
     );
