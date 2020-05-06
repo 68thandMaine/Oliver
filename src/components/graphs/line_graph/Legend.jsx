@@ -4,9 +4,21 @@ import PropTypes from 'prop-types';
 class Legend extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
+    this.state={
+      legendItems:[],
+    }
+    this.createLegendItems = this.createLegendItems.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({
+      legendItems: this.createLegendItems()
+    })
+  }
+
+  createLegendItems(){
+
+  }
   render() {
     return (
       <g>
