@@ -34,7 +34,9 @@ function LineGraph() {
               svgDimensions={svgDimensions}
               data={data}
               maxValue={maxValue} />
-            <Legend />
+            <Legend 
+              maxValue={maxValue}
+              />
           </g>
         </svg>
     );
