@@ -6,7 +6,7 @@ import ResponsiveWrapper from './ChartComponent';
 import { scaleBand, scaleLinear } from 'd3-scale';
 import { shortDate } from '../../../lib/formatters/DateFormatters';
 
-// This import should be reomved once Redux is connected
+// This import should be removed once Redux is connected
 import Transactions from '../../../mock-data/mock-transaction';
 const data = Transactions;
 
