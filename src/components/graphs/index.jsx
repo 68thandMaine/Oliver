@@ -8,11 +8,12 @@ import Circles from './Circles';
 import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
+import LineGraph from './line_graph/LineGraph';
 
 
 function Graphs(props) {
   const defaults = {
-    identifier: dashboardGraphOptions[0].identifier,
+    identifier: dashboardGraphOptions[1].identifier,
     graphType: dashboardGraphOptions[0].graphType,
     name: dashboardGraphOptions[0].name,
   }
@@ -24,8 +25,7 @@ function Graphs(props) {
         return <PieChart 
                   title={graphData.name} /> 
       case "savingsVsBills":
-        return <PieChart 
-                  title={graphData.name} />
+        return <LineGraph />
       case "totalDebt":  
         return <Histogram />
       case "bills":
