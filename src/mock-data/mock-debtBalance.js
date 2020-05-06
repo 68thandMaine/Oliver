@@ -52,4 +52,3 @@ const creditCardMonthlyBalance = [
 
 
 export default creditCardMonthlyBalance;
-
