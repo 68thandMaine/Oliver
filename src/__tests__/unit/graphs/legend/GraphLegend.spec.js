@@ -1,11 +1,11 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import Legend from '../../../../components/graphs/line_graph/Legend';
-import renderer from 'react-test-renderer';
 
 describe('Graph Legend', () => {
   describe('when receiving one data source', () => {
     fit('returns an array with one entry', () => {
-      console.log(Legend.createLegendItems())
+      console.log(shallow(<Legend />))
     });
   });
 });
