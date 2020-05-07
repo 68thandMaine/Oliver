@@ -49,6 +49,11 @@ ___
 
 ### Project Architecture
 
+#### Graphs
 
+Oliver uses D3 to manipulate SVGs into graphical representations of financial data.
+
+To see more information about how the Graphs are created with D3 in Oliver [use this link](./documentation/graphs/index.md)
+ 
 
  
