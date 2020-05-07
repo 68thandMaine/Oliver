@@ -12220,6 +12220,10 @@ polyline{
   text-anchor: end;
 }
 
+text {
+  color: white !important;
+}
+
 .navbar {
   &--horizontal {
     display: flex;

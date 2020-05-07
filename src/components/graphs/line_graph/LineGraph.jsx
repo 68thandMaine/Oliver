@@ -38,7 +38,7 @@ function LineGraph() {
               maxValue={maxValue} />
             <Legend 
               maxValue={maxValue}
-              legendValues={legendValues}
+              values={legendValues}
               />
           </g>
         </svg>

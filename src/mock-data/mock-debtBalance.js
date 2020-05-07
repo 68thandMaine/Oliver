@@ -5,12 +5,12 @@ const creditCardMonthlyBalance = [
         balance: 13860.13
     },
     {
-        creditCardName: "Discover Card",
+        creditCardName: "Citi",
         date: "01/28/2020 12:00:00 AM",
         balance: 13560.13
     },
     {
-        creditCardName: "Discover Card",
+        creditCardName: "Citi",
         date: "02/28/2020 12:00:00 AM",
         balance: 13060.13,
     },
