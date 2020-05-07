@@ -14,6 +14,8 @@ function LineGraph() {
     const margins = { top: 50, right: 20, bottom: 100, left: 60 }
     const svgDimensions = { width: 800, height: 500 }
     const maxValue = Math.max(...data.map(d=>d.balance));
+    // Temporary should delete once this is hooked up to state.
+    const legendValues = data.map(d=>d.creditCardName)
     
     const xScale = scaleBand()
       .domain(data.map(d => shortDate(d.date)))
@@ -36,6 +38,7 @@ function LineGraph() {
               maxValue={maxValue} />
             <Legend 
               maxValue={maxValue}
+              values={legendValues}
               />
           </g>
         </svg>
