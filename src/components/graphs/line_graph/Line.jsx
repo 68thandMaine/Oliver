@@ -1,6 +1,8 @@
 import React from 'react';
 import { select, selectAll } from 'd3-selection';
 import { line } from 'd3-shape';
+import {scaleOrdinal} from 'd3';
+import { schemeSet2 } from 'd3-scale-chromatic';
 import {shortDate} from '../../../lib/formatters/DateFormatters';
 
 class Line extends React.Component {
@@ -10,22 +12,23 @@ class Line extends React.Component {
         this.renderLine = this.renderLine.bind(this);
     }
     
+    
     componentDidMount() {
         const { data } = this.props;
         const node = this.ref.current;
-        const initialData = data.map(d => ({
-            date: d.date,
-            balance: d.balance
-        }));
+
+        const color = scaleOrdinal()
+        .domain(data)
+        .range(schemeSet2);
         
         select(node)
-        .append('path')
-        .datum(initialData)
-        .attr('id', 'line')
-        .attr('stroke', 'red')
-        .attr('stroke-width', 2)
-        .attr('fill', 'none')
-        .attr('d', this.renderLine);
+            .append('path')
+            .datum(data.debtBalance)
+            .attr('id', 'line')
+            .attr('stroke', (d) => color(d))
+            .attr('stroke-width', 2)
+            .attr('fill', 'none')
+            .attr('d', this.renderLine);
     }
     
     renderLine = line()

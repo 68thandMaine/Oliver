@@ -13,10 +13,6 @@ class Legend extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      legendItems: this.props.values
-    });
-
    let color =  scaleOrdinal()
     .domain(this.state.legendItems)
     .range(schemeSet2);

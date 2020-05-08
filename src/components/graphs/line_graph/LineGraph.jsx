@@ -2,7 +2,6 @@ import React from 'react';
 import Axes from '../histogram/Axes';
 import Line from './Line';
 import Legend from './Legend';
-import * as d3 from 'd3';
 import {shortDate} from '../../../lib/formatters/DateFormatters';
 
 import { scaleLinear, scaleBand } from 'd3-scale';
@@ -22,24 +21,14 @@ function LineGraph() {
       }
       return Math.max(...numbers)
     }
-    // // Temporary should delete once this is hooked up to state.
+    // Temporary should delete once this is hooked up to state.
     const xScale = scaleBand()
-    .domain(data[0].debtBalance.map(d => shortDate(d.date)))
+      .domain(data[0].debtBalance.map(d => shortDate(d.date)))
       .range([margins.left, svgDimensions.width - margins.right]);
     const yScale = scaleLinear()
       .domain([0, maxValue()])
       .range([svgDimensions.height - margins.bottom, margins.top]);
-    const legendValues = () => data.map(d => d.creditCardName)
-    const drawLine = () => {
-      return data.map((d, i) => (
-        <Line
-              key={i}
-              scales={{ xScale, yScale }}
-              svgDimensions={svgDimensions}
-              data={d.debtBalance}
-              maxValue={maxValue} />
-      ))
-    }
+    const legendValues = () => data.map(d => d.creditCardName);
 
     return (
         <svg width={svgDimensions.width} height={svgDimensions.height}>
@@ -48,7 +37,13 @@ function LineGraph() {
               scales= {{ xScale, yScale }}
               margins={margins}
               svgDimensions={svgDimensions} />
-            {drawLine()}
+            <Line
+            scales={{ xScale, yScale }}
+            svgDimensions={svgDimensions}
+            data={d}
+            maxValue={maxValue}
+            />
+
             <Legend 
               maxValue={maxValue}
               values={legendValues}
