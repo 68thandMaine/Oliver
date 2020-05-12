@@ -17,8 +17,7 @@ class Legend extends React.Component {
     .domain(this.state.legendItems)
     .range(schemeSet2);
 
-   let legend = select('#legend');
-
+   const legend = select('#legend');
    // legend item icon 
     legend.selectAll('dots')
       .data(this.state.legendItems)
