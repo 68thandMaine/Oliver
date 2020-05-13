@@ -33,7 +33,8 @@ function LineGraph() {
       return arr;
     }
     
-    
+    console.log(legendValues())
+    console.log(dataGroup)
     return (
         <svg width={svgDimensions.width} height={svgDimensions.height}>
           <g transform='translate(50.20)'>
@@ -45,6 +46,7 @@ function LineGraph() {
               scales={{ xScale, yScale }}
               svgDimensions={svgDimensions}
               data={dataGroup}
+              lineColor={legendValues}
               maxValue={maxValue} />
             <Legend 
               maxValue={maxValue}
