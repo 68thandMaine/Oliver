@@ -13,17 +13,15 @@ class Line extends React.Component {
     
     
     componentDidMount() {
-        
-    
         const color = scaleOrdinal()
-            .domain(this.props.data)
+            .domain(this.props.lineColor)
             .range(schemeSet2);
 
          this.props.data.forEach((d, i) => {
                 select('#lines')
                     .append('svg:path')
                     .attr('d', this.renderLine(d.values))
-                    .attr('stroke', color(d.creditCardName))
+                    .attr('stroke', color(d.key))
                     .attr('stroke-width', 2)
                     .attr('fill', 'none')
         });
