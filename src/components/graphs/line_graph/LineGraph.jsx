@@ -47,7 +47,6 @@ function LineGraph() {
               lineColor={legendValues}
               maxValue={maxValue} />
             <Legend 
-              maxValue={maxValue}
               values={legendValues} /> 
           </g>
         </svg>

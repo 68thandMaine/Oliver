@@ -5,22 +5,16 @@ import PropTypes from 'prop-types';
 import { scaleOrdinal } from 'd3';
 
 class Legend extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      legendItems: this.props.values
-    }
-  }
 
   componentDidMount() {
    let color =  scaleOrdinal()
-    .domain(this.state.legendItems)
+    .domain(this.props.values)
     .range(schemeSet2);
 
    const legend = select('#legend');
    // legend item icon 
     legend.selectAll('dots')
-      .data(this.state.legendItems)
+      .data(this.props.values)
       .enter()
       .append('circle')
         .attr('cx', 100)
@@ -38,7 +32,7 @@ class Legend extends React.Component {
 
    // labels
     legend.selectAll('labels')
-      .data(this.state.legendItems)
+      .data(this.props.values)
       .enter()
       .append('text')
         .attr('x', 120)
