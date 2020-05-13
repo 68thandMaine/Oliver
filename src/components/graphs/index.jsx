@@ -1,5 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import dashboardGraphOptions
+ from '../../config/dashboardGraphs.json'
+
+import Circles from './Circles';
+import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
 import LineGraph from './line_graph/LineGraph';
