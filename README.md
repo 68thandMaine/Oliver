@@ -1,6 +1,8 @@
 # Welcome to Oliver
 
 It's my budgeting app and it's in development.
+
+> Currently I am building a static site using data I define in mock files. As soon as the general look of Oliver is complete then I will begin to work on the frontend logic. For the static version of Oliver I am using [tailwindcss](https://tailwindcss.com/#what-is-tailwind) to build a custom style library. My priority will be exploring neumorphic design, accessibility principals, and using [d3](https://d3js.org/).
 ___
 
 ## Table of Contents
@@ -9,7 +11,7 @@ ___
 |---|---|
 | I. | [Description](#i.-description) |
 | II. | [Installation and Running the Project](#ii.-installation-and-running-the-project) |
-| III. | [Project Status](#project-status) |
+| III. | [Project Architecture](#project-architecture) |
 
 ___
 
@@ -45,6 +47,13 @@ After cloning the Oliver repository there are several ways that you may interact
 
 ___
 
-### Project Status
+### Project Architecture
 
-Currently I am building a static site using data I define in mock files. As soon as the general look of Oliver is complete then I will begin to work on the frontend logic. For the static version of Oliver I am using [tailwindcss](https://tailwindcss.com/#what-is-tailwind) to build a custom style library. My priority will be exploring neumorphic design, accessibility principals, and using [d3](https://d3js.org/).
+#### Graphs
+
+Oliver uses D3 to manipulate SVGs into graphical representations of financial data.
+
+To see more information about how the Graphs are created with D3 in Oliver [use this link](./documentation/graphs/index.md)
+ 
+
+ 
