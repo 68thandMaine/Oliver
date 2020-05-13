@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-// import * as d3 from 'd3';
+import React, { useState } from 'react';
 import dashboardGraphOptions
  from '../../config/dashboardGraphs.json'
 
-// import BarChart from './BarChart';
 import Circles from './Circles';
 import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
