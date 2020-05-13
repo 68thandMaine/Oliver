@@ -25,4 +25,3 @@ export default({ scales, margins, svgDimensions }) => {
         </g>
     );
 }
-

@@ -7,3 +7,4 @@ Use the links below to learn more about building the graphing tools needed in Ol
 
 #### [Overview of D3 and Oliver](./D3.md)
 #### [Building the Line Graph and Histograms](./lineGraph-Histogram.md)
+#### [Building the Legend](./legend.md)

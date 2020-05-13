@@ -8,22 +8,16 @@ class Legend extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      legendItems: this.createLegendItems()
+      legendItems: this.props.values
     }
-    this.createLegendItems = this.createLegendItems.bind(this);
   }
 
   componentDidMount() {
-    // this.setState({
-    //   legendItems: this.createLegendItems()
-    // });
-
    let color =  scaleOrdinal()
     .domain(this.state.legendItems)
     .range(schemeSet2);
 
-   let legend = select('#legend');
-
+   const legend = select('#legend');
    // legend item icon 
     legend.selectAll('dots')
       .data(this.state.legendItems)
@@ -55,15 +49,6 @@ class Legend extends React.Component {
   }
     
   // Creates the state array for items in the legend
-  createLegendItems() {
-    const { values } = this.props;
-    return values.filter((index, cardName) => {
-      return values.indexOf(index) == cardName
-    });
-  }
-
-
-
 
   render() {
     return (
@@ -75,7 +60,7 @@ class Legend extends React.Component {
 }
 
 Legend.propTypes = {
-  maxValue: PropTypes.number,
+  // maxValue: PropTypes.number,
 
 }
 

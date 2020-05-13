@@ -1,29 +1,32 @@
-# Creating Line Graphs with d3
+# Creating Line Graphs and Histograms with d3
 
-**Disclaimer:** This document's primay purpose is to assemble knowledge, but not present it in a public way.
+**Disclaimer:** This document's primary purpose is to assemble knowledge, but not present it in a public way.
 
 ___
 
 ## Initial Thoughts
 
-There are several similarities between the line graph and the histgram which present opportunities to reuse components. For example, both graphs use an x and y axis to plot points - so I shouldn't have to write axis components for both graphs.
+There are several similarities between the line graph and the histogram which present opportunities to reuse components. For example, both graphs use an x and y axis to plot points - so I shouldn't have to write axis components for both graphs.
 
 ___
 
-## Components
+[Jump to Line Graph](#line-graph)
+[Jump to Histogram](#histogram)
 
-- [`LineGraph.jsx`](#linegraph.jsx)
-- [`Axes.jsx`](#axes.jsx)
+# Shared Componnets
 
-### `LineGraph.jsx`
+## Axes
 
-The LineGraph component will render a svg element with the following properties:
+## Axis
 
-- width
-- height
+___
 
-This is consistent with the Histogram.
+# Line Graph
 
-While the tutorial I am following uses the `timeScale()` to build the x axis, I am going to attempt to use the `scaleBand()` method that was written for the histogram's xaxis.
+## Lines
 
-### `Axes.jsx`
+___
+
+# Histogram
+
+## Bars
