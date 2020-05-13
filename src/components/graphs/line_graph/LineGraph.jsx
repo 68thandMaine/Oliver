@@ -33,8 +33,6 @@ function LineGraph() {
       return arr;
     }
     
-    console.log(legendValues())
-    console.log(dataGroup)
     return (
         <svg width={svgDimensions.width} height={svgDimensions.height}>
           <g transform='translate(50.20)'>
