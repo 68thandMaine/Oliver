@@ -3,7 +3,6 @@ import dashboardGraphOptions
  from '../../config/dashboardGraphs.json'
 
 // import BarChart from './BarChart';
-import Circles from './Circles';
 import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
@@ -27,9 +26,7 @@ function Graphs(props) {
         return <LineGraph />
       case "totalDebt":  
         return <Histogram />
-      case "bills":
-        return <Circles 
-                  title={graphData.name} />
+      
       default:
         return null;
       }

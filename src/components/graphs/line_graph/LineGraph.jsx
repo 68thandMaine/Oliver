@@ -1,7 +1,7 @@
 import React from 'react';
-import Axes from '../histogram/Axes';
+import Axes from '../axes/Axes';
 import Line from './Line';
-import Legend from './Legend';
+import Legend from '../legend/Legend';
 import { shortDate } from '../../../lib/formatters/DateFormatters';
 
 import { nest } from 'd3-collection';
