@@ -25,7 +25,6 @@ class Line extends React.Component {
                     .attr('stroke-width', 2)
                     .attr('fill', 'none')
         });
-    
     }
     
     renderLine = line()
