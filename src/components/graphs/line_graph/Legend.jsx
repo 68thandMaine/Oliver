@@ -17,7 +17,7 @@ class Legend extends React.Component {
       .data(this.props.values)
       .enter()
       .append('circle')
-        .attr('cx', 100)
+        .attr('cx', 110)
         .attr('cy', ((d, i) => 100 + i*25))
         .attr('r', 7)
         .style('fill',(d) => color(d))
@@ -28,18 +28,21 @@ class Legend extends React.Component {
       .attr('font-family', 'HelveticaNeue-Bold, Helvetica, sans-serif')
       .attr('fill','white')
       .attr('y', 20)
-      .text('helloooo')
+      .attr('x', -295)
+      .text('Credit Card Debt Balance')
 
    // labels
     legend.selectAll('labels')
       .data(this.props.values)
       .enter()
       .append('text')
-        .attr('x', 120)
+        .attr('x', 130)
         .attr('y', (d,i) => 100 + i * 25 )
         .style('fill', (d) => color(d))
         .text((d => d))
         .style('alignment-baseline', 'middle');
+
+      legend.attr('transform', 'translate(600,0)')
   }
     
   // Creates the state array for items in the legend

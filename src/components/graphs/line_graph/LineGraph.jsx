@@ -11,8 +11,8 @@ import creditCardMonthlyBalance from '../../../mock-data/mock-debtBalance';
 const data = creditCardMonthlyBalance;
 
 function LineGraph() { 
-    const margins = { top: 50, right: 20, bottom: 100, left: 60 }
-    const svgDimensions = { width: 800, height: 500 }
+    const margins = { top: 50, right: 220, bottom: 100, left: 60 }
+    const svgDimensions = { width: 900, height: 500 }
     const maxValue = () => Math.max(...data.map(d => d.balance));
     // Temporary should delete once this is hooked up to state.
     const xScale = scaleBand()
@@ -34,7 +34,7 @@ function LineGraph() {
     }
     
     return (
-        <svg width={svgDimensions.width} height={svgDimensions.height}>
+        <svg class='justify-center' width={svgDimensions.width} height={svgDimensions.height}>
           <g transform='translate(50.20)'>
             <Axes
               scales= {{ xScale, yScale }}
