@@ -5,20 +5,25 @@ import CardHeader from './header/CardHeader';
 
 function Card( props ) {
 
-    return (
-        <div>
+    function renderHeader() {
+        if(props.cardTitle) return (
             <CardHeader 
                 title={props.cardTitle}/>
+        );
+    }
+
+    return (
+        <article>
+            {renderHeader()}
             <CardBody>
                 {props.children}
             </CardBody>
-        </div>
+        </article>
     )
 };
 
 Card.propTypes = {
-    cardTitle: PropTypes.string.isRequired,
-    // accountBalance: PropTypes.string.isRequired,
+    cardTitle: PropTypes.string,
 };
 
 export default Card;

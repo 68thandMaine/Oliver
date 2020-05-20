@@ -3,9 +3,9 @@ import React from 'react';
 function CardBody(props) {
 
     return (
-        <div className='container u-pb3'>
+        <section className='container u-pb3'>
            {props.children}
-        </div>
+        </section>
     );
 };
 
