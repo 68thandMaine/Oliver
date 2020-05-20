@@ -7,15 +7,17 @@
   padding: 1% 0 1% 0;
 
   &__icon {
+    @include neumorphic-button;
     @apply flex items-center;
-    border: solid 1px red;
     height: 100px;
+    cursor: pointer;
   }
 
   &__icon--element {
     display: table-cell
   }
 }
+
 .btn:focus{
   outline: 0
 }

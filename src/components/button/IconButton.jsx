@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function IconButton(props) {
   console.log(props)
   return (
-    <section className='btn__icon'>
+    <section className='btn__icon pl-6'>
       <FontAwesomeIcon 
         className='icon--white' 
         icon={props.iconName}
