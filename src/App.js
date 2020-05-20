@@ -29,10 +29,7 @@ function App(props) {
     <div className="container--fluid">
       <NavBar 
         linkList = {props.navOptions}/>
-        <div className='container__col-lg-12' style={content}>
-          {/* <StyleSheet /> */}
-          <Routes />
-        </div>
+      <Routes />
     </div>
   );
 }

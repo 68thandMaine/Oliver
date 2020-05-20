@@ -5,13 +5,13 @@ import Button from '../../button/Button';
 function DashboardGraphControls(props) {
   
   useEffect(() => {
-    toggleActiveControl();
-  })
+    // toggleActiveControl();
+  });
 
-  function toggleActiveControl(){
-    if(document.querySelector('.active')) { document.querySelector('.active').classList.remove('active') }
-    document.getElementById(props.activeControl).classList.add('active');
-  }
+  // function toggleActiveControl() {
+  //   if(document.querySelector('.active')) { document.querySelector('.active').classList.remove('active') }
+  //   document.getElementById(props.activeControl).classList.add('active');
+  // }
 
   function showControls(options) {
     return options.map((option) => {
@@ -28,9 +28,9 @@ function DashboardGraphControls(props) {
     } 
     
   return (
-    <div className='container graph-controls'>
+    <section className='flex flex-row items-center justify-around px-4 py-2 m-2'>
       {showControls(props.dashboardGraphOptions)}
-    </div>
+    </section>
   )
 }
 

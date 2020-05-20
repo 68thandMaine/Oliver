@@ -1,26 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './Dashboard.scss';
-import AccountMenu from '../../../components/account/AccountMenu';
-import Graphs from '../../../components/graphs/index';
-// const state = initialState.initialState;
+
+
+import GraphControls from '../../../components/graphs/graph_controls/DashboardGraphControls';
+
+
+import dashboardGraphOptions from '../../../config/dashboardGraphs.json';
 
 function Dashboard(props) {
 
 
   return (
-    <div className='container--fluid dashboard'>
-      <div className='container__col-lg-6'>
-        <Graphs graphData = {props.transactions} />
-        <div className='container__col-sm-6 accounts u-mt6'>  
-          <AccountMenu accountType='bankAccount' accounts={props.bankAccounts}
-            />
-          <AccountMenu accountType='creditCard' accounts={props.creditCards} />  
-        </div>
-    
-
-      </div>
-    </div>
+    <section>
+        <GraphControls dashboardGraphOptions={dashboardGraphOptions}/>
+        
+    </section>
   );
 }
 
