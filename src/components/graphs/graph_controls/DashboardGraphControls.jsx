@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import Button from '../../button/Button';
+import IconButton from '../../button/IconButton';
 
 function DashboardGraphControls(props) {
   
@@ -26,7 +26,7 @@ function DashboardGraphControls(props) {
     } 
     
   return (
-    <section className='dashboard-controls'>
+    <section className='dashboard__graphControls'>
       {showControls(props.dashboardGraphOptions)}
     </section>
   )

@@ -30,7 +30,7 @@ function NavBar(props) {
 
 
   return (
-    <nav className="flex flex-row items-center justify-between xs:px-5 sm:px-10 lg:px-40 ">
+    <nav className="flex flex-row items-center justify-between xs:px-5 sm:px-10 lg:px-40 mt-4">
       <NavSearch />
       <NavLinks 
         linkList={linkList} 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import dashboardGraphOptions
  from '../../config/dashboardGraphs.json'
@@ -10,6 +11,9 @@ import React, { useEffect, useState } from 'react';
 >>>>>>> c054928... WIP - dashboard control option layout updated
 =======
 >>>>>>> 72a8e54... DASHBOARD-redesign-layout: WIP remove unecessary files from graph dir
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> c054928... WIP - dashboard control option layout updated
 import DashboardGraphControls from './graph_controls/DashboardGraphControls';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
