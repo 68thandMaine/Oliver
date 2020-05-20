@@ -2,17 +2,20 @@
   {
     "identifier": "debts",
     "graphType": "line",
-    "name": "Debts"
+    "name": "Debts",
+    "iconName": "file-invoice-dollar"
   },
   {
     "identifier": "bills",
     "graphType": "histogram",
-    "name": "Bills"
+    "name": "Bills",
+    "iconName": "dollar-sign"
   },
   {
     "identifier": "paycheckStats",
     "graphType": "donut",
-    "name": "Paycheck Stats"
+    "name": "Paycheck Stats",
+    "iconName": "chart-pie"
   }
 ]
 

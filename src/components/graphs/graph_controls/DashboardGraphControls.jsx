@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Button from '../../button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function DashboardGraphControls(props) {
   
@@ -16,13 +17,16 @@ function DashboardGraphControls(props) {
   function showControls(options) {
     return options.map((option) => {
       return (
-        <Button 
-          key={option.identifier}
-          id={option.identifier}
-          buttonStyle="graph-control" 
-          testingId={`${option.identifier}Button`} 
-          clickEvent={() => props.switchGraph(option)} 
-          text={option.name}/>
+        <React.Fragment>
+          <FontAwesomeIcon className='icon--white' icon={option.iconName} />
+          <Button 
+            key={option.identifier}
+            id={option.identifier}
+            buttonStyle="graph-control" 
+            testingId={`${option.identifier}Button`} 
+            clickEvent={() => props.switchGraph(option)} 
+            text={option.name}/>
+        </React.Fragment>
         )
       })
     } 
