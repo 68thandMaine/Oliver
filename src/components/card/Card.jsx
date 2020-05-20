@@ -1,24 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardBody from './body/CardBody';
-import CardHeader from './header/CardHeader';
+
 
 function Card( props ) {
 
-    function renderHeader() {
-        if(props.cardTitle) return (
-            <CardHeader 
-                title={props.cardTitle}/>
-        );
-    }
+    
 
     return (
-        <article>
-            {renderHeader()}
-            <CardBody>
-                {props.children}
-            </CardBody>
-        </article>
+    <section className='grid grid-cols-3 border border-red-300'>
+      <section className='graph-summary col-span-1'>
+        <div>
+                <h1>Credit Cards</h1>
+                <ul>
+                    <li>Discover.....current balance....date</li>
+                    <li>Citi Card.....current balance....date</li>
+                </ul>
+            </div>
+        <div>
+                    <h1>Loans</h1>
+                    <ul>
+                        <li>UAS.....current balance....date</li>
+                        <li>Navient.....current balance....date</li>
+                        <li>Climb.....current balance....date</li>
+                    </ul>
+                </div>
+      </section>
+      <section className='graphs col-span-2'>
+				{props.children}
+      </section>
+    </section>
     )
 };
 

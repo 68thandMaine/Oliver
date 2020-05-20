@@ -15,7 +15,7 @@ function Dashboard(props) {
   return (
     <section>
         <GraphControls dashboardGraphOptions={dashboardGraphOptions}/>
-        <Card>
+        <Card cardTitle='graphs'>
           <Graphs />
         </Card>
     </section>
