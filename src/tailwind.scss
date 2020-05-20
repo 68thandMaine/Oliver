@@ -12141,6 +12141,7 @@ button {
     display: flex;
     align-items: center;
     height: 100px;
+    cursor: pointer;
   }
   &__icon--element {
     display: table-cell
