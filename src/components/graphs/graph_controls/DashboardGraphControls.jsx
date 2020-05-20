@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import Button from '../../button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import IconButton from '../../button/IconButton';
 
 function DashboardGraphControls(props) {
   
@@ -17,22 +16,17 @@ function DashboardGraphControls(props) {
   function showControls(options) {
     return options.map((option) => {
       return (
-        <React.Fragment>
-          <FontAwesomeIcon className='icon--white' icon={option.iconName} />
-          <Button 
-            key={option.identifier}
-            id={option.identifier}
-            buttonStyle="graph-control" 
-            testingId={`${option.identifier}Button`} 
-            clickEvent={() => props.switchGraph(option)} 
-            text={option.name}/>
-        </React.Fragment>
+          <IconButton 
+            iconName={option.iconName}
+            iconSize={'2x'}
+            testingId={option.identifier}
+            name={option.name}/>
         )
       })
     } 
     
   return (
-    <section className='flex flex-row items-center justify-around px-4 py-2 m-2'>
+    <section className='dashboard-controls'>
       {showControls(props.dashboardGraphOptions)}
     </section>
   )

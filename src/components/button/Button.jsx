@@ -8,14 +8,16 @@ const Button = (props) => {
       className={`btn ${props.buttonStyle}`}
       data-cy={props.testingId}
       onClick={() => props.clickEvent()}
-      >{props.text}</button>
+      >
+        {props.text}
+      </button>
   );
 }
 
 Button.propTypes = {
   text : PropTypes.string.isRequired,
   buttonStyle: PropTypes.string.isRequired,
-  clickEvent: PropTypes.func.isRequired,
+  // clickEvent: PropTypes.func.isRequired,
   testingId: PropTypes.string,
   id: PropTypes.string,
 }

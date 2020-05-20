@@ -1,0 +1,7 @@
+.graph-controls {
+  @apply flex justify-around;
+}
+
+.dashboard-controls {
+  @apply flex flex-row items-center justify-around px-4 py-2 m-2;
+}
