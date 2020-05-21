@@ -1,5 +1,5 @@
 import React from 'react';
-import { select, selectAll } from 'd3-selection';
+import { select } from 'd3-selection';
 import { line } from 'd3-shape';
 import { scaleOrdinal } from 'd3';
 import { schemeSet2 } from 'd3-scale-chromatic';

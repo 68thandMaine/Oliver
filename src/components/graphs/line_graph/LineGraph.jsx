@@ -12,8 +12,8 @@ import { svg } from 'd3';
 const data = creditCardMonthlyBalance;
 
 function LineGraph() { 
-    const margins = { top: 50, right: 20, bottom: 100, left: 60 };
-    const svgDimensions = { width: 750, height: 500 };
+    const margins = { top: 50, right: 80, bottom: 100, left: 60 };
+    const svgDimensions = { width: 750, height: 450 };
     const maxValue = () => Math.max(...data.map(d => d.balance));
     // Temporary should delete once this is hooked up to state.
     const xScale = scaleBand()
@@ -35,7 +35,7 @@ function LineGraph() {
     }
     
     return (
-				<svg viewBox={`0, 0, ${svgDimensions.width}, ${svgDimensions.height}`}>
+				<svg viewBox={`0, 0, ${svgDimensions.width}, ${svgDimensions.height}`} preserveAspectRatio='none'>
           <g transform='translate(50.20)'>
             <Axes
               scales= {{ xScale, yScale }}
@@ -43,10 +43,8 @@ function LineGraph() {
               svgDimensions={svgDimensions} />
              <Line
               scales={{ xScale, yScale }}
-              svgDimensions={svgDimensions}
               data={dataGroup}
-              lineColor={legendValues}
-              maxValue={maxValue} />
+              lineColor={legendValues} />
             <Legend 
               values={legendValues} /> 
           </g>
