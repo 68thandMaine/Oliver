@@ -7,42 +7,36 @@ import { scaleOrdinal } from 'd3';
 class Legend extends React.Component {
 
   componentDidMount() {
-   let color =  scaleOrdinal()
-    .domain(this.props.values)
-    .range(schemeSet2);
+		let nodeWidth = (d) => d.getBBox().width; 
+   	let color =  scaleOrdinal()
+    	.domain(this.props.values)
+    	.range(schemeSet2);
+		const { height } = this.props.dimensions;
+	 	const legend = select('#legend')
+		 .attr('class', 'legend')
+		 .attr('transform', 'translate(500,-415)');
+		
+		const lg = legend.selectAll('g')
+			.data(this.props.values)
+			.enter()
+			.append('g')
+				.attr('transform', (d, i) => `translate(${i * 100},${height - 15})`);
 
-   const legend = select('#legend');
-   // legend item icon 
-    legend.selectAll('dots')
-      .data(this.props.values)
-      .enter()
-      .append('circle')
-        .attr('cx', 100)
-        .attr('cy', ((d, i) => 100 + i*25))
-        .attr('r', 7)
-        .style('fill',(d) => color(d))
+			lg.append('rect')
+				.style('fill', d => color(d))
+				.attr('x', 0)
+				.attr('y', 0)
+				.attr('width', 10)
+				.attr('height', 10);
 
-    // title
-    legend.append('text')
-      .attr('font-size', '12px')
-      .attr('font-family', 'HelveticaNeue-Bold, Helvetica, sans-serif')
-      .attr('fill','white')
-      .attr('y', 20)
-      .text('helloooo')
-
-   // labels
-    legend.selectAll('labels')
-      .data(this.props.values)
-      .enter()
-      .append('text')
-        .attr('x', 120)
-        .attr('y', (d,i) => 100 + i * 25 )
-        .style('fill', (d) => color(d))
-        .text((d => d))
-        .style('alignment-baseline', 'middle');
-  }
-    
-  // Creates the state array for items in the legend
+			lg.append('text')
+				
+				.style('font-size', '13px')
+				.style('fill', d => color(d))
+				.attr('x', 17.5)
+				.attr('y', 10)
+				.text(d => d);
+	}
 
   render() {
     return (
@@ -54,7 +48,6 @@ class Legend extends React.Component {
 }
 
 Legend.propTypes = {
-  // maxValue: PropTypes.number,
 
 }
 

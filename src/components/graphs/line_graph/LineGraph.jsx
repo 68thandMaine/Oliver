@@ -46,7 +46,8 @@ function LineGraph() {
               data={dataGroup}
               lineColor={legendValues} />
             <Legend 
-              values={legendValues} /> 
+							values={legendValues}
+							dimensions={svgDimensions} /> 
           </g>
         </svg>
     );
