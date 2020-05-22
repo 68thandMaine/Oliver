@@ -25,3 +25,22 @@ ___
 ### `json-schema-faker`
 
 - This is an optional dependency that would be used instead of the `json-server` package. Essentially this package allows you to create schemas that you can use faker methods to define objects with.
+
+___
+
+## Possible Schemas
+
+The current strategy for developing Oliver starts with creating the a static dashboard. One challenge that I am going to encounter is what the real shape of the data will look like vs how I am passing static data through components.
+
+I should consider the shape of Redux now that I can see the data I want displayed.
+
+### Redux State Slices
+
+These could be delivered throug selectors potentially.
+
+- bankAccounts
+- creditCards
+- loans
+- transactions
+- goals
+- bills
