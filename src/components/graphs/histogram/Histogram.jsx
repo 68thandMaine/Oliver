@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Axes from './Axes';
+import Axes from '../axes/Axes';
 import Bars from './Bars';
-import ResponsiveWrapper from './ChartComponent';
 import { scaleBand, scaleLinear } from 'd3-scale';
 import { shortDate } from '../../../lib/formatters/DateFormatters';
 
@@ -42,8 +41,8 @@ function Histogram() {
     );
 }
 
-Histogram.propTypyes = {
+Histogram.propTypes = {
     
 }
 
-export default ResponsiveWrapper(Histogram);
+export default Histogram;

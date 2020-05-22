@@ -16,8 +16,16 @@
   }
 
   &__link {
-    padding-top: 9.95px;;
-    @apply bg-blue-500;
+    padding-top: 9.95px;
+    @apply px-4;
+
+    &--active {
+      border: solid 2px $dm_button_outline;
+      border-radius: 500px;
+      position: relative;
+      top: 6px;
+      padding-top: 4px;
+    }
 
     &:hover {
       cursor: pointer;

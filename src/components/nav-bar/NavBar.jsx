@@ -1,34 +1,41 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import initialState from '../../constants/index';
 import NavSearch from './NavSearch';
 import NavLinks from './NavLinks';
 const linkList = initialState.initialState.NavOptions;
+const activeClass = 'navbar__link--active';
 
 function NavBar(props) {
 
   const defaultConfig = {
-    activeView: 'Home',
+    activeLinkName: 'Home',
     searchString: '',
   };
+  
+  useEffect(() => {
+    // When the page loads we set the active link by 
+    // matching the route to the linkId
+    setActiveLink(defaultConfig.activeLinkName);
+  });
 
-  const [navConfig, setNavConfig] = useState(defaultConfig);
-
-  function activeClass(id) {
-    setNavConfig({
-      'activeView' : id
-    })
-    console.log(navConfig)
+  function setActiveLink(linkName) {
+    removeActiveLink();
+    document.getElementById(linkName).classList.add('navbar__link--active')
   }
 
-  function searchString(query) {
-
+  function removeActiveLink() {
+    const activeLink = document.querySelector(`.${activeClass}`);
+    if(activeLink) activeLink.classList.remove(activeClass);
   }
 
 
   return (
-    <nav className="flex flex-row items-center justify-between xs:px-5 sm:px-10 lg:px-40 ">
+    <nav className="flex flex-row items-center justify-between xs:px-5 sm:px-10 lg:px-40 mt-4">
       <NavSearch />
-      <NavLinks linkList={linkList} assignActiveClass={activeClass} activeView={navConfig.activeView}/>
+      <NavLinks 
+        linkList={linkList} 
+        assignActiveClass={setActiveLink}
+      />
     </nav>
   )
 }

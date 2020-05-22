@@ -1,49 +1,40 @@
-import React, { useEffect, useState } from 'react';
-// import * as d3 from 'd3';
-import dashboardGraphOptions
- from '../../config/dashboardGraphs.json'
-
-// import BarChart from './BarChart';
-import Circles from './Circles';
-import DashboardGraphControls from './graph_controls/DashboardGraphControls';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
 import LineGraph from './line_graph/LineGraph';
 
 
 function Graphs(props) {
-  const defaults = {
-    identifier: dashboardGraphOptions[1].identifier,
-    graphType: dashboardGraphOptions[0].graphType,
-    name: dashboardGraphOptions[0].name,
-  }
-  const [ graphData, setGraphData ] = useState(defaults);
+	console.log(props)
+	// write a test for this function
+	function displayGraph() {
+		let graphToShow;
+		switch (props.graphType) {
+			case 'line':
+				graphToShow = <LineGraph />;
+				break;
+			case 'histogram':
+				graphToShow = <Histogram />;
+				break;
+			case 'donut':
+				graphToShow =	<PieChart />;
+				break;
+			default:
+				graphToShow = null;
+		}
+		return graphToShow;
+	}
 
-  function showGraph() {
-    switch (graphData.identifier) {
-      case "paycheckBreakdown":
-        return <PieChart 
-                  title={graphData.name} /> 
-      case "savingsVsBills":
-        return <LineGraph />
-      case "totalDebt":  
-        return <Histogram />
-      case "bills":
-        return <Circles 
-                  title={graphData.name} />
-      default:
-        return null;
-      }
-  }
   return (
     <div className='container'>
-      {showGraph()}
-      <DashboardGraphControls
-        dashboardGraphOptions={dashboardGraphOptions} 
-        switchGraph={setGraphData} 
-        activeControl={graphData.identifier} />
+      {displayGraph()}
     </div>
-  )
+  );
 }
+
+Graphs.propTypes = {
+	graphType: PropTypes.string.isRequired,
+};
 
 export default Graphs;

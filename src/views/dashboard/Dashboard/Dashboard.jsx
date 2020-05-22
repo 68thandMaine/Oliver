@@ -1,32 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-
-import initialState from '../../../constants';
-
-// import PropTypes from 'prop-types';
-
-import './Dashboard.scss';
-import AccountMenu from '../../../components/account/AccountMenu';
+import Card from '../../../components/card/Card';
+import GraphControls from '../../../components/graphs/graph_controls/DashboardGraphControls';
 import Graphs from '../../../components/graphs/index';
-import NavBar from '../../../components/nav-bar/NavBar';
-// const state = initialState.initialState;
+import dashboardGraphOptions from '../../../config/dashboardGraphs.json';
+
+const defaultDashboardO  = {
+	 currentGraph: dashboardGraphOptions[0].identifier,
+	 graphType: dashboardGraphOptions[0].graphType
+}
 
 function Dashboard(props) {
-
+	const [ graphInfo, setGraphInfo ] = useState(defaultDashboardO); 
+	function selectGraph(value) {
+		setGraphInfo({
+			currentGraph: value.identifier,
+			graphType: value.graphType
+		});
+	}
 
   return (
-    <div className='container--fluid dashboard'>
-      <div className='container__col-lg-6'>
-        <Graphs graphData = {props.transactions} />
-        <div className='container__col-sm-6 accounts u-mt6'>  
-          <AccountMenu accountType='bankAccount' accounts={props.bankAccounts}
-            />
-          <AccountMenu accountType='creditCard' accounts={props.creditCards} />  
-        </div>
-    
-
-      </div>
-    </div>
+    <section>
+				<GraphControls 
+					dashboardGraphOptions={dashboardGraphOptions}
+					activeControl={graphInfo.currentGraph}
+					selectGraphToView={selectGraph}/>
+				<div className='flex flex-row justify-center mt-4'>
+					<Card>
+						<Graphs 
+							graphType={graphInfo.graphType}/>
+					</Card>
+				</div>
+    </section>
   );
 }
 
