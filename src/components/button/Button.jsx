@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = (props) => {
+	function click() {
+		if(props.clickEvent) props.clickEvent();
+	}
   return (
     <button 
-      id={props.id}
+      id={`btn-${props.id}`}
       className={`btn ${props.buttonStyle}`}
-      data-cy={props.testingId}
-      onClick={() => props.clickEvent()}
+      data-cy={`btn-${props.testingId}`}
+      onClick={() => click()}
       >
         {props.text}
       </button>
@@ -17,7 +20,7 @@ const Button = (props) => {
 Button.propTypes = {
   text : PropTypes.string.isRequired,
   buttonStyle: PropTypes.string.isRequired,
-  // clickEvent: PropTypes.func.isRequired,
+  clickEvent: PropTypes.func,
   testingId: PropTypes.string,
   id: PropTypes.string,
 }
