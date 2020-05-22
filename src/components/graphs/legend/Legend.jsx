@@ -1,14 +1,13 @@
 import React from 'react';
-import { select, selectAll } from 'd3-selection';
+import { select } from 'd3-selection';
 import { schemeSet2 } from 'd3-scale-chromatic';
 import PropTypes from 'prop-types';
 import { scaleOrdinal } from 'd3';
 
 class Legend extends React.Component {
-
-  componentDidMount() {
-		let nodeWidth = (d) => d.getBBox().width; 
-   	let color =  scaleOrdinal()
+	
+	componentDidMount() {
+   	const color =  scaleOrdinal()
     	.domain(this.props.values)
     	.range(schemeSet2);
 		const { height } = this.props.dimensions;
@@ -30,7 +29,6 @@ class Legend extends React.Component {
 				.attr('height', 10);
 
 			lg.append('text')
-				
 				.style('font-size', '13px')
 				.style('fill', d => color(d))
 				.attr('x', 17.5)
@@ -48,7 +46,8 @@ class Legend extends React.Component {
 }
 
 Legend.propTypes = {
-
+	values: PropTypes.func.isRequired,
+	dimensions: PropTypes.object.isRequired
 }
 
 export default Legend;

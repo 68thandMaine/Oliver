@@ -2,6 +2,7 @@ import React from 'react';
 import Axes from '../axes/Axes';
 import Line from './Line';
 import Legend from '../legend/Legend';
+import GraphTitle from '../title/GraphTitle';
 import { shortDate } from '../../../lib/formatters/DateFormatters';
 
 import { nest } from 'd3-collection';
@@ -35,8 +36,10 @@ function LineGraph() {
     }
     
     return (
-				<svg viewBox={`0, 0, ${svgDimensions.width}, ${svgDimensions.height}`} preserveAspectRatio='none'>
+				<svg viewBox={`0, 0, ${svgDimensions.width}, ${svgDimensions.height - 50}`} preserveAspectRatio='none'>
           <g transform='translate(50.20)'>
+						<GraphTitle
+							title='Debts or Something Like That' />
             <Axes
               scales= {{ xScale, yScale }}
               margins={margins}

@@ -15,9 +15,11 @@ function Dashboard(props) {
   return (
     <section>
         <GraphControls dashboardGraphOptions={dashboardGraphOptions}/>
-        <Card cardTitle='graphs'>
-          <Graphs />
-        </Card>
+				<div className='flex flex-row justify-center mt-4'>
+					<Card cardTitle='graphs'>
+						<Graphs />
+					</Card>
+				</div>
     </section>
   );
 }
