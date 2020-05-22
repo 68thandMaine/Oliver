@@ -14,9 +14,11 @@ function DashboardGraphControls(props) {
   // }
 
   function showControls(options) {
-    return options.map((option) => {
+    return options.map((option, i) => {
       return (
-          <IconButton 
+          <IconButton
+						key={i}
+						identifier={option.identifier}
             iconName={option.iconName}
             iconSize={'2x'}
             testingId={option.identifier}
@@ -34,7 +36,6 @@ function DashboardGraphControls(props) {
 
 DashboardGraphControls.propTypes = {
   dashboardGraphOptions: PropTypes.array.isRequired,
-  switchGraph: PropTypes.func.isRequired
 }
 
 export default DashboardGraphControls;

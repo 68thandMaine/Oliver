@@ -5,7 +5,7 @@ import Button from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function IconButton(props) {
-  console.log(props)
+
   return (
     <section className='btn__icon pl-6'>
       <FontAwesomeIcon 
