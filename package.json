@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "axios": "^0.19.0",
     "d3": "^5.15.0",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
     "postcss-import": "^12.0.1",
     "react": "^16.8.6",
@@ -21,9 +22,10 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "build:style": "postcss ./src/index.scss -o ./src/tailwind.scss",
-    "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
+    "build:style": "postcss ./src/index.scss -o ./src/tailwind.scss",
+		"build:mock_db": "json-server ./src/lib/mock-server/generate.js --port 8080",
+		"start": "npm run build:style && react-scripts start",
     "test": "react-scripts test",
     "test:functional": "npx cypress open"
   },
