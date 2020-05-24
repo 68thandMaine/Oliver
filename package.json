@@ -24,7 +24,7 @@
   "scripts": {
     "build": "react-scripts build",
     "build:style": "postcss ./src/index.scss -o ./src/tailwind.scss",
-		"build:mock_db": "json-server ./src/lib/mock-server/generate.js --port 8080",
+		"build:mock_db": "json-server --watch ./src/lib/mock-server/generate.js --port 8080",
 		"start": "npm run build:style && react-scripts start",
     "test": "react-scripts test",
     "test:functional": "npx cypress open"
