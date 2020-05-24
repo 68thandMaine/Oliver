@@ -14,9 +14,9 @@ export default class Bars extends React.Component {
     }
     
     render() {
-        const { scales, margins, data, svgDimensions } = this.props;
+        const { scales, margins, data, dimensions } = this.props;
         const { xScale, yScale } = scales;
-        const { height } = svgDimensions;
+        const { height } = dimensions;
         const bars = (
             data.map(datum =>
                 <rect

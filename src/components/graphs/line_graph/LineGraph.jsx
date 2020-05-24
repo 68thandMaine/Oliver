@@ -1,29 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Axes from '../axes/Axes';
 import Line from './Line';
 import Legend from '../legend/Legend';
 import GraphTitle from '../title/GraphTitle';
 import { shortDate } from '../../../lib/formatters/DateFormatters';
-
-import { nest } from 'd3-collection';
 import { scaleLinear, scaleBand } from 'd3-scale';
 
+
+import { nest } from 'd3-collection';
 import creditCardMonthlyBalance from '../../../mock-data/mock-debtBalance';
-import { svg } from 'd3';
 const data = creditCardMonthlyBalance;
 
-function LineGraph() { 
-    const margins = { top: 50, right: 80, bottom: 100, left: 60 };
-    const svgDimensions = { width: 750, height: 450 };
+function LineGraph(props) { 
+	const { margins, dimensions} = props;
+  
     const maxValue = () => Math.max(...data.map(d => d.balance));
     // Temporary should delete once this is hooked up to state.
     const xScale = scaleBand()
       .domain(data.map(d => shortDate(d.date)))
-      .range([margins.left, svgDimensions.width - margins.right]);
+      .range([margins.left, dimensions.width - margins.right]);
       
     const yScale = scaleLinear()
       .domain([0, maxValue()])
-      .range([svgDimensions.height - margins.bottom, margins.top]);
+      .range([dimensions.height - margins.bottom, margins.top]);
     
     const dataGroup = nest().key((d) => d.creditCardName).entries(data); 
     
@@ -36,24 +36,29 @@ function LineGraph() {
     }
     
     return (
-				<svg viewBox={`0, 0, ${svgDimensions.width}, ${svgDimensions.height - 50}`} preserveAspectRatio='none'>
+				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height - 50}`} preserveAspectRatio='none'>
           <g transform='translate(50.20)'>
 						<GraphTitle
 							title='Debts or Something Like That' />
             <Axes
               scales= {{ xScale, yScale }}
               margins={margins}
-              svgDimensions={svgDimensions} />
+              dimensions={dimensions} />
              <Line
               scales={{ xScale, yScale }}
               data={dataGroup}
               lineColor={legendValues} />
             <Legend 
 							values={legendValues}
-							dimensions={svgDimensions} /> 
+							dimensions={dimensions} /> 
           </g>
         </svg>
     );
+}
+
+LineGraph.propTypes = {
+	dimensions: PropTypes.objectOf(PropTypes.number).isRequired,
+	margins: PropTypes.objectOf(PropTypes.number).isRequired
 }
 
 export default LineGraph;

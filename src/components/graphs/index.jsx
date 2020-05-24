@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import PieChart from './pie_chart/PieChart';
 import Histogram from './histogram/Histogram';
@@ -6,16 +6,26 @@ import LineGraph from './line_graph/LineGraph';
 
 
 function Graphs(props) {
-	console.log(props)
+	const chartMargins = { top: 50, right: 80, bottom: 100, left: 60 };
+	const chartArea = { width: 750, height: 450 };
+
 	// write a test for this function
 	function displayGraph() {
 		let graphToShow;
 		switch (props.graphType) {
 			case 'line':
-				graphToShow = <LineGraph />;
+				graphToShow = (
+					<LineGraph
+						dimensions={chartArea}
+						margins={chartMargins} />	
+				);
 				break;
 			case 'histogram':
-				graphToShow = <Histogram />;
+				graphToShow = (
+					<Histogram
+						dimensions={chartArea}
+						margins={chartMargins} />
+				);
 				break;
 			case 'donut':
 				graphToShow =	<PieChart />;
@@ -26,11 +36,7 @@ function Graphs(props) {
 		return graphToShow;
 	}
 
-  return (
-    <div className='container'>
-      {displayGraph()}
-    </div>
-  );
+  return displayGraph()
 }
 
 Graphs.propTypes = {

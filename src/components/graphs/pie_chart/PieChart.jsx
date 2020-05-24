@@ -26,8 +26,7 @@ function PieChart(props) {
   // append the svg object to the div called 'my_dataviz'
   const svg = d3.select("#donutChart")
     .append("svg")
-      .attr("width", width)
-      .attr("height", height)
+      .attr("viewBox", `0, 0, ${width}, ${height}`)
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
