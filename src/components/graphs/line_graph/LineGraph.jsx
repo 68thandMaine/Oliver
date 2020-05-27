@@ -12,18 +12,19 @@ import { nest } from 'd3-collection';
 import creditCardMonthlyBalance from '../../../mock-data/mock-debtBalance';
 const data = creditCardMonthlyBalance;
 
-function LineGraph() { 
-    const margins = { top: 50, right: 220, bottom: 100, left: 60 }
-    const svgDimensions = { width: 900, height: 500 }
-    const maxValue = () => Math.max(...data.map(d => d.balance));
-    // Temporary should delete once this is hooked up to state.
-    const xScale = scaleBand()
-      .domain(data.map(d => shortDate(d.date)))
-      .range([margins.left, svgDimensions.width - margins.right]);
-      
-    const yScale = scaleLinear()
-      .domain([0, maxValue()])
-      .range([svgDimensions.height - margins.bottom, margins.top]);
+function LineGraph(props) { 
+	const { margins, dimensions} = props;
+	const maxValue = () => Math.max(...data.map(d => d.balance));
+	// Temporary should delete once this is hooked up to state.
+	const xScale = scaleBand()
+		.domain(data.map(d => shortDate(d.date)))
+		.range([margins.left, dimensions.width - margins.right]);
+		
+	const yScale = scaleLinear()
+		.domain([0, maxValue()])
+		.range([dimensions.height - margins.bottom, margins.top]);
+
+	const dataGroup = nest().key((d) => d.creditCardName).entries(data); 
     
     
 	const legendValues = () => {
@@ -35,7 +36,7 @@ function LineGraph() {
 	}
     
     return (
-        <svg class='justify-center' width={svgDimensions.width} height={svgDimensions.height}>
+				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height - 50}`} preserveAspectRatio='none'>
           <g transform='translate(50.20)'>
 						<GraphTitle
 							title='Debts or Something Like That' />
