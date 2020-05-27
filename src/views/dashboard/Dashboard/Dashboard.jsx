@@ -6,8 +6,8 @@ import Graphs from '../../../components/graphs/index';
 import dashboardGraphOptions from '../../../config/dashboardGraphs.json';
 
 const defaultDashboardO  = {
-	 currentGraph: dashboardGraphOptions[0].identifier,
-	 graphType: dashboardGraphOptions[0].graphType
+	 currentGraph: dashboardGraphOptions[2].identifier,
+	 graphType: dashboardGraphOptions[2].graphType
 }
 
 function Dashboard(props) {

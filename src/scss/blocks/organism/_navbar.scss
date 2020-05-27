@@ -1,5 +1,5 @@
 .navbar {
-  
+  @apply flex flex-row items-center justify-between mt-4;
 
   &--horizontal {
     display: flex;
@@ -14,26 +14,27 @@
   &__links {
     list-style: none;
   }
+}
 
-  &__link {
-    padding-top: 9.95px;
-    @apply px-4;
+.navbar__link {
+	@apply px-4 text-lg;
+	padding-top: 9.95px;
 
-    &--active {
-      border: solid 2px $dm_button_outline;
-      border-radius: 500px;
-      position: relative;
-      top: 6px;
-      padding-top: 4px;
-    }
+	&--active {
+		border: solid 2px $dm_button_outline;
+		border-radius: 500px;
+		position: relative;
+		top: 6px;
+		padding-top: 4px;
+	}
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
+	&:hover {
+		cursor: pointer;
+	}
+}
 
-  &__input-search {
-    width: 300px;
-    max-width: 300px;
-  }
+.navbar__input-search {
+	@apply mt-2 mb-2;
+	width: 300px;
+	max-width: 300px;
 }

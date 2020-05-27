@@ -14,26 +14,26 @@ const data = creditCardMonthlyBalance;
 
 function LineGraph(props) { 
 	const { margins, dimensions} = props;
-  
-    const maxValue = () => Math.max(...data.map(d => d.balance));
-    // Temporary should delete once this is hooked up to state.
-    const xScale = scaleBand()
-      .domain(data.map(d => shortDate(d.date)))
-      .range([margins.left, dimensions.width - margins.right]);
-      
-    const yScale = scaleLinear()
-      .domain([0, maxValue()])
-      .range([dimensions.height - margins.bottom, margins.top]);
+	const maxValue = () => Math.max(...data.map(d => d.balance));
+	// Temporary should delete once this is hooked up to state.
+	const xScale = scaleBand()
+		.domain(data.map(d => shortDate(d.date)))
+		.range([margins.left, dimensions.width - margins.right]);
+		
+	const yScale = scaleLinear()
+		.domain([0, maxValue()])
+		.range([dimensions.height - margins.bottom, margins.top]);
+
+	const dataGroup = nest().key((d) => d.creditCardName).entries(data); 
     
-    const dataGroup = nest().key((d) => d.creditCardName).entries(data); 
     
-    const legendValues = () => {
-      let arr = [];
-      dataGroup.forEach((d, i) => {
-        arr.push(d.key)
-      });
-      return arr;
-    }
+	const legendValues = () => {
+		let arr = [];
+		dataGroup.forEach((d, i) => {
+			arr.push(d.key)
+		});
+		return arr;
+	}
     
     return (
 				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height - 50}`} preserveAspectRatio='none'>

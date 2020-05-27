@@ -12208,9 +12208,12 @@ button {
 }
 
 .card {
-  border-radius:20px;
+  border-width: 1px;
+  border-color: #feb2b2;
   @include neumorphic
-
+	
+	&__section {
+  }
 }
 
 .graph-controls {
@@ -12257,6 +12260,11 @@ polyline {
 }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
   &--horizontal {
     display: flex;
     flex-flow: row nowrap;
@@ -12268,25 +12276,30 @@ polyline {
   &__links {
     list-style: none;
   }
-  &__link {
-    padding-top: 9.95px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    &--active {
-      border: solid 2px $dm_button_outline;
-      border-radius: 500px;
-      position: relative;
-      top: 6px;
-      padding-top: 4px;
-    }
-    &:hover {
-      cursor: pointer;
-    }
+}
+
+.navbar__link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.125rem;
+  padding-top: 9.95px;
+  &--active {
+    border: solid 2px $dm_button_outline;
+    border-radius: 500px;
+    position: relative;
+    top: 6px;
+    padding-top: 4px;
   }
-  &__input-search {
-    width: 300px;
-    max-width: 300px;
+  &:hover {
+    cursor: pointer;
   }
+}
+
+.navbar__input-search {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 300px;
+  max-width: 300px;
 }
 
 body {

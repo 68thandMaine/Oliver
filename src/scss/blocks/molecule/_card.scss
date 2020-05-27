@@ -1,4 +1,8 @@
 .card {
-  border-radius:20px;
-  @include neumorphic
+  @apply border border-red-300;
+	@include neumorphic
+	
+	&__section {
+	
+	}
 }

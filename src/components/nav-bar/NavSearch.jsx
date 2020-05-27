@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function NavSearch() {
 
   return (
-    <ul className="navbar__input-search fa-ul u-mt2 u-mb2">
+    <ul className="navbar__input-search">
       <li>
         <span className='fa-li u-pt1'>
           <FontAwesomeIcon className='icon--white' icon='search'/>

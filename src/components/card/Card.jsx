@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 
 
 function Card( props ) {
-
-    
-
     return (
-    <section className='grid grid-cols-3 border border-red-300 w-2/3'>
-      <section className='graph-summary col-span-1 gap-2 flex flex-col items-center mt-12'>
+    <section className='card grid grid-cols-3 w-11/12'>
+      <section className='col-span-1 gap-2 flex flex-col items-center mt-12'>
         <div className='w-64'>
 						<h3>Credit Cards</h3>
 						<ul>
@@ -25,7 +22,7 @@ function Card( props ) {
 					</ul>
 				</div>
       </section>
-      <section className='graphs col-span-2'>
+      <section className='col-span-2'>
 				{props.children}
       </section>
     </section>

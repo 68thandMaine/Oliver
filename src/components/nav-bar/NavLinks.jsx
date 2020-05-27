@@ -6,7 +6,7 @@ function NavLinks(props) {
 
   const links = props.linkList.map((link) => 
     <li 
-      className='navbar__link text-lg'
+      className='navbar__link'
       onClick={() => assignActiveClass(link.name)} 
       key={link.id} 
       id={link.name} 
