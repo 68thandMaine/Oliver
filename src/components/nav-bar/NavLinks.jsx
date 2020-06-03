@@ -18,7 +18,7 @@ function NavLinks(props) {
 
     
   return (
-    <ul className="navbar--horizontal navbar__links" data-cy='navbar__links'>
+    <ul className="navbar__links" data-cy='navbar__links'>
       {links}
     </ul>
   );

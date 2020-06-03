@@ -11847,466 +11847,6 @@ video {
   transition-delay: 1000ms;
 }
 
-/* https://miro.medium.com/max/1280/1*THFUfPfstX075wRBDSfi0Q.jpeg */
-
-$cool-grey-dm-bg: #1e2025;
-
-$cool-grey-gold: #EDC299;
-
-$cool-grey-gold-muted: #4F4649;
-
-$cool-grey-aqua: #33C6B9;
-
-$cool-grey-aqua-muted: #1F4A48;
-
-$cool-grey-dark: #202933;
-
-$cool-grey-med: #343c45;
-
-$cool-grey-light: #434c54;
-
-$white: #eee;
-
-$u-spacing: (
-  0: (
-    b: 0,
-    sm: 0,
-    md: 0,
-    lg: 0
-  ),
-  1: (
-    b: 2px,
-    sm: 2px,
-    md: 2px,
-    lg: 2px
-  ),
-  2: (
-    b: 4px,
-    sm: 4px,
-    md: 4px,
-    lg: 4px
-  ),
-  3: (
-    b: 8px,
-    sm: 8px,
-    md: 8px,
-    lg: 8px
-  ),
-  4: (
-    b: 16px,
-    sm: 16px,
-    md: 16px,
-    lg: 16px
-  ),
-  5: (
-    b: 32px,
-    sm: 32px,
-    md: 32px,
-    lg: 32px
-  ),
-  6: (
-    b: 64px,
-    sm: 64px,
-    md: 64px,
-    lg: 64px
-  ),
-  7: (
-    b: 128px,
-    sm: 128px,
-    md: 128px,
-    lg: 128px
-  ),
-  8: (
-    b: 256px,
-    sm: 256px,
-    md: 256px,
-    lg: 256px
-  ),
-  a: (
-    b: auto,
-    sm: auto,
-    md: auto,
-    lg: auto
-  )
-) !default;
-
-$grid-breakpoints: (
-  sm: 394px,
-  md: 505px,
-  lg: 616px,
-) !default;
-
-$directions: (
-    top: t,
-    right: r,
-    bottom: b,
-    left: l
-  );
-
-// Helper function for general deep setting in maps.
-// Deep-set by Hugo Giraudel
-@function map-deep-set($map, $keys.../*, $value */) {
-  $map-list: ($map,);
-  $result: null;
-  @if length($keys) == 2 {
-    @return map-merge($map, (nth($keys, 1): nth($keys, -1)));
-  }
-  @for $i from 1 through length($keys) - 2 {
-    $map-list: append($map-list, map-get(nth($map-list, -1), nth($keys, $i)));
-  }
-  @for $i from length($map-list) through 1 {
-    $result: map-merge(nth($map-list, $i), (nth($keys, $i): if($i == length($map-list), nth($keys, -1), $result)));
-  }
-  @return $result;
-}
-
-/* A simple deep-map-get function to load
-nested map values from the yaml or json data files */
-
-@function data($map, $keys...) {
-  $value: $map;
-
-  @each $key in $keys {
-    @if type-of($value) != map {
-      @return false;
-    }
-
-    $value: map-get($value, $key);
-  }
-
-  $result: unquote(inspect($value));
-
-  @return $result;
-}
-
-$dm_bg: #17171A;
-
-$dm_card_bg: #101213;
-
-/* Neuomorphic card shadows */
-
-$dm_light_shadow: #1F2624;
-
-$dm_dark_shadow: #0F0F12;
-
-$dm_input_bg: #000051;
-
-$dm_nav_bg: #162320;
-
-$dm_header_bg_color: white;
-
-$dm_attn:#f7f7f7;
-
-$dm_p: #ffffff !important;
-
-$dm_muted: #333339;
-
-/* Experimental themes */
-
-$dm_button_outline: $cool-grey-gold-muted;
-
-@mixin italics {
-  font-style: italic;
-}
-
-p,
-input,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-li,
-label {
-  outline: none;
-  margin: 0;
-}
-
-::placeholder {
-  font-style: italic;
-  font-size: 1rem;
-  color: lightgrey;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: $dm_attn;
-  font-weight: 100;
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2.6rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.75rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-}
-
-p,
-label,
-li,
-input,
-input::-webkit-input-placeholder,
-button {
-  font-size: -.5em;
-  font-family: 'Varela Round', sans-serif;
-  color: $dm_p;
-}
-
-button {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width: 50em) {
-}
-
-@media screen and (min-width: 75em) {
-}
-
-.text {
-  color: $dm_p;
-  &--center {
-    font-size: 0.75em;
-    text-align: center;
-  }
-  &__small {
-    font-size: 0.75em;
-    &--italic {
-      font-size: 0.75em;
-      @include italics;
-    }
-  }
-  &--bold {
-    color: $dm_p;
-    font-weight: 400;
-  }
-}
-
-@mixin neumorphic {
-  background-color: $dm_bg;
-
-  box-shadow: 6px 6px 8px $dm_dark_shadow,
-   -6px -6px 8px $dm_light_shadow;
-}
-
-@mixin neumorphic-button {
-  background: linear-gradient(145deg, #1c1d21, #17181c);
-
-  box-shadow:  3px 3px 5px $dm_dark_shadow, 
-               -3px -3px 5px $dm_light_shadow;
-}
-
-@mixin neumorphic-button--active {
-  box-shadow: inset  10px 10px 6px #101114, 
-                inset -3px -3px 6px #24252a;
-
-  color: #6a6a6a;
-
-  background-color: $dm_bg;
-}
-
-.btn {
-  cursor: pointer;
-  width: 150px;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 18px;
-  padding: 1% 0 1% 0;
-  &__icon {
-    @include neumorphic-button;
-    display: flex;
-    align-items: center;
-    height: 100px;
-    cursor: pointer;
-  }
-  &__icon--element {
-    display: table-cell
-  }
-}
-
-.btn:focus{
-  outline: 0
-}
-
-.btn:hover,
-.btn__icon:hover {
-  background: #141414;
-  color: #bbb;
-}
-
-.active {
-  @include neumorphic-button--active
-
-}
-
-.graph-control {
-  padding: 12px 24px;
-}
-
-.icon {
-  &--white {
-    color: $white;
-  }
-}
-
-.input {
-  background: transparent;
-  cursor: text;
-  display: block;
-  width: 100%;
-  resize: none;
-  color: inherit;
-  text-align: left;
-  box-sizing: border-box;
-  caret-color: white;
-  min-width: 100%;
-  &--txt {
-    padding: 1vw 2vw;
-    margin: 2vw;
-    width: 90%;
-  }
-  &--num {
-    width: 5em;
-    padding: 2vw;
-    text-align: center;
-  }
-}
-
-.card {
-  padding: 2vw;
-  margin: 2vw;
-  background: $dm_card_bg;
-  border-radius: 10px;
-}
-
-.header {
-  background: $dm_header_bg_color;
-}
-
-.card {
-  border-width: 1px;
-  border-color: #feb2b2;
-  @include neumorphic
-	
-	&__section {
-  }
-}
-
-.graph-controls {
-  display: flex;
-  justify-content: space-around;
-}
-
-.dashboard__graphControls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-top: 2.5rem;
-}
-
-path.slice{
-  stroke-width:2px;
-}
-
-polyline {
-  opacity: .3;
-  stroke: white;
-  stroke-width: 2px;
-  fill: white;
-}
-
-.axis path,
-.axis line {
-  stroke: #e0e0e0;
-}
-
-.axis text {
-  font-size: 11px;
-  fill: white;
-}
-
-.axis-bottom text {
-  transform: rotate(-45deg);
-  text-anchor: end;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-  &--horizontal {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  &__input-search {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  &__links {
-    list-style: none;
-  }
-}
-
-.navbar__link {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1.125rem;
-  padding-top: 9.95px;
-  &--active {
-    border: solid 2px $dm_button_outline;
-    border-radius: 500px;
-    position: relative;
-    top: 6px;
-    padding-top: 4px;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.navbar__input-search {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  width: 300px;
-  max-width: 300px;
-}
-
-body {
-  background: $dm_bg;
-  padding: 23px;
-}
-
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
@@ -57277,4 +56817,465 @@ body {
   .xl\:delay-1000 {
     transition-delay: 1000ms;
   }
+}
+
+/* https://miro.medium.com/max/1280/1*THFUfPfstX075wRBDSfi0Q.jpeg */
+
+$cool-grey-dm-bg: #1e2025;
+
+$cool-grey-gold: #EDC299;
+
+$cool-grey-gold-muted: #4F4649;
+
+$cool-grey-aqua: #33C6B9;
+
+$cool-grey-aqua-muted: #1F4A48;
+
+$cool-grey-dark: #202933;
+
+$cool-grey-med: #343c45;
+
+$cool-grey-light: #434c54;
+
+$white: #eee;
+
+$u-spacing: (
+  0: (
+    b: 0,
+    sm: 0,
+    md: 0,
+    lg: 0
+  ),
+  1: (
+    b: 2px,
+    sm: 2px,
+    md: 2px,
+    lg: 2px
+  ),
+  2: (
+    b: 4px,
+    sm: 4px,
+    md: 4px,
+    lg: 4px
+  ),
+  3: (
+    b: 8px,
+    sm: 8px,
+    md: 8px,
+    lg: 8px
+  ),
+  4: (
+    b: 16px,
+    sm: 16px,
+    md: 16px,
+    lg: 16px
+  ),
+  5: (
+    b: 32px,
+    sm: 32px,
+    md: 32px,
+    lg: 32px
+  ),
+  6: (
+    b: 64px,
+    sm: 64px,
+    md: 64px,
+    lg: 64px
+  ),
+  7: (
+    b: 128px,
+    sm: 128px,
+    md: 128px,
+    lg: 128px
+  ),
+  8: (
+    b: 256px,
+    sm: 256px,
+    md: 256px,
+    lg: 256px
+  ),
+  a: (
+    b: auto,
+    sm: auto,
+    md: auto,
+    lg: auto
+  )
+) !default;
+
+$grid-breakpoints: (
+  sm: 394px,
+  md: 505px,
+  lg: 616px,
+) !default;
+
+$directions: (
+    top: t,
+    right: r,
+    bottom: b,
+    left: l
+  );
+
+// Helper function for general deep setting in maps.
+// Deep-set by Hugo Giraudel
+@function map-deep-set($map, $keys.../*, $value */) {
+  $map-list: ($map,);
+  $result: null;
+  @if length($keys) == 2 {
+    @return map-merge($map, (nth($keys, 1): nth($keys, -1)));
+  }
+  @for $i from 1 through length($keys) - 2 {
+    $map-list: append($map-list, map-get(nth($map-list, -1), nth($keys, $i)));
+  }
+  @for $i from length($map-list) through 1 {
+    $result: map-merge(nth($map-list, $i), (nth($keys, $i): if($i == length($map-list), nth($keys, -1), $result)));
+  }
+  @return $result;
+}
+
+/* A simple deep-map-get function to load
+nested map values from the yaml or json data files */
+
+@function data($map, $keys...) {
+  $value: $map;
+
+  @each $key in $keys {
+    @if type-of($value) != map {
+      @return false;
+    }
+
+    $value: map-get($value, $key);
+  }
+
+  $result: unquote(inspect($value));
+
+  @return $result;
+}
+
+$dm_bg: #17171A;
+
+$dm_card_bg: #101213;
+
+/* Neuomorphic card shadows */
+
+$dm_light_shadow: #1F2624;
+
+$dm_dark_shadow: #0F0F12;
+
+$dm_input_bg: #000051;
+
+$dm_nav_bg: #162320;
+
+$dm_header_bg_color: white;
+
+$dm_attn:#f7f7f7;
+
+$dm_p: #ffffff !important;
+
+$dm_muted: #333339;
+
+/* Experimental themes */
+
+$dm_button_outline: $cool-grey-gold-muted;
+
+@mixin italics {
+  font-style: italic;
+}
+
+p,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+li,
+label {
+  outline: none;
+  margin: 0;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 1rem;
+  color: lightgrey;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: $dm_attn;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p,
+label,
+li,
+input,
+input::-webkit-input-placeholder,
+button {
+  font-size: -.5em;
+  font-family: 'Varela Round', sans-serif;
+  color: $dm_p;
+}
+
+button {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 50em) {
+}
+
+@media screen and (min-width: 75em) {
+}
+
+.text {
+  color: $dm_p;
+  &--center {
+    font-size: 0.75em;
+    text-align: center;
+  }
+  &__small {
+    font-size: 0.75em;
+    &--italic {
+      font-size: 0.75em;
+      @include italics;
+    }
+  }
+  &--bold {
+    color: $dm_p;
+    font-weight: 400;
+  }
+}
+
+@mixin neumorphic {
+  background-color: $dm_bg;
+
+  box-shadow: 6px 6px 8px $dm_dark_shadow,
+   -6px -6px 8px $dm_light_shadow;
+}
+
+@mixin neumorphic-button {
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+
+  box-shadow:  3px 3px 5px $dm_dark_shadow, 
+               -3px -3px 5px $dm_light_shadow;
+}
+
+@mixin neumorphic-button--active {
+  box-shadow: inset  10px 10px 6px #101114, 
+                inset -3px -3px 6px #24252a;
+
+  color: #6a6a6a;
+
+  background-color: $dm_bg;
+}
+
+.btn {
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 18px;
+  padding: 1% 0 1% 0;
+  &__icon {
+    @include neumorphic-button;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    cursor: pointer;
+  }
+  &__icon--element {
+    display: table-cell
+  }
+}
+
+.btn:focus{
+  outline: 0
+}
+
+.btn:hover,
+.btn__icon:hover {
+  background: #141414;
+  color: #bbb;
+}
+
+.active {
+  @include neumorphic-button--active
+
+}
+
+.graph-control {
+  padding: 12px 24px;
+}
+
+.icon {
+  &--white {
+    color: $white;
+  }
+}
+
+.input {
+  background: transparent;
+  cursor: text;
+  display: block;
+  width: 100%;
+  resize: none;
+  color: inherit;
+  text-align: left;
+  box-sizing: border-box;
+  caret-color: white;
+  min-width: 100%;
+  &--txt {
+    padding: 1vw 2vw;
+    margin: 2vw;
+    width: 90%;
+  }
+  &--num {
+    width: 5em;
+    padding: 2vw;
+    text-align: center;
+  }
+}
+
+.card {
+  padding: 2vw;
+  margin: 2vw;
+  background: $dm_card_bg;
+  border-radius: 10px;
+}
+
+.header {
+  background: $dm_header_bg_color;
+}
+
+.card {
+  border-width: 1px;
+  border-color: #feb2b2;
+  @include neumorphic
+	
+	&__section {
+  }
+}
+
+.graph-controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dashboard__graphControls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+path.slice{
+  stroke-width:2px;
+}
+
+polyline {
+  opacity: .3;
+  stroke: white;
+  stroke-width: 2px;
+  fill: white;
+}
+
+.axis path,
+.axis line {
+  stroke: #e0e0e0;
+}
+
+.axis text {
+  font-size: 11px;
+  fill: white;
+}
+
+.axis-bottom text {
+  transform: rotate(-45deg);
+  text-anchor: end;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  &__input-search {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  &__links {
+    list-style: none;
+  }
+}
+
+.navbar__link {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 1.125rem;
+  &--active {
+    box-shadow: 0px 0px 0px 1px lightcyan;
+    border-radius: 2em;
+    transition: 5ms;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.navbar__input-search {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: solid 1px whitesmoke;
+  max-width: 30em;
+}
+
+@media (min-width: 640px) {
+  .navbar, 
+	.navbar__links {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+body {
+  background: $dm_bg;
+  padding: 2em;
 }
