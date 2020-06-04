@@ -1,11 +1,13 @@
 // Important Stuff
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import StyleGuide from './assets/style-guide/StyleGuide.jsx';
+import NavBar from './components/nav-bar/NavBar';
+import StyleGuide from './assets/style-guide/StyleGuide';
 
 // API Stuff
 // import { getBankAccounts } from './actions/BankAccountActions';
-
+// Router Stuff
+import Routes from './routes/Routes';
 
 // Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -25,7 +27,12 @@ function App(props) {
   };
 
   return (
-		<StyleGuide />
+    <div className="container--fluid">
+      {/* <NavBar 
+        linkList = {props.navOptions}/>
+      <Routes /> */}
+			<StyleGuide />
+    </div>
   );
 }
 
