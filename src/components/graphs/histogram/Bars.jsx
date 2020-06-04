@@ -1,7 +1,6 @@
 import React from 'react';
 import { scaleLinear } from 'd3-scale';
 import { interpolateLab } from 'd3-interpolate';
-
 import { shortDate } from '../../../lib/formatters/DateFormatters';
 
 export default class Bars extends React.Component {
@@ -15,9 +14,9 @@ export default class Bars extends React.Component {
     }
     
     render() {
-        const { scales, margins, data, svgDimensions } = this.props;
+        const { scales, margins, data, dimensions } = this.props;
         const { xScale, yScale } = scales;
-        const { height } = svgDimensions;
+        const { height } = dimensions;
         const bars = (
             data.map(datum =>
                 <rect

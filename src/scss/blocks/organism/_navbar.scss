@@ -1,10 +1,5 @@
 .navbar {
-  
-
-  &--horizontal {
-    display: flex;
-    flex-flow: row nowrap;
-  }
+  @apply flex flex-col items-center justify-between mt-4;
 
   &__input-search { 
     display: flex;
@@ -14,18 +9,32 @@
   &__links {
     list-style: none;
   }
+}
 
-  &__link {
-    padding-top: 9.95px;;
-    @apply bg-blue-500;
+.navbar__link {
+	@apply px-5 text-lg;
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
+	&--active {
+		box-shadow: 0px 0px 0px 1px lightcyan;
+		border-radius: 2em;
+  	transition: 5ms;
+	}
 
-  &__input-search {
-    width: 300px;
-    max-width: 300px;
-  }
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+.navbar__input-search {
+	@apply mt-2 mb-2;
+	border-bottom: solid 1px whitesmoke;
+	max-width: 30em;
+}
+
+@screen sm {
+	.navbar, 
+	.navbar__links {
+		@apply flex flex-row;
+	}
 }

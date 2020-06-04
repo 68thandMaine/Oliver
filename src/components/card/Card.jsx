@@ -1,24 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardBody from './body/CardBody';
-import CardHeader from './header/CardHeader';
+
 
 function Card( props ) {
-
     return (
-        <div>
-            <CardHeader 
-                title={props.cardTitle}/>
-            <CardBody>
-                {props.children}
-            </CardBody>
-        </div>
+    <section className='card grid grid-cols-3 w-11/12'>
+      <section className='col-span-1 gap-2 flex flex-col items-center mt-12'>
+        <div className='w-64'>
+						<h3>Credit Cards</h3>
+						<ul>
+								<li>Discover.....current balance....date</li>
+								<li>Citi Card.....current balance....date</li>
+						</ul>
+				</div>
+        <div className='w-64'>
+					<h3>Loans</h3>
+					<ul>
+							<li>UAS.....current balance....date</li>
+							<li>Navient.....current balance....date</li>
+							<li>Climb.....current balance....date</li>
+					</ul>
+				</div>
+      </section>
+      <section className='col-span-2'>
+				{props.children}
+      </section>
+    </section>
     )
 };
 
 Card.propTypes = {
-    cardTitle: PropTypes.string.isRequired,
-    // accountBalance: PropTypes.string.isRequired,
+    cardTitle: PropTypes.string,
 };
 
 export default Card;

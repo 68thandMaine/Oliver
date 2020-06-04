@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 
 function PieChart(props) {
-  const width = 500;
+	const { width } = props.dimensions;
+	const { margins } = props.margins;
   const height = width;
-  const margin = 40;
-  const radius = Math.min(width, height) / 2 - margin
+	const margin = 40;
+
+	// Refactor the radius. It needs to correlate to the size of the histogram and linegraph.
+	const radius = Math.min(width, height) / 2 - margin;
+	// This needs to change to percentages of the monthly bills.
   const data = {a: 9, b: 20, c:30, d:8, e:12}
   const color = d3.scaleOrdinal()
     .domain(data)
@@ -26,8 +30,7 @@ function PieChart(props) {
   // append the svg object to the div called 'my_dataviz'
   const svg = d3.select("#donutChart")
     .append("svg")
-      .attr("width", width)
-      .attr("height", height)
+      .attr("viewBox", `0, 0, ${width}, ${height}`)
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 

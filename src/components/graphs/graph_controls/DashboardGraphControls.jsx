@@ -1,43 +1,54 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import Button from '../../button/Button';
-import { active } from 'd3';
+import IconButton from '../../button/IconButton';
 
 function DashboardGraphControls(props) {
-  
+	
   useEffect(() => {
     toggleActiveControl();
-  })
+  });
 
-  function toggleActiveControl(){
-    if(document.querySelector('.active')) { document.querySelector('.active').classList.remove('active') }
-    document.getElementById(props.activeControl).classList.add('active');
+  function toggleActiveControl() {
+    if(document.querySelector('.active')) { 
+			document.querySelector('.active').classList.remove('active') 
+		}
+		document.getElementById(props.activeControl).classList.add('active');
   }
 
+	function clicked(graphId) {
+		const { dashboardGraphOptions } = props;
+		for (let i = 0; i < dashboardGraphOptions.length; i += 1) {
+			if(graphId === dashboardGraphOptions[i].identifier) props.selectGraphToView(dashboardGraphOptions[i]);
+		}
+	}
+	
   function showControls(options) {
-    return options.map((option) => {
+    return options.map((option, i) => {
       return (
-        <Button 
-          key={option.identifier}
-          id={option.identifier}
-          buttonStyle="graph-control" 
-          testingId={`${option.identifier}Button`} 
-          clickEvent={() => props.switchGraph(option)} 
-          text={option.name}/>
-        )
+          <IconButton
+						key={i}
+            name={option.name}
+						identifier={option.identifier}
+						iconName={option.iconName}
+						styling={"graphControls__btn"}
+            iconSize={'2x'}
+						testingId={option.identifier}
+						clickEvent={clicked}
+						/>
+						)
       })
     } 
     
   return (
-    <div className='container graph-controls'>
+    <section className='graphControls'>
       {showControls(props.dashboardGraphOptions)}
-    </div>
+    </section>
   )
 }
 
 DashboardGraphControls.propTypes = {
-  dashboardGraphOptions: PropTypes.array.isRequired,
-  switchGraph: PropTypes.func.isRequired
+	dashboardGraphOptions: PropTypes.array.isRequired,
+	selectGraphToView: PropTypes.func.isRequired,
 }
 
 export default DashboardGraphControls;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default ChartComponent => (
-  class ResponsiveChart extends Component {
+  class ResponsiveWrapper extends Component {
     constructor(props) {
       super(props)
 

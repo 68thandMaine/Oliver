@@ -1,23 +1,21 @@
 [
   {
-    "identifier": "paycheckBreakdown",
-    "graphType": "donut",
-    "name": "Paycheck Breakdown"
-  },
-  {
-    "identifier": "savingsVsBills",
+    "identifier": "debts",
     "graphType": "line",
-    "name": "Savings vs Bills"
-  },
-  {
-    "identifier": "totalDebt",
-    "graphType": "line",
-    "name": "Total Debt"
+    "name": "Debts",
+    "iconName": "file-invoice-dollar"
   },
   {
     "identifier": "bills",
-    "graphType": "bar",
-    "name": "Bills"
+    "graphType": "histogram",
+    "name": "Bills",
+    "iconName": "dollar-sign"
+  },
+  {
+    "identifier": "paycheckStats",
+    "graphType": "donut",
+    "name": "Paycheck Stats",
+    "iconName": "chart-pie"
   }
 ]
 

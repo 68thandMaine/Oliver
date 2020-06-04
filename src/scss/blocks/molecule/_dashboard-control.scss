@@ -1,0 +1,15 @@
+.graphControls {
+	@apply flex flex-wrap items-center justify-center mt-10;
+	
+	&__btn {
+		@apply m-2;
+		min-width: 10em;
+		max-width: 12.5em;		
+	}
+}
+
+@screen sm { 
+	.graphControls {
+		@apply flex flex-row
+	}
+}

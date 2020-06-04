@@ -1,10 +1,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'tailwindcss/screens';
 
 @import './scss/bundle.scss';
 
 
 body {
   background: $dm_bg;
+  padding: 0.5em;
 }
+
