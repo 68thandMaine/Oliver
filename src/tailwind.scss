@@ -57103,15 +57103,16 @@ button {
 
 .btn {
   cursor: pointer;
-  width: 150px;
   text-align: center;
   font-weight: bold;
-  border-radius: 18px;
-  padding: 1% 0 1% 0;
+  border-radius: 2em;
+  padding: 1em;
   &__icon {
     @include neumorphic-button;
     display: flex;
     align-items: center;
+    padding-left: 1.25rem;
+    padding-right: 0.75rem;
     height: 100px;
     cursor: pointer;
   }
@@ -57181,28 +57182,31 @@ button {
 
 .card {
   border-width: 1px;
-  border-color: #feb2b2;
+  border-color: #4299e1;
   @include neumorphic
 	
 	&__section {
   }
 }
 
-.graph-controls {
+.graphControls {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  &__btn {
+    margin: 0.5rem;
+    min-width: 10em;
+    max-width: 12.5em;
+  }
 }
 
-.dashboard__graphControls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-top: 2.5rem;
+@media (min-width: 640px) {
+  .graphControls {
+    display: flex;
+    flex-direction: row
+  }
 }
 
 path.slice{
@@ -57277,5 +57281,5 @@ polyline {
 
 body {
   background: $dm_bg;
-  padding: 2em;
+  padding: 0.5em;
 }

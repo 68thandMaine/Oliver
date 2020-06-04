@@ -1,7 +1,15 @@
-.graph-controls {
-  @apply flex justify-around;
+.graphControls {
+	@apply flex flex-wrap items-center justify-center mt-10;
+	
+	&__btn {
+		@apply m-2;
+		min-width: 10em;
+		max-width: 12.5em;		
+	}
 }
 
-.dashboard__graphControls {
-  @apply flex flex-row items-center justify-around px-4 py-2 mt-10;
+@screen sm { 
+	.graphControls {
+		@apply flex flex-row
+	}
 }

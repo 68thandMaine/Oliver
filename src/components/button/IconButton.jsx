@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function IconButton(props) {
 
   return (
-    <section className='btn__icon pl-6' id={props.identifier} onClick={()=>props.clickEvent(props.identifier)}>
+    <section className={`btn__icon ${props.styling}`} id={props.identifier} onClick={()=>props.clickEvent(props.identifier)}>
       <FontAwesomeIcon 
         className='icon--white' 
         icon={props.iconName}
@@ -27,6 +27,7 @@ IconButton.propTypes = {
   identifier: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	clickEvent: PropTypes.func.isRequired,
+	styling: PropTypes.func.isRequired,
 }
 
 export default IconButton;

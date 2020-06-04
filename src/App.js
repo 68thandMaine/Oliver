@@ -27,9 +27,9 @@ function App(props) {
 
   return (
     <div className="container--fluid">
-      <NavBar 
-        linkList = {props.navOptions}/>
-      {/* <Routes /> */}
+      {/* <NavBar 
+        linkList = {props.navOptions}/> */}
+      <Routes />
     </div>
   );
 }

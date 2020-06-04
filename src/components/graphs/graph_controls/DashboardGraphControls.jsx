@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import IconButton from '../../button/IconButton';
 
 function DashboardGraphControls(props) {
-	// I think the opportunity to use a hash table is present in this file. 
-	// Why not create a hash that uses the graph type as a key to return the different objects?
-	//  That way we don't need to recompute each time something bubbles up from the IconButtton
-	// Component. -->
+	
   useEffect(() => {
     toggleActiveControl();
   });
@@ -32,7 +29,8 @@ function DashboardGraphControls(props) {
 						key={i}
             name={option.name}
 						identifier={option.identifier}
-            iconName={option.iconName}
+						iconName={option.iconName}
+						styling={"graphControls__btn"}
             iconSize={'2x'}
 						testingId={option.identifier}
 						clickEvent={clicked}
@@ -42,7 +40,7 @@ function DashboardGraphControls(props) {
     } 
     
   return (
-    <section className='dashboard__graphControls'>
+    <section className='graphControls'>
       {showControls(props.dashboardGraphOptions)}
     </section>
   )

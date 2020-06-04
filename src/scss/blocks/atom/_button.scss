@@ -1,14 +1,13 @@
 .btn {
-  cursor: pointer;
-  width: 150px;
+	cursor: pointer;
   text-align: center;
   font-weight: bold;
-  border-radius: 18px;
-  padding: 1% 0 1% 0;
+  border-radius: 2em;
+  padding: 1em;
 
   &__icon {
     @include neumorphic-button;
-    @apply flex items-center;
+    @apply flex items-center pl-5 pr-3;
     height: 100px;
     cursor: pointer;
   }

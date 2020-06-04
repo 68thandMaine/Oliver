@@ -25,12 +25,12 @@ function Dashboard(props) {
 					dashboardGraphOptions={dashboardGraphOptions}
 					activeControl={graphInfo.currentGraph}
 					selectGraphToView={selectGraph}/>
-				<div className='flex flex-row justify-center mt-4'>
+				{/* <div className='flex flex-row justify-center mt-4'>
 					<Card>
 						<Graphs 
 							graphType={graphInfo.graphType}/>
 					</Card>
-				</div>
+				</div> */}
     </section>
   );
 }
