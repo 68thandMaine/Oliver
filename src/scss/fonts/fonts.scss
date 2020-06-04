@@ -1,76 +1,70 @@
 @import '../themes/dm-theme.scss';
 @import './mixins/font-mixins.scss';
 
-
-p,
-input,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-li,
-label {
-  outline: none;
-  margin: 0;
-}
-
 ::placeholder {
   font-style: italic;
   font-size: 1rem;
   color: lightgrey;
 }
+
 h1, 
 h2,
-h3, 
-h4, 
-h5, 
-h6 {
-  font-family: 'Poppins', sans-serif;
-  color: $dm_attn;
-  font-weight: 100;
+h3 {
+	font-family: 'Poppins', sans-serif;
+	color: $dm_header;
+}
+
+h4,
+h5,
+h6,
+th {
+	font-family: 'Mukta', sans-serif;
+	font-weight: 700;
+	color: $dm_sub-header;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4.6rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 
 h3 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 h5 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
 }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 p,
-label,
 li,
 input,
 input::-webkit-input-placeholder,
-button {
-  font-size: -.5em;
-  font-family: 'Mukta';
+td,
+a,
+li {
+  font-size: 1.125rem;
+  font-family: 'Mukta', sans-serif;
   color: $dm_p;
 }
 
-button {
-  font-weight: bold;
-  text-transform: uppercase;
+button,
+label {
+	font-family: 'Mukta', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $dm_p;
 }
 
 .text {
