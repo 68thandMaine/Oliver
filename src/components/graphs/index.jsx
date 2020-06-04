@@ -40,7 +40,11 @@ function Graphs(props) {
 		return graphToShow;
 	}
 
-  return displayGraph()
+  return(
+		<section className='card'>
+			{displayGraph()}
+		</section>
+	);
 }
 
 Graphs.propTypes = {

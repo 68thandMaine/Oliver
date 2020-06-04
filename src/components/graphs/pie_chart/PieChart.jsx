@@ -69,8 +69,8 @@ function PieChart(props) {
       .data(data_ready)
       .enter()
       .append('text')
-        .text( function(d) { console.log(d.data.key) ; return d.data.key } )
-        .attr('transform', function(d) {
+        .text((d) => d.data.key )
+        .attr('transform', (d) => {
             var pos = outerArc.centroid(d);
             var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
             pos[0] = radius * 0.99 * (midangle < Math.PI ? 1 : -1);
@@ -79,7 +79,8 @@ function PieChart(props) {
         .style('text-anchor', function(d) {
             var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
             return (midangle < Math.PI ? 'start' : 'end')
-        })
+				})
+				.style('fill', 'white')
     
   });
   return (

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../../components/card/Card';
+import AccountSummaryCard from '../../../components/card/AccountSummaryCard';
 import GraphControls from '../../../components/graphs/graph_controls/DashboardGraphControls';
 import Graphs from '../../../components/graphs/index';
-import Table from '../../../components/table/Table';
 import dashboardGraphOptions from '../../../config/dashboardGraphs.json';
 
 const defaultDashboardO  = {
-	 currentGraph: dashboardGraphOptions[2].identifier,
-	 graphType: dashboardGraphOptions[2].graphType
+	 currentGraph: dashboardGraphOptions[0].identifier,
+	 graphType: dashboardGraphOptions[0].graphType
 }
 
 function Dashboard(props) {
@@ -22,10 +22,10 @@ function Dashboard(props) {
 
   return (
     <section>
-			<Table />
 				<Card>
-					{/* <Graphs 
-						graphType={graphInfo.graphType}/> */}
+					<AccountSummaryCard />
+					<Graphs 
+						graphType={graphInfo.graphType}/>
 				</Card>
 				<GraphControls 
 					dashboardGraphOptions={dashboardGraphOptions}

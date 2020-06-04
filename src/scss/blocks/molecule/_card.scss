@@ -1,6 +1,7 @@
 .card {
   @apply border border-blue-500;
-	@include neumorphic
+	@include neumorphic;
+	width: 100%;
 	
 	&__section {
 	

@@ -56837,6 +56837,42 @@ $cool-grey-med: #343c45;
 
 $cool-grey-light: #434c54;
 
+/* Color Theme Swatches in Hex */
+
+$Tema-de-Color-40-1-hex: #025959;
+
+$Tema-de-Color-40-2-hex: #038C7E;
+
+$Tema-de-Color-40-3-hex: #04D9B2;
+
+$Tema-de-Color-40-4-hex: #03A688;
+
+$Tema-de-Color-40-5-hex: #D9B3B0;
+
+/* Color Theme Swatches in RGBA */
+
+$Tema-de-Color-40-1-rgba: rgba(2,89,89, 1);
+
+$Tema-de-Color-40-2-rgba: rgba(3,140,126, 1);
+
+$Tema-de-Color-40-3-rgba: rgba(4,217,178, 1);
+
+$Tema-de-Color-40-4-rgba: rgba(3,166,136, 1);
+
+$Tema-de-Color-40-5-rgba: rgba(217,179,176, 1);
+
+/* Color Theme Swatches in HSLA */
+
+$Tema-de-Color-40-1-hsla: hsla(180, 95, 17, 1);
+
+$Tema-de-Color-40-2-hsla: hsla(173, 95, 28, 1);
+
+$Tema-de-Color-40-3-hsla: hsla(169, 96, 43, 1);
+
+$Tema-de-Color-40-4-hsla: hsla(168, 96, 33, 1);
+
+$Tema-de-Color-40-5-hsla: hsla(4, 35, 77, 1);
+
 $white: #eee;
 
 $u-spacing: (
@@ -57039,7 +57075,8 @@ input,
 input::-webkit-input-placeholder,
 td,
 a,
-li {
+li,
+text {
   font-size: 1.125rem;
   font-family: 'Mukta', sans-serif;
   color: $dm_p;
@@ -57177,9 +57214,9 @@ label {
 .card {
   border-width: 1px;
   border-color: #4299e1;
-  @include neumorphic
-	
-	&__section {
+  @include neumorphic;
+  width: 100%;
+  &__section {
   }
 }
 
