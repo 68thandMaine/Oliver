@@ -37,7 +37,7 @@ function LineGraph(props) {
     
     return (
 				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height - 50}`} preserveAspectRatio='none'>
-          <g transform='translate(50.20)'>
+          
 						<GraphTitle
 							title='Debts or Something Like That' />
             <Axes
@@ -51,7 +51,7 @@ function LineGraph(props) {
             <Legend 
 							values={legendValues}
 							dimensions={dimensions} /> 
-          </g>
+          
         </svg>
     );
 }
