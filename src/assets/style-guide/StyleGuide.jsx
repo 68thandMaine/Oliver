@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './stylesheet.scss';
 
-function StyleSheet(props) {
+function StyleGuide(props) {
 
     return (
         <div className='container--fluid styleSheetWrapper'>
@@ -88,4 +88,4 @@ function StyleSheet(props) {
     )
 }
 
-export default StyleSheet;
+export default StyleGuide;

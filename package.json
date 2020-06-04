@@ -21,8 +21,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "build:style": "postcss ./src/index.scss -o ./src/tailwind.scss",
-    "start": "npm run build:style && react-scripts start",
+    "style": "postcss ./src/index.scss -o ./src/tailwind.scss",
+    "start": "npm run style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:functional": "npx cypress open"
