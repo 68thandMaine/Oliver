@@ -57011,6 +57011,8 @@ $dm_sub-header: #E1E1E1;
 
 $dm_body: #FFFFFF;
 
+$dm_attn:#f7f7f7;
+
 /* Neuomorphic card shadows */
 
 $dm_light_shadow: #1F2624;
@@ -57022,8 +57024,6 @@ $dm_input_bg: #000051;
 $dm_nav_bg: #162320;
 
 $dm_header_bg_color: white;
-
-$dm_attn:#f7f7f7;
 
 @mixin italics {
   font-style: italic;
@@ -57202,7 +57202,7 @@ label {
   caret-color: white;
   border-radius: 0.4em;
   &--txt {
-    padding: 0.6em 1.0em;
+    padding: 0.4em 1.0em;
     width: 90%;
   }
   &--num {
