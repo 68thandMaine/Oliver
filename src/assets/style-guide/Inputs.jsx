@@ -22,7 +22,22 @@ const Inputs = () => {
 				<h1>Labled Inputs</h1>
 				<hr className='mb-3' />
 				<LabeledInput
-				
+					labelText='Example Input Field'
+					identifier='exampleTextInput'
+					inputName='exampleTextInput'
+					inputType='text'
+					placeHolderText='Example'
+					styling='input--txt'
+					testingId='exampleTextInput'
+				/>
+				<LabeledInput
+					labelText='Example Number Input Field'
+					identifier='exampleIntField'
+					inputName='exampleIntField'
+					inputType='number'
+					placeHolderText='$1,0000'
+					styling='input--num'
+					testingId='exampleNumInput'
 				/>
 			</article>
 		</section>
