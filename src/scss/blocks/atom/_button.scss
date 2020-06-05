@@ -10,10 +10,11 @@
     @include neumorphic-button;
     height: 5em;
 		padding: 12px 24px;
+		width: 12em;
   }
 
 	&__icon {
-		@apply justify-between items-center pl-2 pr-3;
+		@apply flex justify-center items-center pl-2 pr-3;
 		border-radius: 1em;
 	}
 

@@ -1,6 +1,7 @@
 .graphControls {
-	@apply flex flex-wrap items-center justify-center mt-10;
-	
+	@apply flex flex-wrap items-center justify-around mt-10 mx-auto;
+	width: 75%;
+
 	&__btn {
 		@apply m-2;
 		min-width: 10em;

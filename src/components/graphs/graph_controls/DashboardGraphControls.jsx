@@ -30,7 +30,7 @@ function DashboardGraphControls(props) {
             name={option.name}
 						identifier={option.identifier}
 						iconName={option.iconName}
-						styling={"btn__graphControl"}
+						styling={"btn__graphControl my-2"}
             iconSize={'2x'}
 						testingId={option.identifier}
 						clickEvent={clicked}
@@ -40,7 +40,7 @@ function DashboardGraphControls(props) {
     } 
     
   return (
-    <section className='graphControls'>
+    <section className='graphControls flex flex-wrap justify-around'>
       {showControls(props.dashboardGraphOptions)}
     </section>
   )
