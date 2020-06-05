@@ -1,17 +1,20 @@
 .btn {
-	cursor: pointer;
   text-align: center;
   font-weight: bold;
   border-radius: 2em;
   padding: 1em;
 	border: solid 1px $dm__btn--outline;
 
-  &__icon {
+  &__graphControl {
     @include neumorphic-button;
-    @apply flex items-center pl-5 pr-3;
+
     height: 100px;
-    cursor: pointer;
+		padding: 12px 24px;
   }
+
+	&__icon {
+		@apply justify-between items-center pl-5 pr-3;
+	}
 
   &__icon--element {
     display: table-cell
@@ -24,12 +27,13 @@
 .btn:hover,
 .btn__icon:hover {
   background: #141414;
-  color: #bbb;
+	color: #bbb;
+	cursor: pointer;
 }
 .active {
   @include neumorphic-button--active
 }
 
 .graph-control {
-  padding: 12px 24px;
+  
 }

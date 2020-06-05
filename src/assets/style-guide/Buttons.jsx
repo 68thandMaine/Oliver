@@ -11,12 +11,13 @@ const Buttons = () => {
 				<Button
 					text='Base Button'
 					/>
-				<IconButton 
+				<IconButton
+					name='Graph Control Button'
 					iconName='cogs'
-					name="Icon Button"
-					/>
+					buttonStyle='btn__graphControl'
+				/>
 		</article>
 	)
-}
+} 
 
 export default Buttons;

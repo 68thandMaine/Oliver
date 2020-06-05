@@ -56993,7 +56993,7 @@ $dm_card_bg: #101213;
 
 /* Button Colors */
 
-$dm__btn--outline: #00897B;
+$dm__btn--outline: #57d9a3;
 
 /* Typography */
 
@@ -57133,20 +57133,21 @@ label {
 }
 
 .btn {
-  cursor: pointer;
   text-align: center;
   font-weight: bold;
   border-radius: 2em;
   padding: 1em;
   border: solid 1px $dm__btn--outline;
-  &__icon {
+  &__graphControl {
     @include neumorphic-button;
-    display: flex;
+    height: 100px;
+    padding: 12px 24px;
+  }
+  &__icon {
+    justify-content: space-between;
     align-items: center;
     padding-left: 1.25rem;
     padding-right: 0.75rem;
-    height: 100px;
-    cursor: pointer;
   }
   &__icon--element {
     display: table-cell
@@ -57161,6 +57162,7 @@ label {
 .btn__icon:hover {
   background: #141414;
   color: #bbb;
+  cursor: pointer;
 }
 
 .active {
@@ -57169,10 +57171,10 @@ label {
 }
 
 .graph-control {
-  padding: 12px 24px;
 }
 
 .icon {
+  margin-right: 0.75rem;
   &--white {
     color: $white;
   }
