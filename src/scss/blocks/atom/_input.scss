@@ -9,6 +9,10 @@
 	caret-color: white;
 	border-radius: 0.4em;
 
+	&__search {
+		border: none !important;
+	}
+
   &--txt {
     padding: 0.4em 1.0em;
     width: 90%;

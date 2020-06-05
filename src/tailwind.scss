@@ -57187,9 +57187,10 @@ label {
 }
 
 .icon {
-  margin-right: 0.75rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   &--white {
-    color: $white;
+    color: #fff;
   }
 }
 
@@ -57203,6 +57204,9 @@ label {
   border: solid 1px $dm_muted;
   caret-color: white;
   border-radius: 0.4em;
+  &__search {
+    border: none !important;
+  }
   &--txt {
     padding: 0.4em 1.0em;
     width: 90%;
@@ -57312,7 +57316,7 @@ polyline {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-bottom: solid 1px whitesmoke;
-  max-width: 30em;
+  width: 15em;
 }
 
 @media (min-width: 640px) {
