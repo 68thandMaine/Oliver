@@ -12,8 +12,7 @@ function DashboardGraphControls(props) {
     if(document.querySelector('.active')) { 
 			document.querySelector('.active').classList.remove('active') 
 		}
-		console.log(props)
-		// document.getElementById(props.activeControl).classList.add('active');
+		document.getElementById(props.activeControl).classList.add('active');
   }
 
 	function clicked(graphId) {
