@@ -9,7 +9,7 @@ function IconButton(props) {
 			id={props.identifier}
 			className={`btn__icon ${props.styling}`}
 			testingId={`${props.identifier}`} 
-			clickEvent={props.clickEvent}>
+			onClick={() => props.clickEvent(props.identifier)}>
 				<FontAwesomeIcon 
 					className='icon icon--white' 
 					icon={props.iconName}

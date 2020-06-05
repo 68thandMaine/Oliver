@@ -57152,9 +57152,11 @@ label {
     @include neumorphic-button;
     height: 5em;
     padding: 12px 24px;
+    width: 12em;
   }
   &__icon {
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding-left: 0.5rem;
     padding-right: 0.75rem;
@@ -57224,8 +57226,6 @@ label {
   @include neumorphic;
   width: 100%;
   padding: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
   &__section {
   }
 }
@@ -57234,8 +57234,11 @@ label {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
   &__btn {
     margin: 0.5rem;
     min-width: 10em;
