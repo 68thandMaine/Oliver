@@ -56991,9 +56991,15 @@ $dm_bg: #17171A;
 
 $dm_card_bg: #101213;
 
+/* Dark Mode Colors */
+
+$dm_green: #57d9a3;
+
+$dm_muted: #0E5432;
+
 /* Button Colors */
 
-$dm__btn--outline: #57d9a3;
+$dm__btn--outline: $dm_green;
 
 $dm__btn--green: #35E87E;
 
@@ -57003,7 +57009,7 @@ $dm_header: #F0F4F8;
 
 $dm_sub-header: #E1E1E1;
 
-$dm_p: #FFFFFF;
+$dm_body: #FFFFFF;
 
 /* Neuomorphic card shadows */
 
@@ -57019,14 +57025,11 @@ $dm_header_bg_color: white;
 
 $dm_attn:#f7f7f7;
 
-$dm_muted: #333339;
-
 @mixin italics {
   font-style: italic;
 }
 
 ::placeholder {
-  font-style: italic;
   font-size: 1rem;
   color: lightgrey;
 }
@@ -57081,7 +57084,7 @@ li,
 text {
   font-size: 1.125rem;
   font-family: 'Mukta', sans-serif;
-  color: $dm_p;
+  color: $dm_body;
 }
 
 button,
@@ -57089,11 +57092,15 @@ label {
   font-family: 'Mukta', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  color: $dm_p;
+  color: $dm_body;
+}
+
+label {
+  font-size: 1.25rem;
 }
 
 .text {
-  color: $dm_p;
+  color: $dm_body;
   &--center {
     font-size: 0.75em;
     text-align: center;
@@ -57106,7 +57113,7 @@ label {
     }
   }
   &--bold {
-    color: $dm_p;
+    color: $dm_body;
     font-weight: 400;
   }
 }
@@ -57177,9 +57184,6 @@ label {
 
 }
 
-.graph-control {
-}
-
 .icon {
   margin-right: 0.75rem;
   &--white {
@@ -57192,22 +57196,26 @@ label {
   cursor: text;
   display: block;
   width: 100%;
-  resize: none;
-  color: inherit;
   text-align: left;
   box-sizing: border-box;
+  border: solid 1px $dm_muted;
   caret-color: white;
-  min-width: 100%;
+  border-radius: 0.4em;
   &--txt {
-    padding: 1vw 2vw;
-    margin: 2vw;
+    padding: 0.6em 1.0em;
     width: 90%;
   }
   &--num {
+    padding: 0.6em 1em;
     width: 5em;
-    padding: 2vw;
     text-align: center;
   }
+}
+
+.input:focus {
+  transition: 500ms;
+  border: solid 1px $dm_green;
+  outline: $dm_green;
 }
 
 .card {

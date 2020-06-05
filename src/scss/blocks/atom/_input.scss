@@ -3,23 +3,26 @@
   cursor: text;
   display: block;
   width: 100%;
-  resize: none;
-  color: inherit;
   text-align: left;
-  box-sizing: border-box;
-  caret-color: white;
-  min-width: 100%;
+	box-sizing: border-box;
+	border: solid 1px $dm_muted;
+	caret-color: white;
+	border-radius: 0.4em;
 
   &--txt {
-    padding: 1vw 2vw;
-    margin: 2vw;
+    padding: 0.6em 1.0em;
     width: 90%;
   }
 
   &--num {
-    width: 5em;
-    padding: 2vw;
+		padding: 0.6em 1em;
+		width: 5em;
     text-align: center;
   }
+}
 
+.input:focus {
+	transition: 500ms;
+	border: solid 1px $dm_green;
+	outline: $dm_green;
 }

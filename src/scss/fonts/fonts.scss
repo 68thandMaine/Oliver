@@ -2,7 +2,7 @@
 @import './mixins/font-mixins.scss';
 
 ::placeholder {
-  font-style: italic;
+  
   font-size: 1rem;
   color: lightgrey;
 }
@@ -57,7 +57,7 @@ li,
 text {
   font-size: 1.125rem;
   font-family: 'Mukta', sans-serif;
-  color: $dm_p;
+  color: $dm_body;
 }
 
 button,
@@ -65,11 +65,15 @@ label {
 	font-family: 'Mukta', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: $dm_p;
+	color: $dm_body;
+}
+
+label {
+	font-size: 1.25rem;
 }
 
 .text {
-  color: $dm_p;
+  color: $dm_body;
 
   &--center {
     font-size: 0.75em;
@@ -85,7 +89,7 @@ label {
   }
 
   &--bold {
-    color: $dm_p;
+    color: $dm_body;
     font-weight: 400;
   }
 }

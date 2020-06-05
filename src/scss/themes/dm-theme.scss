@@ -1,14 +1,18 @@
 $dm_bg: #17171A;
 $dm_card_bg: #101213;
 
+/* Dark Mode Colors */
+$dm_green: #57d9a3;
+$dm_muted: #0E5432;
+
 /* Button Colors */ 
-$dm__btn--outline: #57d9a3;
+$dm__btn--outline: $dm_green;
 $dm__btn--green: #35E87E;
 
 /* Typography */
 $dm_header: #F0F4F8;
 $dm_sub-header: #E1E1E1;
-$dm_p: #FFFFFF;
+$dm_body: #FFFFFF;
 
 
 /* Neuomorphic card shadows */
@@ -22,4 +26,4 @@ $dm_header_bg_color: white;
 
 $dm_attn:#f7f7f7;
 
-$dm_muted: #333339;
+
