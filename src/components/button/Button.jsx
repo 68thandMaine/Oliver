@@ -12,14 +12,15 @@ const Button = (props) => {
       data-cy={`btn-${props.testingId}`}
       onClick={() => click()}
       >
+				{props.children}
         {props.text}
-      </button>
+      </button>	
   );
 }
 
 Button.propTypes = {
   text : PropTypes.string.isRequired,
-  buttonStyle: PropTypes.string.isRequired,
+  buttonStyle: PropTypes.string,
   clickEvent: PropTypes.func,
   testingId: PropTypes.string,
   id: PropTypes.string,
