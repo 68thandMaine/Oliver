@@ -1,6 +1,9 @@
 $dm_bg: #17171A;
 $dm_card_bg: #101213;
 
+/* Button Colors */ 
+$dm__btn--outline: #00897B;
+
 /* Typography */
 $dm_header: #F0F4F8;
 $dm_sub-header: #E1E1E1;
@@ -8,7 +11,6 @@ $dm_p: #FFFFFF;
 
 
 /* Neuomorphic card shadows */
-
 $dm_light_shadow: #1F2624; 
 $dm_dark_shadow: #0F0F12; 
 
@@ -20,7 +22,3 @@ $dm_header_bg_color: white;
 $dm_attn:#f7f7f7;
 
 $dm_muted: #333339;
-
-/* Experimental themes */
-
-$dm_button_outline: $cool-grey-gold-muted;

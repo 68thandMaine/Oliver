@@ -4,6 +4,7 @@
   font-weight: bold;
   border-radius: 2em;
   padding: 1em;
+	border: solid 1px $dm__btn--outline;
 
   &__icon {
     @include neumorphic-button;

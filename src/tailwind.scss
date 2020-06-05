@@ -56991,6 +56991,10 @@ $dm_bg: #17171A;
 
 $dm_card_bg: #101213;
 
+/* Button Colors */
+
+$dm__btn--outline: #00897B;
+
 /* Typography */
 
 $dm_header: #F0F4F8;
@@ -57014,10 +57018,6 @@ $dm_header_bg_color: white;
 $dm_attn:#f7f7f7;
 
 $dm_muted: #333339;
-
-/* Experimental themes */
-
-$dm_button_outline: $cool-grey-gold-muted;
 
 @mixin italics {
   font-style: italic;
@@ -57138,6 +57138,7 @@ label {
   font-weight: bold;
   border-radius: 2em;
   padding: 1em;
+  border: solid 1px $dm__btn--outline;
   &__icon {
     @include neumorphic-button;
     display: flex;
