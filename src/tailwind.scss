@@ -56995,6 +56995,8 @@ $dm_card_bg: #101213;
 
 $dm__btn--outline: #57d9a3;
 
+$dm__btn--green: #35E87E;
+
 /* Typography */
 
 $dm_header: #F0F4F8;
@@ -57138,31 +57140,36 @@ label {
   border-radius: 2em;
   padding: 1em;
   border: solid 1px $dm__btn--outline;
+  height: 4em;
   &__graphControl {
     @include neumorphic-button;
-    height: 100px;
+    height: 5em;
     padding: 12px 24px;
   }
   &__icon {
     justify-content: space-between;
     align-items: center;
-    padding-left: 1.25rem;
+    padding-left: 0.5rem;
     padding-right: 0.75rem;
+    border-radius: 1em;
   }
   &__icon--element {
     display: table-cell
   }
+  &__add {
+    padding-top: 0.25rem;
+    background-color: $dm__btn--green;
+    max-height: 2em;
+  }
 }
 
-.btn:focus{
+.btn:focus,
+.btn__graphControl:focus {
   outline: 0
 }
 
 .btn:hover,
 .btn__icon:hover {
-  background: #141414;
-  color: #bbb;
-  cursor: pointer;
 }
 
 .active {

@@ -14,7 +14,7 @@ const Button = (props) => {
       >
 				{props.children}
         {props.text}
-      </button>
+      </button>	
   );
 }
 

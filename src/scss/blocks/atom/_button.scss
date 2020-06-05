@@ -4,36 +4,39 @@
   border-radius: 2em;
   padding: 1em;
 	border: solid 1px $dm__btn--outline;
-
+	height: 4em;
+	
   &__graphControl {
     @include neumorphic-button;
-
-    height: 100px;
+    height: 5em;
 		padding: 12px 24px;
   }
 
 	&__icon {
-		@apply justify-between items-center pl-5 pr-3;
+		@apply justify-between items-center pl-2 pr-3;
+		border-radius: 1em;
 	}
 
   &__icon--element {
     display: table-cell
-  }
+	}
+	
+	&__add {
+		@apply pt-1;
+		background-color: $dm__btn--green;
+		max-height: 2em;
+	}
 }
 
-.btn:focus{
+
+.btn:focus,
+.btn__graphControl:focus {
   outline: 0
 }
 .btn:hover,
 .btn__icon:hover {
-  background: #141414;
-	color: #bbb;
-	cursor: pointer;
+  
 }
 .active {
   @include neumorphic-button--active
-}
-
-.graph-control {
-  
 }

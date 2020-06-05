@@ -8,14 +8,22 @@ const Buttons = () => {
 				<h1>Button Styles</h1>
 				<hr/>
 				<br />
-				<Button
-					text='Base Button'
+				<section className='flex flex-row justify-between'>
+					<Button
+						text='Base Button'
+						/>
+					<IconButton
+						name='Numorphoic Graph Control Button'
+						iconName='cogs'
+						styling='btn__graphControl'
 					/>
-				<IconButton
-					name='Graph Control Button'
-					iconName='cogs'
-					buttonStyle='btn__graphControl'
-				/>
+					<IconButton
+						name='Add'
+						iconName='plus-circle'
+						styling='btn__add'
+					/>
+
+				</section>
 		</article>
 	)
 } 
