@@ -5,14 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function NavSearch() {
 
   return (
-    <ul className="navbar__input-search">
-      <li>
-        <span className='fa-li u-pt1'>
-          <FontAwesomeIcon className='icon--white' icon='search'/>
-        </span>
+    <section className='navbar__input-search'>
+				<FontAwesomeIcon className='icon icon--white mt-1' icon='search'/>
         <input className="input input__search u-pl3 text-lg" autoFocus placeholder="What can I do for you?"/>
-      </li>
-    </ul>
+		</section>
   )
 }
 
