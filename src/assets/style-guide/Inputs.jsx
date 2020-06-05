@@ -1,4 +1,5 @@
 import React from 'react';
+import LabeledInput from '../../components/input/LabeledInput';
 
 const Inputs = () => {
 
@@ -15,6 +16,14 @@ const Inputs = () => {
 			<article>
 				<h1>Form Labels</h1>
 				<label className='label'>Label</label>
+			</article>
+
+			<article>
+				<h1>Labled Inputs</h1>
+				<hr className='mb-3' />
+				<LabeledInput
+				
+				/>
 			</article>
 		</section>
 	);
