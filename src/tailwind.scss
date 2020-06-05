@@ -57201,21 +57201,13 @@ label {
 }
 
 .card {
-  padding: 2vw;
-  margin: 2vw;
-  background: $dm_card_bg;
-  border-radius: 10px;
-}
-
-.header {
-  background: $dm_header_bg_color;
-}
-
-.card {
   border-width: 1px;
   border-color: #4299e1;
   @include neumorphic;
   width: 100%;
+  padding: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   &__section {
   }
 }

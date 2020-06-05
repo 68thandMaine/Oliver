@@ -2,6 +2,9 @@
   @apply border border-blue-500;
 	@include neumorphic;
 	width: 100%;
+	padding: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
 	
 	&__section {
 	
