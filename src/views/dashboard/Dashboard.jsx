@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import Card from '../../../components/card/Card';
-import AccountSummaryCard from '../../../components/card/AccountSummaryCard';
-import GraphControls from '../../../components/graphs/graph_controls/DashboardGraphControls';
-import Graphs from '../../../components/graphs/index';
-import dashboardGraphOptions from '../../../config/dashboardGraphs.json';
+import Card from '../../components/card/Card';
+import AccountSummaryCard from '../../components/card/AccountSummaryCard';
+import GraphControls from '../../components/graphs/graph_controls/DashboardGraphControls';
+import Graphs from '../../components/graphs/index';
+import dashboardGraphOptions from '../../config/dashboardGraphs.json';
 
 const defaultDashboardO  = {
 	 currentGraph: dashboardGraphOptions[0].identifier,

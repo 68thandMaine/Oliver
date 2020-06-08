@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import BankAccountService from '../../../services/BankAccountService';
 
-import Button from '../../styles/button/Button';
-import Input from '../../styles/input/Input';
+import Button from '../../button/Button';
+import Input from '../../input/Input';
 
 import './NewBankAccount.css';
 
