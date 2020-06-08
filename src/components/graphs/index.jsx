@@ -41,7 +41,7 @@ function Graphs(props) {
 	}
 
   return(
-		<section className='card'>
+		<section className='card w-10/12'>
 			{displayGraph()}
 		</section>
 	);
