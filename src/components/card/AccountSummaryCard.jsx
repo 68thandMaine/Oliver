@@ -6,7 +6,7 @@ import Table from '../table/Table';
 const AccountSummaryCard = () => {
 
 	return (
-		<section className='card order-1 xs:order-none'>
+		<section className='card order-1 sm:order-none'>
 			<h3>Card Title</h3>
 			<hr />
 			<table className='table-auto'>
