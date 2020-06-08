@@ -15,11 +15,11 @@ ___
 
 ___
 
-###  I. Description
+### I. Description
 
-Oliver is a React application that can be used to create budgets, manage financial goals, and track the cash flow of a user. 
+Oliver is a React application that can be used to create budgets, manage financial goals, and track the cash flow of a user.
 
-This project was scaffolded with `creat react app`, and has not been ejected.
+This project was scaffolded with `create react app`, and has not been ejected.
 
 ### II. Installation and Running the Project
 
@@ -54,6 +54,4 @@ ___
 Oliver uses D3 to manipulate SVGs into graphical representations of financial data.
 
 To see more information about how the Graphs are created with D3 in Oliver [use this link](./documentation/graphs/index.md)
- 
-
  
