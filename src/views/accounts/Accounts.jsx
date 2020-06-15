@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Card from '../../components/card/Card';
-import NewBankAccount from '../../components/forms/bankAccount/NewBankAccount';
+import BankAccountForm from '../../components/forms/bankAccount/BankAccountForm';
 const Accounts = () => {
 
 	return (
 		
 			<Card>
-				<NewBankAccount />
+				<BankAccountForm />
 			</Card>
 		
 	);

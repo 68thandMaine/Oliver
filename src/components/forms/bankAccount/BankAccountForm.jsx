@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import BankAccountService from '../../../services/BankAccountService';
 
 import Button from '../../button/Button';
-import LabeledInput from '../../input/LabeledInput';
+import Input from '../../input/Input';
 
 
 function BankAccountForm(props) {
