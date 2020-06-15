@@ -4,6 +4,19 @@ import LabeledInput from '../../components/input/LabeledInput';
 
 const Inputs = () => {
 
+	const radioOptions = [
+		{
+			name: "example1",
+			labelText: "Example 1",
+			group: "examples"
+		},
+		{
+			name: "example2",
+			labelText: "Example 2",
+			group: "examples"
+		},
+	]
+
 	return (
 		<section>
 			<article>
@@ -27,6 +40,7 @@ const Inputs = () => {
 
 				 <RadioButton
 					 labelText='Example Radio Button'
+					 radioOptions={radioOptions}
 					 />
 			</article>
 

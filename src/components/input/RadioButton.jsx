@@ -2,31 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RadioButton = (props) => {
-	const renderRadioGroup = () => {
-		return (
-			<>
-				<input 
-				id=""
-				name=""
-				type="radio" 
-				value=""
-				/>
-				<label htmlFor=""></label>
-			</>
-		)
-	}
 
 	return (
-		<>
-			<p className="label--txt">{props.labelText}</p>
-			{renderRadioGroup()}
-		</>
+		<fieldset>
+			<legend className="label--txt">{props.labelText}</legend>
+				{
+					props.radioOptions.map((option, index) => {
+						return 	(
+							<div className="">
+								<input
+									type="radio"
+									id={option.name}
+									name={option.group}
+									value={option.name}
+									className="mr-2"
+								/>
+								<label htmlFor={option.name}>{option.labelText}</label>
+							</div>
+						)
+					})
+				}
+		</fieldset>
 	)
 }
 
 RadioButton.propTypes = {
 	labelText: PropTypes.string.isRequired,
-	values: PropTypes.array.isRequired
+	radioOptions: PropTypes.array.isRequired,
 };
 
 export default RadioButton;
