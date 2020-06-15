@@ -57088,14 +57088,16 @@ text {
 }
 
 button,
-label {
+label,
+.label--txt {
   font-family: 'Mukta', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: $dm_body;
 }
 
-label {
+label,
+.label--txt {
   font-size: 1.25rem;
 }
 

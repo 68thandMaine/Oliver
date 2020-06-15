@@ -8,11 +8,11 @@ const LabeledInput = (props) => {
 		<>
 			<label 
 			className='label'
-			htmlFor={props.identifier}
+			htmlFor={props.name}
 			data-cy={props.testingId}
 			>{props.labelText}</label>
 			<input 
-				id={props.identifier}
+				id={props.name}
 				className={classNames()} 
 				placeholder={props.placeHolderText}
 				name={props.inputName}
@@ -24,11 +24,10 @@ const LabeledInput = (props) => {
 
 LabeledInput.propTypes = {
 	labelText: PropTypes.string.isRequired,
-	identifier: PropTypes.string.isRequired,
-	inputName: PropTypes.string.isRequired,
 	inputType: PropTypes.string.isRequired,
-	testingId: PropTypes.string.isRequired,
-
+	name: PropTypes.string.isRequired,
+	
+	testingId: PropTypes.string,
 	placeHolderText: PropTypes.string,
 	styling: PropTypes.string,
 };
