@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 
 const LabeledInput = (props) => {
 	let classNames = () => props.styling ? `input ${props.styling}` : 'input'; 
 
 	return (
-		<Fragment>
+		<>
 			<label 
 			className='label'
 			htmlFor={props.identifier}
@@ -18,7 +18,7 @@ const LabeledInput = (props) => {
 				name={props.inputName}
 				type={props.inputType}
 				data-cy={props.testingId}></input>
-		</Fragment>
+		</>
 	);
 }
 

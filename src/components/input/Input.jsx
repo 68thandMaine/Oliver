@@ -3,24 +3,13 @@ import PropTypes from 'prop-types';
 
 const Input = (props) => {
 
-  function toggleInput(props) {
-    return ( props.textarea  ? <textarea></textarea> : <input
-    className={'input ' + props.styling}
-    type={props.inputType}
-    name={props.inputName} 
-    value={props.inputValue}
-    onChange={props.handleChange}
-    placeholder={props.inputPlaceholder}
-  />
-    )
-  }
   return (    
-    <div className='inputWrapper'>
-      {{
+<div className='inputWrapper'>
+     { {
         true: <textarea
-          className={'input ' + props.inputStyle}></textarea>,
+          className={'input px-5' + props.inputStyle}></textarea>,
         undefined: <input
-          className={'input ' + props.inputStyle}
+					className={`input   ${props.inputStyle}`}
           type={props.inputType}
           name={props.inputName} 
           value={props.inputValue}
@@ -42,4 +31,4 @@ Input.propTypes = {
   textarea : PropTypes.string,
 }
 
-export default Input;
+export default Input; 
