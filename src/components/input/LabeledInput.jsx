@@ -7,9 +7,9 @@ const LabeledInput = (props) => {
 	return (
 		
 			<label 
-			className='label w-full m-2'
-			htmlFor={props.name}
-			data-cy={props.testingId}
+				className='label w-full m-2'
+				htmlFor={props.name}
+				data-cy={props.testingId}
 			>{props.labelText}
 			<input 
 				id={props.name}

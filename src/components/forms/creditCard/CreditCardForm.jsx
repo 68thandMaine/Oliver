@@ -1,50 +1,63 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../../styles/button/Button';
-import Input from '../../styles/input/Input';
 
-import './CreditCardForm.scss';
+import Button from '../../button/Button';
+import LabeledInput from '../../input/LabeledInput';
+
+
 
 const CreditCardForm = (props) => {
 
     return (
-        <div className='card'>
-            <form className='cc_formWrapper'>
-                <div className='col'>
-                    <label>Credit Card Provider</label>
-                    <Input inputName='cc_provider' inputType='text' styling='txt'/>
-                    <div className='row'>
-                      <div className='col block'>
-                        <label>Credit Card Name</label>
-                        <Input inputName='cc_name' inputType='text' styling='txt'/>
-                      </div>
-                      <div className ='col block'>
-                        <label>Credit Card Number</label>
-                        <Input inputName='cc_number' inputType='number' styling='num'/>
-                      </div>
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col block'>
-                        <label>Credit Limit</label>
-                        <Input inputName='creditLimit' inputType='text' styling='txt'/>
-                    </div>
-                    <div className='col block'>
-                        <label>APY</label>
-                        <Input inputName='apy' inputType='number' styling='num'/>
-                    </div>
-                </div>
-                <label>Balance</label>
-                <Input inputName='balance' inputType='number' styling='num'/>
+						<form>
+								<LabeledInput
+									labelText="Credit Card Name"
+									inputType="text"
+									name="creditCardProvider"
+									testingId="creditCardNameInput"
+									placeHolderText="Discover Card"
+									styling="input--txt" />
+                     
+									<LabeledInput
+										labelText="Card Number"
+										inputType="number"
+										name="creditCardNumber"
+										testingId="creditCardNumberInput"
+										placeHolderText="1234567"
+										styling="input--num" />
+                    
+									<LabeledInput
+										labelText="Credit Limit"
+										inputType="number"
+										name="creditLimit"
+										testingId="creditLimitInput"
+										placeHolderText="50000"
+										styling="input--num" />
+                    
+									<LabeledInput
+										labelText="APY"
+										inputType="number"
+										name="apy"
+										testingId="apyInput"
+										placeHolderText="20"
+										styling="input--num" />
+                    
+								<LabeledInput
+											labelText="Initial Balancer"
+											inputType="number"
+											name="creditCardBalance"
+											testingId="creditCardBalanceInput"
+											placeHolderText="1232"
+											styling="input--num" />
                 <Button
                     text='submit'
-                    buttonStyle='greenPill'
+                    buttonStyle='w-1/2'
                     clickEvent=
                     {(e) => console.log('hi')}
                     testingId='newCreditCard'/>
             </form>
-        </div>
+        
     );
 }
 
