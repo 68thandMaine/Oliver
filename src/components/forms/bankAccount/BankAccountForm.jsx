@@ -7,7 +7,7 @@ import LabeledInput from '../../input/LabeledInput';
 import RadioButton from '../../input/RadioButton';
 
 
-function NewBankAccount(props) {
+function BankAccountForm(props) {
   const [bankAccount, setBankAccountProps] = useState({});
 
 	const bankAccountOptions = [
@@ -96,4 +96,4 @@ function NewBankAccount(props) {
 	);
 }
 
-export default NewBankAccount;
+export default BankAccountForm;

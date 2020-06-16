@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Card from '../../components/card/Card';
-import NewBankAccount from '../../components/forms/bankAccount/NewBankAccount';
+import Form from '../../components/forms';
 
 const Accounts = () => {
 
@@ -18,7 +18,9 @@ const Accounts = () => {
 			</aside>
 			<section className="w-4/5 px-2">
 			<Card>
-				<NewBankAccount />
+				<Form
+					formName="newBankAccount" />
+					
 			</Card>
 			</section>
 		</section>
