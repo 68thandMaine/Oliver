@@ -36,7 +36,7 @@ After cloning the Oliver repository there are several ways that you may interact
 
 |Step|Instruction|Example Command|
 |---|---|---|
-|**1**|With terminal focus in Oliver's root, issue the run command|`npm run start`| 
+|**1**|With terminal focus in Oliver's root, issue the run command|`npm run start`|
 
 #### To Run Tests
 

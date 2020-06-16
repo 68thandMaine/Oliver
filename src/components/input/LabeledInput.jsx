@@ -1,34 +1,33 @@
-import React, { Fragment } from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 
 const LabeledInput = (props) => {
 	let classNames = () => props.styling ? `input ${props.styling}` : 'input'; 
 
 	return (
-		<Fragment>
+		<>
 			<label 
 			className='label'
-			htmlFor={props.identifier}
+			htmlFor={props.name}
 			data-cy={props.testingId}
 			>{props.labelText}</label>
 			<input 
-				id={props.identifier}
+				id={props.name}
 				className={classNames()} 
 				placeholder={props.placeHolderText}
 				name={props.inputName}
 				type={props.inputType}
 				data-cy={props.testingId}></input>
-		</Fragment>
+		</>
 	);
 }
 
 LabeledInput.propTypes = {
 	labelText: PropTypes.string.isRequired,
-	identifier: PropTypes.string.isRequired,
-	inputName: PropTypes.string.isRequired,
 	inputType: PropTypes.string.isRequired,
-	testingId: PropTypes.string.isRequired,
-
+	name: PropTypes.string.isRequired,
+	
+	testingId: PropTypes.string,
 	placeHolderText: PropTypes.string,
 	styling: PropTypes.string,
 };
