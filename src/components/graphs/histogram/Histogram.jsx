@@ -1,4 +1,5 @@
 import React from 'react';
+import GraphTitle from '../title/GraphTitle';
 import Axes from '../axes/Axes';
 import Bars from './Bars';
 import { scaleBand, scaleLinear } from 'd3-scale';
