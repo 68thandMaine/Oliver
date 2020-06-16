@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import GraphTitle from '../title/GraphTitle';
 import Axes from '../axes/Axes';
 import Bars from './Bars';
 import { scaleBand, scaleLinear } from 'd3-scale';
@@ -25,6 +26,9 @@ function Histogram(props) {
     
     return (
         <svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height}`}>
+						<GraphTitle 
+								title='Graph Title'
+							/>
             <Axes
                 scales= {{ xScale, yScale }}
                 margins={margins}

@@ -36,7 +36,7 @@ function LineGraph(props) {
 	}
     
     return (
-				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height - 50}`} preserveAspectRatio='none'>
+				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height}`} preserveAspectRatio='none'>
           
 						<GraphTitle
 							title='Debts or Something Like That' />
