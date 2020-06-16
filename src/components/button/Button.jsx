@@ -5,10 +5,14 @@ const Button = (props) => {
 	function click() {
 		if(props.clickEvent) props.clickEvent();
 	}
+
+	const classNames = () => {
+		return (props.buttonStyle !== undefined) ? `btn ${props.buttonStyle}` : `btn`;
+ 	}
   return (
     <button 
       id={`btn-${props.id}`}
-      className={`btn ${props.buttonStyle}`}
+      className={classNames()}
       data-cy={`btn-${props.testingId}`}
       onClick={() => click()}
       >

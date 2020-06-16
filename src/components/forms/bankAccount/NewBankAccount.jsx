@@ -34,59 +34,63 @@ function NewBankAccount(props) {
   }
     return (
 			<section className="card">
-				<h1>Add a new bank account</h1>
-        <form className='flex flex-col'>
-					<section className="flex flex-row">
+				<h1 className='text-center'>Add a new bank account</h1>
+        <form className='flex flex-col mx-16'>
+					<section className="flex flex-row my-4">
 						<LabeledInput
 							labelText="Account Name"
 							inputType="text"
 							name="accountName"
 							testingId="accountNameInput"
 							placeHolderText="Apple FCU"
-							styling="px-4 newForm" />
+							styling="px-4 input--txt" />
 						<LabeledInput
 							labelText="Bank Name"
 							inputType="text"
 							name="bankName"
 							testingId="bankNameInput"
 							placeHolderText="Apple Federal Credit Union"
-							styling="px-4 newForm" />
+							styling="px-4 input--txt" />
 					</section>
-					<section className="flex flex-row">
+					<section className="flex flex-row my-4">
 						<LabeledInput
 							labelText="Account Number"
 							inputType="number"
 							name="accountNumber"
 							testingId="accountNumberInput"
 							placeHolderText="123456"
-							styling="px-4 newForm" />
+							styling="px-4 input--num " />
 						<LabeledInput
 							labelText="Routing Number"
 							inputType="number"
 							name="routingNumber"
 							testingId="routingNumberInput"
 							placeHolderText="123456"
-							styling="px-4 newForm" />
+							styling="px-4 input--num " />
 					</section>
-					<section className="flex flex-row">
+					<section className="flex flex-row my-4">
 						<RadioButton
 							labelText="Account Type"
 							radioOptions={bankAccountOptions}	
 							name="accountName"
 							testingId="accountNameInput"
 							placeHolderText="Apple FCU"
-							styling="px-4 newForm" />
+							styling="px-4 " />
 						<LabeledInput
 							labelText="Starting Balance"
 							inputType="number"
 							name="balance"
 							testingId="balanceInput"
 							placeHolderText="1000"
-							styling="px-4 newForm" />
+							styling="px-4 input--num" />
 					</section>
-					<Button
-							text='submit'
-							clickEvent={createBankAccount}/>
+					<section className="flex justify-center">
+						<Button
+								text='submit'
+								id="submitBankAccount"
+								buttonStyle="w-1/2 "
+								clickEvent={createBankAccount}/>
+						</section>
 				</form>
 		</section>        
 	);
