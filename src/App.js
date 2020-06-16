@@ -30,8 +30,8 @@ function App(props) {
     <div className="container--fluid">
       {/* <NavBar 
         linkList = {props.navOptions}/> */}
-      {/* <Routes /> */}
-			<StyleGuide />
+      <Routes />
+			{/* <StyleGuide /> */}
     </div>
   );
 }

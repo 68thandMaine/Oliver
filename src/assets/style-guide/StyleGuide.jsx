@@ -10,7 +10,7 @@ function StyleGuide(props) {
     return (
 			<section>
 
-					{/* <section>
+					<section>
 						<h1>Typography</h1>
 						<hr/>  
 						<section className='grid grid-cols-2 gap-3'>
@@ -58,7 +58,7 @@ function StyleGuide(props) {
 						<li>Grocery Icon: <span><FontAwesomeIcon icon='shopping-cart'/></span></li>
 						<li>Credit Card Icon: <span><FontAwesomeIcon icon='credit-card'/></span></li>
 					</ul>								
-				</article> */}
+				</article>
 					<Buttons />
 					<Inputs />
 				</section>
