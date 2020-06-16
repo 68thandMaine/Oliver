@@ -57082,7 +57082,7 @@ td,
 a,
 li,
 text {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-family: 'Mukta', sans-serif;
   color: $dm_body;
 }
@@ -57182,6 +57182,9 @@ label,
 
 .btn:hover,
 .btn__icon:hover {
+  transition: 500ms;
+  border: solid 4px $dm_green;
+  outline: $dm_green;
 }
 
 .active {
@@ -57212,12 +57215,11 @@ label,
   }
   &--txt {
     padding: 0.4em 1.0em;
-    width: 90%;
   }
   &--num {
     padding: 0.6em 1em;
-    width: 5em;
-    text-align: center;
+    border: none;
+    border-bottom: solid 1px $dm_muted !important;
   }
   &__checkbox {
     display: block;
@@ -57225,7 +57227,7 @@ label,
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1em;
     -webkit-user-select: none;
             user-select: none;
   }
@@ -57281,6 +57283,13 @@ label,
   border: solid 1px $dm_green;
   outline: $dm_green;
 }
+
+/*
+References
+
+Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+
+*/
 
 .card {
   border-width: 1px;
@@ -57382,6 +57391,12 @@ polyline {
     display: flex;
     flex-direction: row;
   }
+}
+
+form {
+  padding: 3em 6em 8.5em 6em;
+  border: solid 3px $dm_green;
+  border-radius: 2em;
 }
 
 body {

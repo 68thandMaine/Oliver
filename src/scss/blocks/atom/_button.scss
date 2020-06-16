@@ -37,7 +37,9 @@
 }
 .btn:hover,
 .btn__icon:hover {
-  
+  transition: 500ms;
+	border: solid 4px $dm_green;
+	outline: $dm_green;
 }
 .active {
   @include neumorphic-button--active

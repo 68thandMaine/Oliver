@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import GraphTitle from '../title/GraphTitle';
 import Axes from '../axes/Axes';
 import Bars from './Bars';
