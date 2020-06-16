@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Card from '../../components/card/Card';
-import BankAccountForm from '../../components/forms/bankAccount/BankAccountForm';
+import NewBankAccount from '../../components/forms/bankAccount/NewBankAccount';
 const Accounts = () => {
 
 	return (
@@ -18,7 +18,7 @@ const Accounts = () => {
 			</aside>
 			<section className="w-4/5 px-2">
 			<Card>
-				<BankAccountForm />
+				<NewBankAccount />
 			</Card>
 			</section>
 		</section>

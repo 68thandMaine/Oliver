@@ -5,12 +5,12 @@ const LabeledInput = (props) => {
 	let classNames = () => props.styling ? `input ${props.styling}` : 'input'; 
 
 	return (
-		<>
+		
 			<label 
-			className='label'
+			className='label w-full m-2'
 			htmlFor={props.name}
 			data-cy={props.testingId}
-			>{props.labelText}</label>
+			>{props.labelText}
 			<input 
 				id={props.name}
 				className={classNames()} 
@@ -18,7 +18,7 @@ const LabeledInput = (props) => {
 				name={props.inputName}
 				type={props.inputType}
 				data-cy={props.testingId}></input>
-		</>
+		</label>
 	);
 }
 
