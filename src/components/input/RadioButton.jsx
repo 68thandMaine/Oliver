@@ -9,16 +9,17 @@ const RadioButton = (props) => {
 				{
 					props.radioOptions.map((option, index) => {
 						return 	(
-							<div className="">
+							<label className="input__checkbox" htmlFor={option.name}>
+								{option.labelText}
 								<input
-									type="radio"
+									type="checkbox"
 									id={option.name}
 									name={option.group}
 									value={option.name}
 									className="mr-2"
 								/>
-								<label htmlFor={option.name}>{option.labelText}</label>
-							</div>
+								<span className="input__checkbox--check"></span>
+							</label>
 						)
 					})
 				}
@@ -32,3 +33,4 @@ RadioButton.propTypes = {
 };
 
 export default RadioButton;
+

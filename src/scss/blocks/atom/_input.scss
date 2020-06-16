@@ -22,7 +22,69 @@
 		padding: 0.6em 1em;
 		width: 5em;
     text-align: center;
-  }
+	}
+	
+	&__checkbox {
+		display: block;
+  	position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 22px;
+		user-select: none;
+	}
+
+	/* Hide the browser's default checkbox */
+	&__checkbox input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+	}
+/* Create a custom radio button */
+	&__checkbox--check {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		border: solid 2px $dm_muted;
+	}
+
+	/* On mouse-over, add a style appropriate background color */
+	&__checkbox:hover input ~ &__checkbox--check {
+		background-color: $dm_green;
+	}
+
+	/* When the radio is checked, add a green background */
+	&__checkbox input:checked ~ &__checkbox--check {
+		background-color: $dm_green;
+	}
+
+	/* Create the check (hidden when not checked) */
+	&__checkbox--check:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	/* Show the check when checked */
+	&__checkbox input:checked ~ &__checkbox--check:after {
+		display: block;
+	}
+
+	/* Style the check */
+	&__checkbox--check:after {
+		left: 4px;
+		bottom: 12px;
+		width: 23px;
+		height: 9px;
+		border: solid white;
+		border-width: 0 0 3px 3px;
+		transform: rotate(-45deg);
+	}
+
 }
 
 .input:focus {
@@ -30,3 +92,11 @@
 	border: solid 1px $dm_green;
 	outline: $dm_green;
 }
+
+
+/*
+References
+
+Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+
+*/
