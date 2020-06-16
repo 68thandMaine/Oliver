@@ -12,11 +12,13 @@ function NewBankAccount(props) {
 
 	const bankAccountOptions = [
 		{
-			"name" : "Checking",
+			"labelText": "Checking Account",
+			"name" : "checking",
 			"group" : "accountType"
 		},
 		{
-			"name" : "Savings",
+			"labelText": "Savings Account",
+			"name" : "savings",
 			"group" : "accountType"
 		},
 	];
