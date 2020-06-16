@@ -57225,7 +57225,7 @@ label,
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1em;
     -webkit-user-select: none;
             user-select: none;
   }
@@ -57281,6 +57281,13 @@ label,
   border: solid 1px $dm_green;
   outline: $dm_green;
 }
+
+/*
+References
+
+Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+
+*/
 
 .card {
   border-width: 1px;

@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import NavBar from './components/nav-bar/NavBar';
-import StyleGuide from './assets/style-guide/StyleGuide';
+// import StyleGuide from './assets/style-guide/StyleGuide';
 
 // API Stuff
 // import { getBankAccounts } from './actions/BankAccountActions';
@@ -22,15 +22,12 @@ function App(props) {
     // props.dispatch(getBankAccounts());
   },[props]);
 
-  const content = {
-    marginTop: '2vh',
-  };
 
   return (
     <div className="container--fluid">
-      {/* <NavBar 
-        linkList = {props.navOptions}/> */}
-      <Routes />
+      <NavBar 
+        linkList = {props.navOptions}/>
+		<Routes />
 			{/* <StyleGuide /> */}
     </div>
   );

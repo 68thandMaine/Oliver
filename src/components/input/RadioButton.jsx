@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 const RadioButton = (props) => {
 
 	return (
-		<fieldset>
+		<fieldset className="w-7/12 px-2">
 			<legend className="label--txt">{props.labelText}</legend>
 				{
 					props.radioOptions.map((option, index) => {
 						return 	(
-							<label className="input__checkbox" htmlFor={option.name}>
+							<label className="input__checkbox" htmlFor={option.name} key={index}>
 								{option.labelText}
 								<input
 									type="checkbox"

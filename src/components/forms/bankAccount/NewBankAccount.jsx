@@ -84,16 +84,12 @@ function NewBankAccount(props) {
 							placeHolderText="1000"
 							styling="px-4 newForm" />
 					</section>
-						
-						
-							{/* <div className='row'> 
-							<Button
-									text='submit'
-									clickEvent={createBankAccount}/>
-						</div> */}
-						</form>
-			</section>        
-    );
+					<Button
+							text='submit'
+							clickEvent={createBankAccount}/>
+				</form>
+		</section>        
+	);
 }
 
 export default NewBankAccount;

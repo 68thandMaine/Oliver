@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 
 function PieChart(props) {
 	const { width } = props.dimensions;
-	const { margins } = props.margins;
+
   const height = width;
 	const margin = 40;
 
