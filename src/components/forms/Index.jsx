@@ -16,14 +16,14 @@ function Index(props) {
   }, [props] );
 
 return (
-  <div>
+  <>
    {{
      newBankAccount: <BankAccountForm />,
      newCreditCard : <CreditCardForm />,
      newLoan : <LoanForm />,
     //  newTransaction: <TransactionForm />,
    }[formToShow]}
-  </div>
+  </>
   )
 }
 

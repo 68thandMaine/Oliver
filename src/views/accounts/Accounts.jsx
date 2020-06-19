@@ -17,11 +17,8 @@ const Accounts = () => {
 				</ul>
 			</aside>
 			<section className="w-4/5 px-2">
-			<Card>
 				<Form
-					formName="newBankAccount" />
-					
-			</Card>
+					formName="newCreditCard" />
 			</section>
 		</section>
 			

@@ -2,7 +2,6 @@
   background: transparent;
   cursor: text;
   display: block;
-  width: 100%;
   text-align: left;
 	box-sizing: border-box;
 	border: solid 1px $dm_muted;
@@ -20,8 +19,6 @@
 
   &--num {
 		padding: 0.6em 1em;
-		border: none;
-		border-bottom: solid 1px $dm_muted !important;	
 	}
 	
 	&__checkbox {
