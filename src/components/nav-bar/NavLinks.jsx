@@ -7,8 +7,6 @@
 		const { assignActiveClass } = props
 
 		const links = props.linkList.map((link) => 
-
-
 			<Link
 				to={{
 						pathname: `${link.path}`,
