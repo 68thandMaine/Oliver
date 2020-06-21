@@ -8,7 +8,7 @@ const activeClass = 'navbar__link--active';
 function NavBar(props) {
 
   const defaultConfig = {
-    activeLinkName: 'Home',
+    activeLinkName: 'home',
     searchString: '',
   };
   

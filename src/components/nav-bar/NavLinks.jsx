@@ -1,33 +1,44 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+	import React from 'react';
+	import { Link } from "react-router-dom";
 
-function NavLinks(props) {
-  const { assignActiveClass } = props
+	import PropTypes from 'prop-types';
 
-  const links = props.linkList.map((link) => 
-    <li 
-      className='navbar__link'
-      onClick={() => assignActiveClass(link.name)} 
-      key={link.id} 
-      id={link.name} 
-      data-cy='navbar__link'
-    >
-      {link.name} 
-    </li>
-    )
+	function NavLinks(props) {
+		const { assignActiveClass } = props
 
-    
-  return (
-    <ul className="navbar__links" data-cy='navbar__links'>
-      {links}
-    </ul>
-  );
-}
+		const links = props.linkList.map((link) => 
+			<Link
+				to={{
+						pathname: `${link.path}`,
+						// stuff from docs below
+						// search: "?sort=name",
+						// hash: "#the-hash",
+						// state: { fromDashboard: true }
+					}}
+				className='navbar__link'
+				onClick={() => assignActiveClass(link.routeName)} 				
+				key={link.id}
+				id={link.routeName} 
+				data-cy={`navbar__link--${link.routeName}`}
+			> 
+			<li>
+					{link.name} 
+			</li>
+			</Link>
+			)
 
-NavLinks.propTypes = {
-  linkList: PropTypes.array,
-  assignActiveClass: PropTypes.func,
-  activeView: PropTypes.string
-}
+			
+		return (
+			<ul className="navbar__links" data-cy='navbar__links'>
+				{links}
+			</ul>
+		);
+	}
 
-export default NavLinks;
+	NavLinks.propTypes = {
+		linkList: PropTypes.array,
+		assignActiveClass: PropTypes.func, 
+		activeView: PropTypes.string
+	}
+
+	export default NavLinks;

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe("Dashboard graph controls", () => {
   before(() => {
     cy.visit('/')
