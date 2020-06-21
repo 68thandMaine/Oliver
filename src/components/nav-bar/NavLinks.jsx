@@ -7,10 +7,10 @@ function NavLinks(props) {
   const links = props.linkList.map((link) => 
     <li 
       className='navbar__link'
-      onClick={() => assignActiveClass(link.name)} 
-      key={link.id} 
-      id={link.name} 
-      data-cy='navbar__link'
+      onClick={() => assignActiveClass(link.routeName)} 
+      key={link.routeName} 
+      id={link.routeName} 
+      data-cy={`navbar__link--${link.routeName}`}
     >
       {link.name} 
     </li>
@@ -26,7 +26,7 @@ function NavLinks(props) {
 
 NavLinks.propTypes = {
   linkList: PropTypes.array,
-  assignActiveClass: PropTypes.func,
+  assignActiveClass: PropTypes.func, 
   activeView: PropTypes.string
 }
 
