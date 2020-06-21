@@ -3,7 +3,7 @@
 
 	import PropTypes from 'prop-types';
 
-	function NavLinks(props) {
+	function MenuLinks(props) {
 		const { assignActiveClass } = props
 
 		const links = props.linkList.map((link) => 
@@ -35,10 +35,10 @@
 		);
 	}
 
-	NavLinks.propTypes = {
+	MenuLinks.propTypes = {
 		linkList: PropTypes.array,
 		assignActiveClass: PropTypes.func, 
 		activeView: PropTypes.string
 	}
 
-	export default NavLinks;
+	export default MenuLinks;

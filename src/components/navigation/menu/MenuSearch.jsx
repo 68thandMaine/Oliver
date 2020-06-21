@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-function NavSearch() {
+function MenuSearch() {
 
   return (
     <section className='navbar__input-search'>
@@ -12,4 +12,4 @@ function NavSearch() {
   )
 }
 
-export default NavSearch;
+export default MenuSearch;

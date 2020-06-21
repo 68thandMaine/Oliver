@@ -1,7 +1,7 @@
 // Important Stuff
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import NavBar from './components/nav-bar/NavBar';
+import Menu from './components/navigation/menu/Menu';
 // import StyleGuide from './assets/style-guide/StyleGuide';
 
 // API Stuff
@@ -25,7 +25,7 @@ function App(props) {
 
   return (
     <div className="container--fluid">
-      <NavBar 
+      <Menu 
         linkList = {props.navOptions}/>
 		<Routes />
 			{/* <StyleGuide /> */}

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import initialState from '../../constants/index';
-import NavSearch from './NavSearch';
-import NavLinks from './NavLinks';
+import initialState from '../../../constants/index';
+import MenuSearch from './MenuSearch';
+import MenuLinks from './MenuLinks';
 const linkList = initialState.initialState.NavOptions;
 const activeClass = 'navbar__link--active';
 
-function NavBar(props) {
+function Menu(props) {
 
   const defaultConfig = {
     activeLinkName: 'home',
@@ -31,8 +31,8 @@ function NavBar(props) {
 
   return (
     <nav className="navbar">
-      <NavSearch />
-      <NavLinks 
+      <MenuSearch />
+      <MenuLinks 
         linkList={linkList} 
         assignActiveClass={setActiveLink}
       />
@@ -41,4 +41,4 @@ function NavBar(props) {
 }
 
 
-export default NavBar;
+export default Menu;
