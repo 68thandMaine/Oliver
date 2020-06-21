@@ -6,7 +6,8 @@ describe("Navbar", () => {
 		
 		context("When clicking on navbar tabs", () => {
 			it.only("routes to the account view when the 'Account Info' tab is clicked", () => {
-				// cy.get("[data-cy='navbar__link--accounts']").
+				cy.get("[data-cy='navbar__link--accounts']").click();
+				cy.url().should("include", "/accounts")
 			});
 			it("routes to goal view when the 'Goals' tab is clicked", () => {
 				
