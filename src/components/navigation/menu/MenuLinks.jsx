@@ -1,5 +1,5 @@
 	import React from 'react';
-	import { Link } from "react-router-dom";
+	import { NavLink } from "react-router-dom";
 
 	import PropTypes from 'prop-types';
 
@@ -7,24 +7,18 @@
 		const { assignActiveClass } = props
 
 		const links = props.linkList.map((link) => 
-			<Link
-				to={{
-						pathname: `${link.path}`,
-						// stuff from docs below
-						// search: "?sort=name",
-						// hash: "#the-hash",
-						// state: { fromDashboard: true }
-					}}
-				className='navbar__link'
-				onClick={() => assignActiveClass(link.routeName)} 				
+			 <NavLink
+				exact to={link.path}
+				activeClassName="navbar__link--active"
 				key={link.id}
+				className="navbar__link"
 				id={link.routeName} 
 				data-cy={`navbar__link--${link.routeName}`}
-			> 
-			<li>
-					{link.name} 
-			</li>
-			</Link>
+				>
+					<li>
+						{link.name}
+					</li>
+				</NavLink>
 			)
 
 			
