@@ -21,19 +21,19 @@ const ElementPropertyTable = () => {
 			<tr>
 				<td className='border px-4 py-2'>Sub-headers</td>
 				<td className='border px-4 py-2'>h4 - h6</td>
-				<td className='border px-4 py-2'>Mukta 700</td>
+				<td className='border px-4 py-2'>Raleway 700</td>
 				<td className='border px-4 py-2'>Dark Mode Color: E1E1E1</td>
 			</tr>
 			<tr>
 				<td className='border px-4 py-2'>Main Elements</td>
 				<td className='border px-4 py-2'>p, li, input, textarea, a, td</td>
-				<td className='border px-4 py-2'>Mukta 300</td>
+				<td className='border px-4 py-2'>Raleway 300</td>
 				<td className='border px-4 py-2'>Dark Mode Color: FFFFFF</td>
 			</tr>
 			<tr>
 				<td className='border px-4 py-2'>Action Items</td>
 				<td className='border px-4 py-2'>Button Labels</td>
-				<td className='border px-4 py-2'>Mukta 600</td>
+				<td className='border px-4 py-2'>Raleway 600</td>
 				<td className='border px-4 py-2'>Dark Mode Color: FFFFFF, uppercase</td>
 			</tr>
 		</tbody>

@@ -57045,8 +57045,8 @@ h4,
 h5,
 h6,
 th {
-  font-family: 'Mukta', sans-serif;
-  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   color: $dm_sub-header;
 }
 
@@ -57083,14 +57083,15 @@ a,
 li,
 text {
   font-size: 1.25rem;
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   color: $dm_body;
 }
 
 button,
 label,
 .label--txt {
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: $dm_body;
