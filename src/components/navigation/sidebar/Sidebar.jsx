@@ -4,21 +4,9 @@ const SideBar = (props) => {
 	return (
 		<aside>
 			<ul>
-				<li>Banking
-					<ul>
-						<li>New</li>
-					</ul>
-				</li>
-				<li>Credit Cards
-					<ul>
-						<li>New</li>
-					</ul>
-				</li>
-				<li>Loans
-					<ul>
-						<li>New</li>
-					</ul>
-				</li>
+				<li>Banking</li>
+				<li>Credit Cards</li>
+				<li>Loans</li>
 			</ul>
 		</aside>
 	)
