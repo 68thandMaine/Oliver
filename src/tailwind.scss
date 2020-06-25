@@ -56993,9 +56993,9 @@ $dm_bg: #202030;
 
 /* Dark Mode Card Colors */
 
-$dm_card_bg: #1f1f29;
+$dm_card_bg: #292935;
 
-$dm_card_head: #292935;
+$dm_card_head: #1f1f29;
 
 /* Dark Mode Colors */
 
@@ -57304,7 +57304,6 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
     &--title {
       background: $dm_card_head;
       display: block;
-      width: 100%
     }
     &--graph {
     }

@@ -7,14 +7,14 @@ const GraphCard = () => {
 	return (
 		<section className="card card__graph">
 			<div className="card__graph--title">
-				<h4>Paycheck Breakdown</h4>
+				<h4>Balance History of Apple FCU</h4>
 			</div>
 			<div className="card__graph--graph">
 				<Graphs
-					graphType="donut" />
+					graphType="line" />
 			</div>
 			<div className="card__graph--body">
-				<p>Let's put a table here</p>
+				<p>Let's put a table here. This table would be for showing the data the graph is displaying in a manual form.</p>
 			</div>
 		</section>
 	)
