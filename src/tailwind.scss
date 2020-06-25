@@ -56987,9 +56987,15 @@ nested map values from the yaml or json data files */
   @return $result;
 }
 
-$dm_bg: #17171A;
+/* $dm_bg: #17171A; */
 
-$dm_card_bg: #101213;
+$dm_bg: #202030;
+
+/* Dark Mode Card Colors */
+
+$dm_card_bg: #1f1f29;
+
+$dm_card_head: #292935;
 
 /* Dark Mode Colors */
 
@@ -57045,8 +57051,8 @@ h4,
 h5,
 h6,
 th {
-  font-family: 'Mukta', sans-serif;
-  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   color: $dm_sub-header;
 }
 
@@ -57083,14 +57089,15 @@ a,
 li,
 text {
   font-size: 1.25rem;
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   color: $dm_body;
 }
 
 button,
 label,
 .label--txt {
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: $dm_body;
@@ -57211,6 +57218,7 @@ label,
   border-radius: 0.4em;
   &__search {
     border: none !important;
+    width: 100%;
   }
   &--txt {
     padding: 0.4em 1.0em;
@@ -57289,11 +57297,19 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
 */
 
 .card {
-  border-width: 1px;
-  border-color: #4299e1;
-  @include neumorphic;
-  padding: 2em;
-  &__section {
+  background: $dm_card_bg;
+  &__graph {
+    display: flex;
+    flex-direction: column;
+    &--title {
+      background: $dm_card_head;
+      display: block;
+      width: 100%
+    }
+    &--graph {
+    }
+    &--body {
+    }
   }
 }
 
