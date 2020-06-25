@@ -1,9 +1,20 @@
 .card {
-  @apply border border-blue-500;
-	@include neumorphic;
+	background: $dm_card_bg;
 
-	padding: 2em;
-	&__section {
-	
+	&__graph {
+		@apply flex flex-col;
+
+		&--title {
+			background: $dm_card_head;
+			display: block;
+			width: 100%
+		}
+
+		&--graph {
+
+		}
+		&--body {
+			
+		}
 	}
 }

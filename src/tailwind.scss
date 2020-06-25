@@ -56989,9 +56989,13 @@ nested map values from the yaml or json data files */
 
 /* $dm_bg: #17171A; */
 
-$dm_card_bg: #101213;
+$dm_bg: #202030;
 
-$dm_bg: #101421;
+/* Dark Mode Card Colors */
+
+$dm_card_bg: #1f1f29;
+
+$dm_card_head: #292935;
 
 /* Dark Mode Colors */
 
@@ -57293,11 +57297,19 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
 */
 
 .card {
-  border-width: 1px;
-  border-color: #4299e1;
-  @include neumorphic;
-  padding: 2em;
-  &__section {
+  background: $dm_card_bg;
+  &__graph {
+    display: flex;
+    flex-direction: column;
+    &--title {
+      background: $dm_card_head;
+      display: block;
+      width: 100%
+    }
+    &--graph {
+    }
+    &--body {
+    }
   }
 }
 
