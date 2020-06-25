@@ -7,7 +7,7 @@ const GraphCard = () => {
 	return (
 		<section className="card card__graph">
 			<div className="card__graph--title">
-				<h4>Balance History of Apple FCU</h4>
+				<h5>Balance History of Apple FCU</h5>
 			</div>
 			<div className="card__graph--graph">
 				<Graphs
