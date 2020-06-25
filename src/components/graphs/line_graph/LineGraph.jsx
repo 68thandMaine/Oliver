@@ -37,9 +37,6 @@ function LineGraph(props) {
     
     return (
 				<svg viewBox={`0, 0, ${dimensions.width}, ${dimensions.height}`} preserveAspectRatio='none'>
-          
-						<GraphTitle
-							title='Debts or Something Like That' />
             <Axes
               scales= {{ xScale, yScale }}
               margins={margins}
@@ -48,10 +45,6 @@ function LineGraph(props) {
               scales={{ xScale, yScale }}
               data={dataGroup}
               lineColor={legendValues} />
-            <Legend 
-							values={legendValues}
-							dimensions={dimensions} /> 
-          
         </svg>
     );
 }
