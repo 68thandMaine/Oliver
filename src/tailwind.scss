@@ -57339,7 +57339,7 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
 .accounts {
   &__container {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 250px auto;
     column-gap: 30px;
   }
 }
@@ -57368,6 +57368,12 @@ polyline {
 .axis-bottom text {
   transform: rotate(-45deg);
   text-anchor: end;
+}
+
+form {
+  padding: 3em 6em 8.5em 6em;
+  border: solid 3px $dm_green;
+  border-radius: 2em;
 }
 
 .navbar {
@@ -57412,12 +57418,6 @@ polyline {
     display: flex;
     flex-direction: row;
   }
-}
-
-form {
-  padding: 3em 6em 8.5em 6em;
-  border: solid 3px $dm_green;
-  border-radius: 2em;
 }
 
 body {
