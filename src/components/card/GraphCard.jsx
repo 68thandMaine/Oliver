@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Graphs from '../graphs/index';
 
-const GraphCard = () => {
+const GraphCard = (props) => {
 	return (
 		<section className="card card__graph">
 			<div className="card__graph--title">
@@ -21,6 +21,7 @@ const GraphCard = () => {
 }
 
 GraphCard.propTypes = {
+	graphTitle: PropTypes.string.isRequired,
 	graphType: PropTypes.string.isRequired
 }
 

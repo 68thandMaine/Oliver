@@ -57336,6 +57336,14 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
   }
 }
 
+.accounts {
+  &__container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    column-gap: 30px;
+  }
+}
+
 path.slice{
   stroke-width:2px;
 }
