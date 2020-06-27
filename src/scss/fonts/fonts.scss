@@ -1,8 +1,10 @@
 @import '../themes/dm-theme.scss';
-@import './mixins/font-mixins.scss';
 
-::placeholder {
-  
+html {
+	font-size: 16px;
+}
+
+::placeholder {  
   font-size: 1rem;
   color: lightgrey;
 }
@@ -85,10 +87,6 @@ label,
   &__small {
     font-size: 0.75em;
     
-    &--italic {
-      font-size: 0.75em;
-      @include italics;
-    }
   }
 
   &--bold {

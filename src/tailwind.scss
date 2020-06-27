@@ -57031,8 +57031,8 @@ $dm_nav_bg: #162320;
 
 $dm_header_bg_color: white;
 
-@mixin italics {
-  font-style: italic;
+html {
+  font-size: 16px;
 }
 
 ::placeholder {
@@ -57116,10 +57116,6 @@ label,
   }
   &__small {
     font-size: 0.75em;
-    &--italic {
-      font-size: 0.75em;
-      @include italics;
-    }
   }
   &--bold {
     color: $dm_body;
