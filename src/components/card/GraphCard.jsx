@@ -20,4 +20,8 @@ const GraphCard = () => {
 	)
 }
 
+GraphCard.propTypes = {
+	graphType: PropTypes.string.isRequired
+}
+
 export default GraphCard;
