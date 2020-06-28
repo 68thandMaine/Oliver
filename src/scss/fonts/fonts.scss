@@ -1,9 +1,10 @@
 @import '../themes/dm-theme.scss';
-@import './mixins/font-mixins.scss';
 
-::placeholder {
-  
-  font-size: 1rem;
+html {
+	@include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+::placeholder {  
   color: lightgrey;
 }
 
@@ -24,27 +25,27 @@ th {
 }
 
 h1 {
-  font-size: 4.6rem;
+	font-size: 1.25 * 1 * 1rem;
 }
 
 h2 {
-  font-size: 3.6rem;
+	font-size: 1rem;
 }
 
 h3 {
-  font-size: 2.8rem;
+	font-size: 0.85 * 1rem;
 }
 
 h4 {
-  font-size: 2.2rem;
+	font-size: 0.8 * 1rem;
 }
 
 h5 {
-  font-size: 1.8rem;
+	font-size: 0.7 * 1rem;
 }
 
 h6 {
-  font-size: 1.6rem;
+	font-size: 0.65 * 1rem;
 }
 
 p,
@@ -55,10 +56,10 @@ td,
 a,
 li,
 text {
-  font-size: 1.25rem;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 200;
-  color: $dm_body;
+	color: $dm_body;
+	font-size: 0.85rem;
 }
 
 button,
@@ -68,27 +69,26 @@ label,
 	font-weight: 600;
 	text-transform: uppercase;
 	color: $dm_body;
+	font-size: 0.85rem;
 }
 
 label,
 .label--txt {
-	font-size: 1.25rem;
+	font-size: 0.85rem;
 }
 
-.text {
+
+@debug $min_width;.text {
   color: $dm_body;
 
   &--center {
-    font-size: 0.75em;
+
+		@debug $min_width;
     text-align: center;
   }
   &__small {
-    font-size: 0.75em;
+
     
-    &--italic {
-      font-size: 0.75em;
-      @include italics;
-    }
   }
 
   &--bold {

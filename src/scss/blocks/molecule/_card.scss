@@ -3,11 +3,12 @@
 
 	&__graph {
 		@apply flex flex-col;
-
+		width: 18em;
+		
 		&--title {
 			background: $dm_card_head;
 			display: block;
-			width: 100%
+			
 		}
 
 		&--graph {
