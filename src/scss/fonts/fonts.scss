@@ -24,6 +24,30 @@ th {
 	color: $dm_sub-header;
 }
 
+h1 {
+	font-size: 1.25 * 1 * 1rem;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+h3 {
+	font-size: 0.85 * 1rem;
+}
+
+h4 {
+	font-size: 0.8 * 1rem;
+}
+
+h5 {
+	font-size: 0.7 * 1rem;
+}
+
+h6 {
+	font-size: 0.65 * 1rem;
+}
+
 p,
 li,
 input,
@@ -34,7 +58,8 @@ li,
 text {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 200;
-  color: $dm_body;
+	color: $dm_body;
+	font-size: 0.85rem;
 }
 
 button,
@@ -44,10 +69,12 @@ label,
 	font-weight: 600;
 	text-transform: uppercase;
 	color: $dm_body;
+	font-size: 0.85rem;
 }
 
 label,
 .label--txt {
+	font-size: 0.85rem;
 }
 
 

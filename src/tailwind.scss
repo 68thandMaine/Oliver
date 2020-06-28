@@ -56875,13 +56875,13 @@ $Tema-de-Color-40-5-hsla: hsla(4, 35, 77, 1);
 
 $white: #eee;
 
-$min-width: 320px;
+$min_width: 320px;
 
 $max_width: 1200px;
 
 $min_font: 16px;
 
-$max-font: 24px;
+$max_font: 24px;
 
 $u-spacing: (
   0: (
@@ -57114,6 +57114,30 @@ th {
   color: $dm_sub-header;
 }
 
+h1 {
+  font-size: 1.25 * 1 * 1rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 0.85 * 1rem;
+}
+
+h4 {
+  font-size: 0.8 * 1rem;
+}
+
+h5 {
+  font-size: 0.7 * 1rem;
+}
+
+h6 {
+  font-size: 0.65 * 1rem;
+}
+
 p,
 li,
 input,
@@ -57125,6 +57149,7 @@ text {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
   color: $dm_body;
+  font-size: 0.85rem;
 }
 
 button,
@@ -57134,10 +57159,12 @@ label,
   font-weight: 600;
   text-transform: uppercase;
   color: $dm_body;
+  font-size: 0.85rem;
 }
 
 label,
 .label--txt {
+  font-size: 0.85rem;
 }
 
 @debug $min_width;
