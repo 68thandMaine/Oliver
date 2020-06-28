@@ -28,7 +28,7 @@ function App(props) {
       <Menu 
         linkList = {props.navOptions}/>
 		  <Routes />
-			<StyleGuide />
+			{/* <StyleGuide /> */}
     </div>
   );
 }
