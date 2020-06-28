@@ -1,11 +1,10 @@
 @import '../themes/dm-theme.scss';
 
 html {
-	font-size: 16px;
+	@include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
 ::placeholder {  
-  font-size: 1rem;
   color: lightgrey;
 }
 
@@ -25,30 +24,6 @@ th {
 	color: $dm_sub-header;
 }
 
-h1 {
-  font-size: 4.6rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-}
-
-h3 {
-  font-size: 2.8rem;
-}
-
-h4 {
-  font-size: 2.2rem;
-}
-
-h5 {
-  font-size: 1.8rem;
-}
-
-h6 {
-  font-size: 1.6rem;
-}
-
 p,
 li,
 input,
@@ -57,7 +32,6 @@ td,
 a,
 li,
 text {
-  font-size: 1.25rem;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 200;
   color: $dm_body;
@@ -74,18 +48,19 @@ label,
 
 label,
 .label--txt {
-	font-size: 1.25rem;
 }
 
-.text {
+
+@debug $min_width;.text {
   color: $dm_body;
 
   &--center {
-    font-size: 0.75em;
+
+		@debug $min_width;
     text-align: center;
   }
   &__small {
-    font-size: 0.75em;
+
     
   }
 

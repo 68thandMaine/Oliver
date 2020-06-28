@@ -6,9 +6,10 @@
 
 @import "./themes/dm-theme.scss";
 
-@import "./fonts/fonts.scss";
 
 @import "./mixins/_style-themes.scss";
+@import "./mixins/_fluid-font.scss";
 
+@import "./fonts/fonts.scss";
 @import "./blocks/bundle.scss"
 

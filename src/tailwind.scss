@@ -56875,6 +56875,14 @@ $Tema-de-Color-40-5-hsla: hsla(4, 35, 77, 1);
 
 $white: #eee;
 
+$min-width: 320px;
+
+$max_width: 1200px;
+
+$min_font: 16px;
+
+$max-font: 24px;
+
 $u-spacing: (
   0: (
     b: 0,
@@ -56950,6 +56958,10 @@ $directions: (
     bottom: b,
     left: l
   );
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
 
 // Helper function for general deep setting in maps.
 // Deep-set by Hugo Giraudel
@@ -57031,98 +57043,6 @@ $dm_nav_bg: #162320;
 
 $dm_header_bg_color: white;
 
-html {
-  font-size: 16px;
-}
-
-::placeholder {
-  font-size: 1rem;
-  color: lightgrey;
-}
-
-h1, 
-h2,
-h3 {
-  font-family: 'Poppins', sans-serif;
-  color: $dm_header;
-}
-
-h4,
-h5,
-h6,
-th {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
-  color: $dm_sub-header;
-}
-
-h1 {
-  font-size: 4.6rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-}
-
-h3 {
-  font-size: 2.8rem;
-}
-
-h4 {
-  font-size: 2.2rem;
-}
-
-h5 {
-  font-size: 1.8rem;
-}
-
-h6 {
-  font-size: 1.6rem;
-}
-
-p,
-li,
-input,
-input::-webkit-input-placeholder,
-td,
-a,
-li,
-text {
-  font-size: 1.25rem;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 200;
-  color: $dm_body;
-}
-
-button,
-label,
-.label--txt {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: $dm_body;
-}
-
-label,
-.label--txt {
-  font-size: 1.25rem;
-}
-
-.text {
-  color: $dm_body;
-  &--center {
-    font-size: 0.75em;
-    text-align: center;
-  }
-  &__small {
-    font-size: 0.75em;
-  }
-  &--bold {
-    color: $dm_body;
-    font-weight: 400;
-  }
-}
-
 @mixin neumorphic {
   background-color: $dm_bg;
 
@@ -57144,6 +57064,96 @@ label,
   color: #6a6a6a;
 
   background-color: $dm_bg;
+}
+
+/* Mixin found on css-tricks.com/snippets/css/fluid-typography */
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+
+  $u2: unit($max-vw);
+
+  $u3: unit($min-font-size);
+
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-width) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (max-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+::placeholder {
+  color: lightgrey;
+}
+
+h1, 
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: $dm_header;
+}
+
+h4,
+h5,
+h6,
+th {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: $dm_sub-header;
+}
+
+p,
+li,
+input,
+input::-webkit-input-placeholder,
+td,
+a,
+li,
+text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  color: $dm_body;
+}
+
+button,
+label,
+.label--txt {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $dm_body;
+}
+
+label,
+.label--txt {
+}
+
+@debug $min_width;
+
+.text {
+  color: $dm_body;
+  &--center {
+    @debug $min_width;
+    text-align: center;
+  }
+  &__small {
+  }
+  &--bold {
+    color: $dm_body;
+    font-weight: 400;
+  }
 }
 
 .btn {

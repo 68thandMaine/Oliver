@@ -1,3 +1,4 @@
+@import "./font_functions.scss";
 // Helper function for general deep setting in maps.
 // Deep-set by Hugo Giraudel
 @function map-deep-set($map, $keys.../*, $value */) {
