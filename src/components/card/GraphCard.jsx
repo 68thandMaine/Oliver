@@ -7,12 +7,11 @@ const GraphCard = (props) => {
 	return (
 		<section className="card card__graph">
 			<div className="card__graph--title">
-				<h5>{props.graphTitle}</h5>
-				<h3>Monthly Balance</h3>
+				<h3>{props.graphTitle}</h3>
 			</div>
 			<div className="card__graph--graph">
 				<Graphs
-					graphType="line" />
+					graphType={props.graphType} />
 			</div>
 			<div className="card__graph--body">
 				<p>Let's put a table here. This table would be for showing the data the graph is displaying in a manual form.</p>
