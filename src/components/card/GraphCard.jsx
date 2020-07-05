@@ -6,10 +6,10 @@ import Graphs from '../graphs/index';
 const GraphCard = (props) => {
 	return (
 		<section className="card card__graph">
-			<div className="card__graph--title">
+			<div className="card card__graph--title">
 				<h3>{props.graphTitle}</h3>
 			</div>
-			<div className="card__graph--graph">
+			<div className="card card__graph--graph">
 				<Graphs
 					graphType={props.graphType} />
 			</div>

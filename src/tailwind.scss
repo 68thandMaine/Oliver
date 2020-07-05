@@ -57332,12 +57332,12 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
 .card {
   background: $dm_card_bg;
   &__graph {
-    display: flex;
     flex-direction: column;
     width: 18em;
     &--title {
       background: $dm_card_head;
       display: block;
+      justify-content: center;
     }
     &--graph {
     }
