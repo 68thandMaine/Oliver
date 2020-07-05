@@ -9,7 +9,7 @@ const Accounts = () => {
 	return (
 		<section className="accounts__container">
 			<Sidebar />
-			<div>
+			<div className="grid grid-row-auto">
 				<GraphCard
 					graphTitle="Balance per month"
 					graphType="line" />

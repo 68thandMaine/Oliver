@@ -8,6 +8,7 @@ ___
 
 | Prop Name | PropType | Purpose |
 |---|---|---|
-| graphData | Array | The data which will be charted. |
+| graphData | Array or Object | The data that will be charted. |
 | graphTitle | String | This will be the title of the card.|
 | graphType | String | This prop will be passed to the `<Graphs />` component so it can render the correct graph.|
+

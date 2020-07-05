@@ -18,7 +18,8 @@
     "react-scripts": "3.0.1",
     "react-test-renderer": "^16.13.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "style": "postcss ./src/index.scss -o ./src/tailwind.scss",

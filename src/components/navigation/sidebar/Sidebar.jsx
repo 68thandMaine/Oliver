@@ -2,7 +2,7 @@ import React from 'react';
 
 const SideBar = (props) => {
 	return (
-		<aside className="border border-blue-500 flex flex-wrap items-center">
+		<aside className="border border-blue-500 flex flex-col align-left">
 			<section>
 				<h3>Banks</h3>
 				<h6>Apple Federal Credit Union</h6>
