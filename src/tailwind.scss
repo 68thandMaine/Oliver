@@ -57332,16 +57332,17 @@ Custom Checkboxes. (n.d.). Retrieved from https://www.w3schools.com/howto/tryit.
 .card {
   background: $dm_card_bg;
   &__graph {
-    display: flex;
     flex-direction: column;
     width: 18em;
     &--title {
       background: $dm_card_head;
       display: block;
+      justify-content: center;
     }
     &--graph {
     }
     &--body {
+      padding:  0.5em;
     }
   }
 }
@@ -57414,7 +57415,6 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
   &__input-search {
     display: flex;
     flex-flow: row nowrap;
@@ -57455,6 +57455,6 @@ form {
 
 body {
   background: $dm_bg;
-  padding: 0.5em;
+  padding: 0 0.5em;
 }
 

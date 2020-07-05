@@ -27,7 +27,7 @@ function Graphs(props) {
 						margins={chartMargins} />
 				);
 				break;
-			case 'donut':
+			case 'pie':
 				graphToShow = (
 					<PieChart
 						dimensions={chartArea}

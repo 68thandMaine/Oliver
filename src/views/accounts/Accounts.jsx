@@ -8,11 +8,19 @@ const Accounts = () => {
 
 	return (
 		<section className="accounts__container">
-			<Sidebar />			
-			<GraphCard />
+			<Sidebar />
+			<div>
+				<GraphCard
+					graphTitle="Balance per month"
+					graphType="line" />
+				<GraphCard
+					graphTitle="Paycheck Distributions"
+					graphType="pie" />
+				<GraphCard
+					graphTitle="Debt Amount per month"
+					graphType="histogram" />
+			</div>
 		</section>
-			
-		
 	);
 }
 
