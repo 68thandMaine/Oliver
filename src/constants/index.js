@@ -2,6 +2,6 @@ import * as actionTypes from './ActionTypes';
 import initialState from './InitialState';
 
 export default {
-  types: actionTypes,
+  action: actionTypes,
   initialState: initialState
 };

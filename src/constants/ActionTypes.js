@@ -1,8 +1,11 @@
 // Bank Account Action Types
 export const RECEIVE_BANKACCOUNTS = 'RECEIVE_BANKACCOUNTS';
+export const FETCH_BANKACCOUNTS = 'FETCH_BANKACCOUNTS';
 
 // Credt Card Action Types
 export const RECEIVE_CREDITCARDS = 'RECEIVE_CREDITCARDS';
+export const FETCH_CREDITCARDS = 'FETCH_CREDITCARDS';
 
 // Transaction Action Types
 export const RECEIVE_TRANSACTIONS = 'RECEIVE_TRANSACTIONS';
+export const FETCH_TRANSACTIONS = 'FETCH_TRANSACTIONS';
