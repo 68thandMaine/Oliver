@@ -33,3 +33,5 @@ I think that this will make testing easier because I will be able to assert that
 ##### Test Structure
 
 Each test will need to use `fetchMock` and `redux-mock-store` to be tested. Taking advantage of the `afterEach` lifecycle hook, I encapsulate `fetchMock.restore()` in the hook to reset all of the mock fetched data.
+
+From here I will test success states. A success state will use `fetchMock.getOnce()` which will mock a route and the expected return on that route for the given scenario.
