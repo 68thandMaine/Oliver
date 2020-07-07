@@ -1,4 +1,4 @@
-const BankAccount = [
+const BankAccounts = [
   {
     Id: 1,
     AccountName: "Apple FCU",
@@ -34,4 +34,4 @@ const BankAccount = [
   }
 ];
 
-export default BankAccount;
+export default BankAccounts;
