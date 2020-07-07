@@ -45,6 +45,8 @@ After cloning the Oliver repository there are several ways that you may interact
 |**1**|Unit tests|With terminal focus in Oliver's root issue the test command|`npm run test`| 
 |**2**|Integration tests|With terminal focus in Oliver's root issue the integration test command|`npm run test:integration`|
 
+##### Please note that if the CLI returns `too many files open`, the current solution is to delete the `node_modules` directory and run `npm install`
+
 ___
 
 ### Project Architecture
