@@ -15,9 +15,20 @@ export function getBankAccounts() {
 }
 
 
+export function fetchBankAccounts() {
+	return async function actions (dispatch) {
+		// console.log(action.FETCH_BANKACCOUNTS)
+		dispatch({ type: action.FETCH_BANKACCOUNTS });
+		await BankAccountService.getAllBankAccounts()
+		.then( res => console.log('in the closure'))
+	
+	}
+}
+
 export function receiveBankAccounts(bankAccountList) {
+	console.log(bankAccountList)
   return {
-    type: action.RECEIVE_BANKACCOUNTS,
+    type: action.FETCH_BANKACCOUNTS_SUCCESS,
     bankAccounts: bankAccountList
   };
 }
