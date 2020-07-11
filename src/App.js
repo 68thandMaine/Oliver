@@ -27,7 +27,7 @@ function App(props) {
     <div className="container--fluid">
       <Menu 
         linkList = {props.navOptions}/>
-		  <Routes />
+		  {/* <Routes /> */}
 			{/* <StyleGuide /> */}
     </div>
   );
