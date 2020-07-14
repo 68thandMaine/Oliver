@@ -7,7 +7,7 @@ const NavOptions = [
   },
   {
     id: 2,
-    name: "Account Info",
+    name: "Accounts",
     routeName: 'accounts',
     path: "./accounts"
   },
