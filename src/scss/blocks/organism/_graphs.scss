@@ -1,0 +1,25 @@
+path.slice{
+	stroke-width:2px;
+}
+
+polyline {
+	opacity: .3;
+	stroke: white;
+	stroke-width: 2px;
+	fill: white;
+}
+
+.axis path,
+.axis line {
+	stroke: #e0e0e0;
+}
+
+.axis text {
+	font-size: 11px;
+	fill: white;
+}
+
+.axis-bottom text {
+	transform: rotate(-45deg);
+	text-anchor: end;
+}

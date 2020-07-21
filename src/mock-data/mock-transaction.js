@@ -1,0 +1,103 @@
+const Transactions = [
+  {
+    id: 1,
+    date: "1/1/2019 12:00:00 AM",
+    description: "Food for the week",
+    category: "Grocery",
+    amount: 50.34,
+    paymentType: "Debit",
+    paymentTypeId: 1,
+  },
+  {
+    id: 2,
+    date: "1/12/2019 12:00:00 AM",
+    description: "Phone bill",
+    category: "Bills",
+    amount: 75,
+    paymentType: "Credit",
+    paymentTypeId: 1,
+  },
+  {
+    id: 3,
+    date: "1/22/2019 12:00:00 AM",
+    description: "Gas bill",
+    category: "Utilities",
+    amount: 19,
+    paymentType: "bank account",
+    paymentTypeId: 2,
+  },
+  {
+    id: 4,
+    date: "1/22/2019 12:00:00 AM",
+    description: "Electricity",
+    category:"Utilities",
+    amount:32,
+    paymentType: "bank account",
+    paymentTypeId: 2,
+  },
+  {
+    id: 5,
+    date: "2/02/2019 12:00:00 AM",
+    description: "Food for the week",
+    category: "Grocery",
+    amount: 23.40,
+    paymentType: "debit",
+    paymentTypeId: 2
+  },
+  {
+    id: 6,
+    date: "2/04/2019 12:00:00 AM",
+    description: "Weed",
+    category: "personal",
+    amount: 12.80,
+    paymentType: "debit",
+    paymentTypeId: 2,
+  },
+  {
+    id: 7,
+    date:"2/09/2019 12:00:00 AM",
+    description:"Coffee",
+    category:"personal",
+    amount: 4,
+    paymentType:"Credit",
+    paymentTypeId:1
+  },
+  {
+    id: 8,
+    date:"2/12/2019 12:00:00 AM",
+    description: "Rent",
+    category: "utilities",
+    amount: 845,
+    paymentType: "bank account",
+    paymentTypeId: 1,
+  },
+  {
+    id: 9,
+    date: "2/22/2019 12:00:00 AM",
+    description: "Beer with friends",
+    category: "personal",
+    amount: 8,
+    paymentType: 'bank account',
+    paymentTypeId: 1,
+  },
+  {
+    id: 10,
+    date: "2/22/2019 12:00:00 AM",
+    description:"Beer with friends at Scoots",
+    category: "personal",
+    amount: 12,
+    paymentType: 'bank account',
+    paymentTypeId: 1
+  },
+  {
+    id: 11,
+    date: "3/12/2019 12:00:00 AM",
+    description:"Sitting on the toilet",
+    category: "personal",
+    amount: 13,
+    paymentType: 'bank account',
+    paymentTypeId: 1
+  },
+];
+
+export default Transactions;

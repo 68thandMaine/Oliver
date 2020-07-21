@@ -1,0 +1,22 @@
+.card {
+	background: $dm_card_bg;
+
+	&__graph {
+		@apply flex-col;
+		width: 18em;
+		
+		&--title {
+			background: $dm_card_head;
+			display: block;
+			justify-content: center;
+
+		}
+
+		&--graph {
+			
+		}
+		&--body {
+			padding:  0.5em;
+		}
+	}
+}

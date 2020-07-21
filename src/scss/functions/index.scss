@@ -1,0 +1,35 @@
+@import "./font_functions.scss";
+// Helper function for general deep setting in maps.
+// Deep-set by Hugo Giraudel
+@function map-deep-set($map, $keys.../*, $value */) {
+  $map-list: ($map,);
+  $result: null;
+
+  @if length($keys) == 2 {
+    @return map-merge($map, (nth($keys, 1): nth($keys, -1)));
+  }
+
+  @for $i from 1 through length($keys) - 2 {
+    $map-list: append($map-list, map-get(nth($map-list, -1), nth($keys, $i)));
+  }
+
+  @for $i from length($map-list) through 1 {
+    $result: map-merge(nth($map-list, $i), (nth($keys, $i): if($i == length($map-list), nth($keys, -1), $result)));
+  }
+
+  @return $result;
+}
+
+/* A simple deep-map-get function to load
+nested map values from the yaml or json data files */
+@function data($map, $keys...) {
+  $value: $map;
+  @each $key in $keys {
+    @if type-of($value) != map {
+      @return false;
+    }
+    $value: map-get($value, $key);
+  }
+  $result: unquote(inspect($value));
+  @return $result;
+}

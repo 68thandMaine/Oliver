@@ -1,0 +1,21 @@
+[
+  {
+    "identifier": "debts",
+    "graphType": "line",
+    "name": "Debts",
+    "iconName": "file-invoice-dollar"
+  },
+  {
+    "identifier": "bills",
+    "graphType": "histogram",
+    "name": "Bills",
+    "iconName": "dollar-sign"
+  },
+  {
+    "identifier": "paycheckStats",
+    "graphType": "donut",
+    "name": "Paycheck Stats",
+    "iconName": "chart-pie"
+  }
+]
+

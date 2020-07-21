@@ -1,0 +1,98 @@
+@import '../themes/dm-theme.scss';
+
+html {
+	@include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+::placeholder {  
+  color: lightgrey;
+}
+
+h1, 
+h2,
+h3 {
+	font-family: 'Poppins', sans-serif;
+	color: $dm_header;
+}
+
+h4,
+h5,
+h6,
+th {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	color: $dm_sub-header;
+}
+
+h1 {
+	font-size: 1.25 * 1 * 1rem;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+h3 {
+	font-size: 0.85 * 1rem;
+}
+
+h4 {
+	font-size: 0.8 * 1rem;
+}
+
+h5 {
+	font-size: 0.7 * 1rem;
+}
+
+h6 {
+	font-size: 0.65 * 1rem;
+}
+
+p,
+li,
+input,
+input::-webkit-input-placeholder,
+td,
+a,
+li,
+text {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	color: $dm_body;
+	font-size: 0.85rem;
+}
+
+button,
+label,
+.label--txt {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $dm_body;
+	font-size: 0.85rem;
+}
+
+label,
+.label--txt {
+	font-size: 0.85rem;
+}
+
+
+@debug $min_width;.text {
+  color: $dm_body;
+
+  &--center {
+
+		@debug $min_width;
+    text-align: center;
+  }
+  &__small {
+
+    
+  }
+
+  &--bold {
+    color: $dm_body;
+    font-weight: 400;
+  }
+}

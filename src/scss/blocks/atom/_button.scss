@@ -1,0 +1,46 @@
+.btn {
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+	padding: 1em;
+	margin: 2em;
+	border: solid 1px $dm__btn--outline;
+	height: 4em;
+	
+  &__graphControl {
+    @include neumorphic-button;
+    height: 5em;
+		padding: 12px 24px;
+		width: 12em;
+  }
+
+	&__icon {
+		@apply flex justify-center items-center pl-2 pr-3;
+		border-radius: 1em;
+	}
+
+  &__icon--element {
+    display: table-cell
+	}
+	
+	&__add {
+		@apply pt-1;
+		background-color: $dm__btn--green;
+		max-height: 2em;
+	}
+}
+
+
+.btn:focus,
+.btn__graphControl:focus {
+  outline: 0
+}
+.btn:hover,
+.btn__icon:hover {
+  transition: 500ms;
+	border: solid 4px $dm_green;
+	outline: $dm_green;
+}
+.active {
+  @include neumorphic-button--active
+}
