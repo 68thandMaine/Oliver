@@ -34,7 +34,7 @@
 		cursor: pointer;
 	}
 }
-
+/* The media screen below is where we should implement the mobile design. Yes we are doing this backwards....*/
 @media screen and (max-width: 768px) {
 	.navbar {
 		display: grid;
